@@ -43,6 +43,8 @@ extern "C" {
 
 /* These #defines allow us to reuse TI-RTOS across other device families */
 #define     Board_LED0              Board_RLED
+#define     Board_LED1              Board_GLED
+#define     Board_LED2              Board_LED0
 
 #define     Board_BUTTON0           Board_BTN1
 #define     Board_BUTTON1           Board_BTN2
@@ -51,6 +53,15 @@ extern "C" {
 #define     Board_AES0              Board_AES
 #define     Board_WATCHDOG0         CC1350_LAUNCHXL_WATCHDOG0
 
+#define     Board_ADC0              CC1350_LAUNCHXL_ADCVSS
+#define     Board_ADC1              CC1350_LAUNCHXL_ADCVDDS
+
+#define     Board_ADCBuf0           CC1350_LAUNCHXL_ADCBuf0
+#define     Board_ADCBufChannel0    (0)
+#define     Board_ADCBufChannel1    (1)
+
+
+#define     Board_I2C_BME           Board_I2C1
 #define     Board_I2C_ADXL          Board_I2C0
 
 
@@ -67,11 +78,10 @@ extern "C" {
 #define     Board_initSPI()         SPI_init()
 #define     Board_initUART()        UART_init()
 #define     Board_initWatchdog()    Watchdog_init()
+#define     Board_initADCBuf()      ADCBuf_init()
+#define     Board_initADC()         ADC_init()
 #define     GPIO_toggle(n)
 #define     GPIO_write(n,m)
-
-
-#define     ADXL_SLAVE_ADDR         0x53
 
 #ifdef __cplusplus
 }

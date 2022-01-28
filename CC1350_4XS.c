@@ -279,7 +279,16 @@ const I2CCC26XX_HWAttrsV1 i2cCC26xxHWAttrs[CC1350_LAUNCHXL_I2CCOUNT] = {
         .swiPriority = 0,
         .sdaPin = Board_I2C0_SDA0,
         .sclPin = Board_I2C0_SCL0,
-    }
+    },
+    {
+        .baseAddr = I2C0_BASE,
+        .powerMngrId = PowerCC26XX_PERIPH_I2C0,
+        .intNum = INT_I2C_IRQ,
+        .intPriority = ~0,
+        .swiPriority = 0,
+        .sdaPin = Board_I2C1_SDA0,
+        .sclPin = Board_I2C1_SCL0,
+    },
 };
 
 /* I2C configuration structure */
@@ -289,7 +298,12 @@ const I2C_Config I2C_config[] = {
         .object = &i2cCC26xxObjects[0],
         .hwAttrs = &i2cCC26xxHWAttrs[0]
     },
-    {NULL, NULL, NULL}
+    {
+        .fxnTablePtr = &I2CCC26XX_fxnTable,
+        .object = &i2cCC26xxObjects[1],
+        .hwAttrs = &i2cCC26xxHWAttrs[1]
+    },
+    {NULL,NULL,NULL},
 };
 /*
  *  ========================== I2C end =========================================

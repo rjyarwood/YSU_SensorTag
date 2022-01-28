@@ -72,13 +72,13 @@ extern const PIN_Config BoardGpioInitTable[];
 
 /* UART Board */
 #define Board_UART_RX               PIN_UNASSIGNED        /* RXD  */
-#define Board_UART_TX               PIN_UNASSIGNED        /* TXD  */
-#define Board_UART_CTS              PIN_UNASSIGNED        /* CTS  */
-#define Board_UART_RTS              PIN_UNASSIGNED        /* RTS */
+#define Board_UART_TX               PIN_UNASSIGNED         /* TXD  */
+#define Board_UART_CTS              PIN_UNASSIGNED         /* CTS  */
+#define Board_UART_RTS              PIN_UNASSIGNED         /* RTS */
 
 /* SPI Board */
-#define Board_SPI0_MISO             PIN_UNASSIGNED        /* RF1.20 */
-#define Board_SPI0_MOSI             PIN_UNASSIGNED        /* RF1.18 */
+#define Board_SPI0_MISO             PIN_UNASSIGNED         /* RF1.20 */
+#define Board_SPI0_MOSI             PIN_UNASSIGNED          /* RF1.18 */
 #define Board_SPI0_CLK              PIN_UNASSIGNED        /* RF1.16 */
 #define Board_SPI0_CSN              PIN_UNASSIGNED
 #define Board_SPI1_MISO             PIN_UNASSIGNED
@@ -87,6 +87,9 @@ extern const PIN_Config BoardGpioInitTable[];
 #define Board_SPI1_CSN              PIN_UNASSIGNED
 
 /* I2C */
+#define Board_I2C1_SCL0             IOID_2
+#define Board_I2C1_SDA0             IOID_1
+
 #define Board_I2C0_SCL0             IOID_8
 #define Board_I2C0_SDA0             IOID_7
 
@@ -101,7 +104,6 @@ extern const PIN_Config BoardGpioInitTable[];
 #define Board_PWMPIN6                       PIN_UNASSIGNED
 #define Board_PWMPIN7                       PIN_UNASSIGNED
 
-
 /** ============================================================================
  *  Instance identifiers
  *  ==========================================================================*/
@@ -112,6 +114,7 @@ extern const PIN_Config BoardGpioInitTable[];
 #define Board_UART                  CC1350_LAUNCHXL_UART0
 /* Generic I2C instance identifiers */
 #define Board_I2C0                   CC1350_LAUNCHXL_I2C0
+#define Board_I2C1                   CC1350_LAUNCHXL_I2C1
 /* Generic Crypto instance identifiers */
 #define Board_CRYPTO                CC1350_LAUNCHXL_CRYPTO0
 /* Generic GPTimer instance identifiers */
@@ -143,6 +146,7 @@ extern const PIN_Config BoardGpioInitTable[];
  */
 typedef enum CC1350_LAUNCHXL_I2CName {
     CC1350_LAUNCHXL_I2C0 = 0,
+    CC1350_LAUNCHXL_I2C1,
 
     CC1350_LAUNCHXL_I2CCOUNT
 } CC1350_LAUNCHXL_I2CName;

@@ -36,7 +36,7 @@
 *
 */
 
-#include "BME688.h"
+#include <BME688/api/BME688_api.h>
 #include <stdio.h>
 
 /* This internal API is used to read the calibration coefficients */

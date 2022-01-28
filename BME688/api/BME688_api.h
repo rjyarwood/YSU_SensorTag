@@ -8,7 +8,7 @@
 #ifndef BME688_H_
 #define BME688_H_
 
-#include "BME688_defs.h"
+#include <BME688/api/BME688_api_defs.h>
 
 /* CPP guard */
 #ifdef __cplusplus

@@ -1,12 +1,29 @@
 /*
- * ADXL_defs.h
+ * adxl343.h
  *
- *  Created on: Jan 15, 2022
- *      Author: joaog
+ *  Created on: Jan 19, 2022
+ *      Author: rjyar
  */
 
-#ifndef ADXL_DEFS_H_
-#define ADXL_DEFS_H_
+#ifndef ADXL343_ADXL343_H_
+#define ADXL343_ADXL343_H_
+
+/* XDCtools Header files */
+#include <xdc/std.h>
+#include <xdc/runtime/System.h>
+
+/* BIOS Header files */
+#include <ti/sysbios/BIOS.h>
+#include <ti/sysbios/knl/Clock.h>
+#include <ti/sysbios/knl/Task.h>
+
+/* TI-RTOS Header files */
+#include <ti/drivers/I2C.h>
+
+/* Board Header files */
+#include "Board.h"
+
+#include "i2c_interface/i2c_interface.h"
 
 /*** Defining Registers Addresses ***/
 
@@ -100,16 +117,6 @@
 /* FIFO Status */
 #define FIFO_STATUS         UINT8_C(0x39)
 
-/* Defining variables */
-
-#define int16_t         x_axis
-
-#define int16_t         y_axis
-
-#define int16_t         z_axis
-
-#define int8_t          msb, lsb
-
 /* Defining Power Control Status */
 
 /* Auto sleep mode */
@@ -160,22 +167,37 @@
 #define RANGE_16G           UINT8_C(0x8B)
 
 
-/* Defining offset variables */
-
-/* X axis offset */
-#define int8_t              x_offset
-
-/* Y axis offset */
-#define int8_t              y_offset
-
-/* Z axis offset */
-#define int8_t              z_offset
-
-
-
-
 /* Macro to combine two 8 bit data's to form a 16 bit data */
 #define ADXL_CONCAT_BYTES(msb, lsb)             (((uint16_t)msb << 8) | (uint16_t)lsb)
 
 
-#endif /* ADXL_DEFS_H_ */
+
+#define ADXL_SLAVE_ADDR     0x53
+
+Void adxlTaskFxn(UArg arg0, UArg arg1);
+
+
+typedef struct{
+    I2C_Handle      i2c;
+    I2C_Params      i2cParams;
+    I2C_Transaction i2cTransaction;
+}ADXL;
+
+ADXL* gADXL;
+
+/* Defining variables */
+int16_t x_axis;
+int16_t y_axis;
+int16_t z_axis;
+int8_t  msb, lsb;
+
+/* Defining offset variables */
+
+/* X axis offset */
+int8_t x_offset;
+/* Y axis offset */
+int8_t y_offset;
+/* Z axis offset */
+int8_t z_offset;
+
+#endif /* ADXL343_ADXL343_H_ */

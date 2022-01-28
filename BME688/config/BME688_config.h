@@ -8,7 +8,7 @@
 #ifndef BME_CONFIG_H_
 #define BME_CONFIG_H_
 
-#include "BME688.h"
+#include <BME688/api/BME688_api.h>
 #include <ti/drivers/I2C.h>
 #include "Board.h"
 #include <ti/sysbios/BIOS.h>
@@ -19,6 +19,8 @@
 #include <xdc/runtime/Error.h>
 #include <ti/sysbios/family/arm/cc26xx/Timer.h>
 
+#include "i2c_interface/i2c_interface.h"
+
 struct bme {
     struct bme68x_dev bme_dev;
     struct bme68x_conf conf;
@@ -26,8 +28,8 @@ struct bme {
     struct bme68x_data data;
     uint8_t test;
 
-    I2C_Handle      i2c;
-    I2C_Params      i2cParams;
+    I2C_Handle i2c;
+    I2C_Params params;
     I2C_Transaction i2cTransaction;
 };
 
@@ -40,7 +42,7 @@ volatile bool timer_running;
 
 struct bme *gBME;
 
-void init_bme(struct bme *bme);
+uint8_t init_bme(struct bme *bme);
 uint8_t config_bme(struct bme *bme);
 uint8_t config_heatr(struct bme *bme);
 

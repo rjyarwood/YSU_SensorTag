@@ -1,1 +1,1 @@
-To see documentation, open Docs/html/index.html in your browser. This can be done by navigating there with your file explorer and selecting "Open with"
+To see documentation navigate to https://rjyarwood.github.io/YSU_SensorTag/ in your browser

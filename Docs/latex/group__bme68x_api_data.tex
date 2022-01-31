@@ -1,0 +1,40 @@
+\hypertarget{group__bme68x_api_data}{}\doxysection{Data Read out}
+\label{group__bme68x_api_data}\index{Data Read out@{Data Read out}}
+
+
+Read our data from the sensor.  
+
+
+Read our data from the sensor. 
+
+\hypertarget{bme68x_api_bme68x_get_data}{}\doxysubsubsection{bme68x\+\_\+get\+\_\+data}\label{bme68x_api_bme68x_get_data}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{int8\_t bme68x\_get\_data(uint8\_t op\_mode, \textcolor{keyword}{struct} bme68x\_data *data, uint8\_t *n\_data, \textcolor{keyword}{struct} bme68x\_dev *dev);}
+
+\end{DoxyCode}
+
+
+This API reads the pressure, temperature and humidity and gas data from the sensor, compensates the data and store it in the bme68x\+\_\+data structure instance passed by the user.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em op\+\_\+mode} & \+: Expected operation mode. \\
+\hline
+\mbox{\texttt{ out}}  & {\em data} & \+: Structure instance to hold the data. \\
+\hline
+\mbox{\texttt{ out}}  & {\em n\+\_\+data} & \+: Number of data instances available. \\
+\hline
+\mbox{\texttt{ in,out}}  & {\em dev} & \+: Structure instance of bme68x\+\_\+dev\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Result of API execution status 
+\end{DoxyReturn}
+
+\begin{DoxyRetVals}{Return values}
+{\em 0} & -\/\texorpdfstring{$>$}{>} Success \\
+\hline
+{\em $<$} & 0 -\/\texorpdfstring{$>$}{>} Fail \\
+\hline
+\end{DoxyRetVals}

@@ -1,0 +1,141 @@
+\hypertarget{group__bme68x_api_config}{}\doxysection{Configuration}
+\label{group__bme68x_api_config}\index{Configuration@{Configuration}}
+
+
+Configuration API of sensor.  
+
+
+Configuration API of sensor. 
+
+\hypertarget{bme68x_api_bme68x_get_meas_dur}{}\doxysubsubsection{bme68x\+\_\+get\+\_\+meas\+\_\+dur}\label{bme68x_api_bme68x_get_meas_dur}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{uint32\_t bme68x\_get\_meas\_dur(\textcolor{keyword}{const} uint8\_t op\_mode, \textcolor{keyword}{struct} bme68x\_conf *conf, \textcolor{keyword}{struct} bme68x\_dev *dev);}
+
+\end{DoxyCode}
+
+
+This API is used to get the remaining duration that can be used for heating.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em op\+\_\+mode} & \+: Desired operation mode. \\
+\hline
+\mbox{\texttt{ in}}  & {\em conf} & \+: Desired sensor configuration. \\
+\hline
+\mbox{\texttt{ in}}  & {\em dev} & \+: Structure instance of bme68x\+\_\+dev\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Measurement duration calculated in microseconds 
+\end{DoxyReturn}
+\hypertarget{bme68x_api_bme68x_set_conf}{}\doxysubsubsection{bme68x\+\_\+set\+\_\+conf}\label{bme68x_api_bme68x_set_conf}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{int8\_t bme68x\_set\_conf(\textcolor{keyword}{struct} bme68x\_conf *conf, \textcolor{keyword}{struct} bme68x\_dev *dev);}
+
+\end{DoxyCode}
+
+
+This API is used to set the oversampling, filter and odr configuration
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em conf} & \+: Desired sensor configuration. \\
+\hline
+\mbox{\texttt{ in,out}}  & {\em dev} & \+: Structure instance of bme68x\+\_\+dev.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Result of API execution status 
+\end{DoxyReturn}
+
+\begin{DoxyRetVals}{Return values}
+{\em 0} & -\/\texorpdfstring{$>$}{>} Success \\
+\hline
+{\em $<$} & 0 -\/\texorpdfstring{$>$}{>} Fail \\
+\hline
+\end{DoxyRetVals}
+\hypertarget{bme68x_api_bme68x_get_conf}{}\doxysubsubsection{bme68x\+\_\+get\+\_\+conf}\label{bme68x_api_bme68x_get_conf}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{int8\_t bme68x\_get\_conf(\textcolor{keyword}{struct} bme68x\_conf *conf, \textcolor{keyword}{struct} bme68x\_dev *dev);}
+
+\end{DoxyCode}
+
+
+This API is used to get the oversampling, filter and odr configuration
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ out}}  & {\em conf} & \+: Present sensor configuration. \\
+\hline
+\mbox{\texttt{ in,out}}  & {\em dev} & \+: Structure instance of bme68x\+\_\+dev.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Result of API execution status 
+\end{DoxyReturn}
+
+\begin{DoxyRetVals}{Return values}
+{\em 0} & -\/\texorpdfstring{$>$}{>} Success \\
+\hline
+{\em $<$} & 0 -\/\texorpdfstring{$>$}{>} Fail \\
+\hline
+\end{DoxyRetVals}
+\hypertarget{bme68x_api_bme68x_set_heatr_conf}{}\doxysubsubsection{bme68x\+\_\+set\+\_\+heatr\+\_\+conf}\label{bme68x_api_bme68x_set_heatr_conf}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{int8\_t bme68x\_set\_heatr\_conf(uint8\_t op\_mode, \textcolor{keyword}{const} \textcolor{keyword}{struct} bme68x\_heatr\_conf *conf, \textcolor{keyword}{struct} bme68x\_dev *dev);}
+
+\end{DoxyCode}
+
+
+This API is used to set the gas configuration of the sensor.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em op\+\_\+mode} & \+: Expected operation mode of the sensor. \\
+\hline
+\mbox{\texttt{ in}}  & {\em conf} & \+: Desired heating configuration. \\
+\hline
+\mbox{\texttt{ in,out}}  & {\em dev} & \+: Structure instance of bme68x\+\_\+dev.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Result of API execution status 
+\end{DoxyReturn}
+
+\begin{DoxyRetVals}{Return values}
+{\em 0} & -\/\texorpdfstring{$>$}{>} Success \\
+\hline
+{\em $<$} & 0 -\/\texorpdfstring{$>$}{>} Fail \\
+\hline
+\end{DoxyRetVals}
+\hypertarget{bme68x_api_bme68x_get_heatr_conf}{}\doxysubsubsection{bme68x\+\_\+get\+\_\+heatr\+\_\+conf}\label{bme68x_api_bme68x_get_heatr_conf}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{int8\_t bme68x\_get\_heatr\_conf(\textcolor{keyword}{const} \textcolor{keyword}{struct} bme68x\_heatr\_conf *conf, \textcolor{keyword}{struct} bme68x\_dev *dev);}
+
+\end{DoxyCode}
+
+
+This API is used to get the gas configuration of the sensor.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ out}}  & {\em conf} & \+: Current configurations of the gas sensor. \\
+\hline
+\mbox{\texttt{ in,out}}  & {\em dev} & \+: Structure instance of bme68x\+\_\+dev.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Result of API execution status 
+\end{DoxyReturn}
+
+\begin{DoxyRetVals}{Return values}
+{\em 0} & -\/\texorpdfstring{$>$}{>} Success \\
+\hline
+{\em $<$} & 0 -\/\texorpdfstring{$>$}{>} Fail \\
+\hline
+\end{DoxyRetVals}

@@ -65,6 +65,14 @@ extern "C" {
 #define     Board_I2C_ADXL          Board_I2C0
 
 
+/** Comment these to change how much to print **/
+//#define     DEBUG
+#define     CONSOLE
+
+/** How much to sleep between tasks **/
+#define     TASK_SLEEP_TIME         1000000
+
+
 #define     Board_initGeneral() { \
     Power_init(); \
     if (PIN_init(BoardGpioInitTable) != PIN_SUCCESS) \

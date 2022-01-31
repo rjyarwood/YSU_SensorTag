@@ -25,6 +25,8 @@
 
 #include "i2c_interface/i2c_interface.h"
 
+
+/* ========== FROM ADXL ============*/
 /*** Defining Registers Addresses ***/
 
 /* Chip ID */
@@ -170,26 +172,21 @@
 /* Macro to combine two 8 bit data's to form a 16 bit data */
 #define ADXL_CONCAT_BYTES(msb, lsb)             (((uint16_t)msb << 8) | (uint16_t)lsb)
 
+/*============= END FROM ADXL =============== */
 
+#define ADXL_SLAVE_ADDR     0x53        ///I2C Address of the ADXL device
 
-#define ADXL_SLAVE_ADDR     0x53
+/** Change this to adjust how many samples to take from ADXL before releasing **/
+#define ADXL_TRANSACTIONS   3
 
-Void adxlTaskFxn(UArg arg0, UArg arg1);
-
-
-typedef struct{
-    I2C_Handle      i2c;
-    I2C_Params      i2cParams;
-    I2C_Transaction i2cTransaction;
-}ADXL;
-
-ADXL* gADXL;
+Void adxlTaskFxn(UArg arg0, UArg arg1); ///Function that is called whenever the ADXL task is on the processor
 
 /* Defining variables */
 int16_t x_axis;
 int16_t y_axis;
 int16_t z_axis;
 int8_t  msb, lsb;
+
 
 /* Defining offset variables */
 

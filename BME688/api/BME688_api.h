@@ -15,8 +15,14 @@
 extern "C" {
 #endif
 
+
+
 /**
- * \ingroup bme68x
+ * \defgroup bme68x_api
+ * @brief API from Bosch for BME68x Devices
+ */
+/**
+ * \ingroup bme68x_api
  * \defgroup bme68xApiInit Initialization
  * @brief Initialize the sensor and device structure
  */
@@ -40,7 +46,7 @@ extern "C" {
 int8_t bme68x_init(struct bme68x_dev *dev);
 
 /**
- * \ingroup bme68x
+ * \ingroup bme68x_api
  * \defgroup bme68xApiRegister Registers
  * @brief Generic API for accessing sensor registers
  */
@@ -85,7 +91,7 @@ int8_t bme68x_set_regs(const uint8_t *reg_addr, const uint8_t *reg_data, uint32_
 int8_t bme68x_get_regs(uint8_t reg_addr, uint8_t *reg_data, uint32_t len, struct bme68x_dev *dev);
 
 /**
- * \ingroup bme68x
+ * \ingroup bme68x_api
  * \defgroup bme68xApiSystem System
  * @brief API that performs system-level operations
  */
@@ -107,7 +113,7 @@ int8_t bme68x_get_regs(uint8_t reg_addr, uint8_t *reg_data, uint32_t len, struct
 int8_t bme68x_soft_reset(struct bme68x_dev *dev);
 
 /**
- * \ingroup bme68x
+ * \ingroup bme68x_api
  * \defgroup bme68xApiOm Operation mode
  * @brief API to configure operation mode
  */
@@ -162,7 +168,7 @@ int8_t bme68x_get_op_mode(uint8_t *op_mode, struct bme68x_dev *dev);
 uint32_t bme68x_get_meas_dur(const uint8_t op_mode, struct bme68x_conf *conf, struct bme68x_dev *dev);
 
 /**
- * \ingroup bme68x
+ * \ingroup bme68x_api
  * \defgroup bme68xApiData Data Read out
  * @brief Read our data from the sensor
  */
@@ -189,7 +195,7 @@ uint32_t bme68x_get_meas_dur(const uint8_t op_mode, struct bme68x_conf *conf, st
 int8_t bme68x_get_data(uint8_t op_mode, struct bme68x_data *data, uint8_t *n_data, struct bme68x_dev *dev);
 
 /**
- * \ingroup bme68x
+ * \ingroup bme68x_api
  * \defgroup bme68xApiConfig Configuration
  * @brief Configuration API of sensor
  */

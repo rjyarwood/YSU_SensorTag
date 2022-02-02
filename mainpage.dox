@@ -1,0 +1,17 @@
+/*! \mainpage YSU SensorTag Documentation
+ *
+ * \section intro_sec Introduction
+ *
+ * This code works with the ADMETE Sensor PCBv1 developed at YSU. It will read the data output from 
+ * Bosch BME688 Sensor and ADXL343 Accelerometer.
+ *
+ * \section install_sec Installation
+ *
+ * \subsection step1 Step 1: Ensure you have Code Composer Studio and CC1350 support.
+ * \subsection step2 Step 2: Open a 'minimal project' for the CC1350 LaunchPad
+ * \subsection step3 Step 3: Replace the files generated with the files in this repo
+ *
+ * \section basics Basics 
+ * This code works by opening the I2C interface to one of the sensors on the board and reading a set amount of samples 
+ * before sleeping that sensor for a given amount of time
+ */

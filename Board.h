@@ -65,9 +65,9 @@ extern "C" {
 #define     Board_I2C_ADXL          Board_I2C0
 
 
-/** Comment these to change how much to print **/
-//#define     DEBUG
-#define     CONSOLE
+/*! Comment these to change how much to print **/
+//#define     DEBUG  /** Will print messages that will help with debugging */
+#define     CONSOLE  /** Will print data to console */
 
 /** How much to sleep between tasks **/
 #define     TASK_SLEEP_TIME         1000000

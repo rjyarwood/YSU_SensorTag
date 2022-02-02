@@ -20,13 +20,20 @@
 #include <ti/drivers/I2C.h>
 
 
-/** If adding a device, add a flag here. This ensures only one device on the bus at a time */
+/**
+ * @brief Enum for devices index in 'devices' array.
+ * 
+ */
 typedef enum {
     bme = 0,
     adxl,
     total_count
 }I2C_Device_ID;
 
+/**
+ * @brief Struct containing all the information needed to open and run an I2C bus
+ * 
+ */
 typedef struct {
     I2C_Handle      i2c;
     I2C_Params      i2cParams;
@@ -35,19 +42,30 @@ typedef struct {
 
 
 
-/** Function that will ensure I2C interface is available.
- * If it is not available it will sleep the task and check again
- *
- * @param I2C_Device The type of device calling this
+/**
+ * @brief Function to aquire I2C semaphore.
+ * 
+ * Function will sleep task for a defined interval before checking if I2C is available. Once it is
+ * It will lock the interface for itself
+ * 
+ * @param dev The device trying to lock it out
  */
 void aquireI2CInterface(I2C_Device_ID dev);
 
-/** Function that will release the interface for other devices to aquire.
- *
- * @param I2C_Device The type of device calling this
+/**
+ * @brief Function to release the I2C semaphore.
+ * 
+ * Function will release the semaphore flag being held on I2C interface
+ * 
+ * @param dev device that should release the flag
  */
 void releaseI2CInterface(I2C_Device_ID dev);
 
+/**
+ * @brief An array representing all the devices that use seperate I2C busses.
+ * 
+ * Will store a 1 at index I2C_Device_ID if device is holding the flag.
+ */
 uint8_t devices[total_count]; /// An array to keep track of what device has control of the interface
 
 #endif /* I2C_INTERFACE_I2C_INTERFACE_H_ */

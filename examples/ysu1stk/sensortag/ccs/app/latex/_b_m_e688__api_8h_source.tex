@@ -1,0 +1,55 @@
+\hypertarget{_b_m_e688__api_8h_source}{}\doxysection{BME688\+\_\+api.\+h}
+\label{_b_m_e688__api_8h_source}\index{BME688/api/BME688\_api.h@{BME688/api/BME688\_api.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{comment}{/*}}
+\DoxyCodeLine{2 \textcolor{comment}{ * BME688.h}}
+\DoxyCodeLine{3 \textcolor{comment}{ *}}
+\DoxyCodeLine{4 \textcolor{comment}{ *  Created on: Jan 11, 2022}}
+\DoxyCodeLine{5 \textcolor{comment}{ *      Author: joaog}}
+\DoxyCodeLine{6 \textcolor{comment}{ */}}
+\DoxyCodeLine{7 }
+\DoxyCodeLine{8 \textcolor{preprocessor}{\#ifndef BME688\_H\_}}
+\DoxyCodeLine{9 \textcolor{preprocessor}{\#define BME688\_H\_}}
+\DoxyCodeLine{10 }
+\DoxyCodeLine{11 \textcolor{preprocessor}{\#include <BME688/api/BME688\_api\_defs.h>}}
+\DoxyCodeLine{12 }
+\DoxyCodeLine{13 \textcolor{comment}{/* CPP guard */}}
+\DoxyCodeLine{14 \textcolor{preprocessor}{\#ifdef \_\_cplusplus}}
+\DoxyCodeLine{15 \textcolor{keyword}{extern} \textcolor{stringliteral}{"{}C"{}} \{}
+\DoxyCodeLine{16 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{17 }
+\DoxyCodeLine{18 }
+\DoxyCodeLine{19 }
+\DoxyCodeLine{46 int8\_t bme68x\_init(\textcolor{keyword}{struct} bme68x\_dev *dev);}
+\DoxyCodeLine{47 }
+\DoxyCodeLine{72 int8\_t bme68x\_set\_regs(\textcolor{keyword}{const} uint8\_t *reg\_addr, \textcolor{keyword}{const} uint8\_t *reg\_data, uint32\_t len, \textcolor{keyword}{struct} bme68x\_dev *dev);}
+\DoxyCodeLine{73 }
+\DoxyCodeLine{91 int8\_t bme68x\_get\_regs(uint8\_t reg\_addr, uint8\_t *reg\_data, uint32\_t len, \textcolor{keyword}{struct} bme68x\_dev *dev);}
+\DoxyCodeLine{92 }
+\DoxyCodeLine{113 int8\_t bme68x\_soft\_reset(\textcolor{keyword}{struct} bme68x\_dev *dev);}
+\DoxyCodeLine{114 }
+\DoxyCodeLine{135 int8\_t bme68x\_set\_op\_mode(\textcolor{keyword}{const} uint8\_t op\_mode, \textcolor{keyword}{struct} bme68x\_dev *dev);}
+\DoxyCodeLine{136 }
+\DoxyCodeLine{152 int8\_t bme68x\_get\_op\_mode(uint8\_t *op\_mode, \textcolor{keyword}{struct} bme68x\_dev *dev);}
+\DoxyCodeLine{153 }
+\DoxyCodeLine{168 uint32\_t bme68x\_get\_meas\_dur(\textcolor{keyword}{const} uint8\_t op\_mode, \textcolor{keyword}{struct} bme68x\_conf *conf, \textcolor{keyword}{struct} bme68x\_dev *dev);}
+\DoxyCodeLine{169 }
+\DoxyCodeLine{195 int8\_t bme68x\_get\_data(uint8\_t op\_mode, \textcolor{keyword}{struct} bme68x\_data *data, uint8\_t *n\_data, \textcolor{keyword}{struct} bme68x\_dev *dev);}
+\DoxyCodeLine{196 }
+\DoxyCodeLine{218 int8\_t bme68x\_set\_conf(\textcolor{keyword}{struct} bme68x\_conf *conf, \textcolor{keyword}{struct} bme68x\_dev *dev);}
+\DoxyCodeLine{219 }
+\DoxyCodeLine{236 int8\_t bme68x\_get\_conf(\textcolor{keyword}{struct} bme68x\_conf *conf, \textcolor{keyword}{struct} bme68x\_dev *dev);}
+\DoxyCodeLine{237 }
+\DoxyCodeLine{254 int8\_t bme68x\_set\_heatr\_conf(uint8\_t op\_mode, \textcolor{keyword}{const} \textcolor{keyword}{struct} bme68x\_heatr\_conf *conf, \textcolor{keyword}{struct} bme68x\_dev *dev);}
+\DoxyCodeLine{255 }
+\DoxyCodeLine{271 int8\_t bme68x\_get\_heatr\_conf(\textcolor{keyword}{const} \textcolor{keyword}{struct} bme68x\_heatr\_conf *conf, \textcolor{keyword}{struct} bme68x\_dev *dev);}
+\DoxyCodeLine{272 }
+\DoxyCodeLine{287 int8\_t bme68x\_selftest\_check(\textcolor{keyword}{const} \textcolor{keyword}{struct} bme68x\_dev *dev);}
+\DoxyCodeLine{288 }
+\DoxyCodeLine{289 \textcolor{preprocessor}{\#ifdef \_\_cplusplus}}
+\DoxyCodeLine{290 \}}
+\DoxyCodeLine{291 \textcolor{preprocessor}{\#endif }\textcolor{comment}{/* End of CPP guard */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{292 \textcolor{preprocessor}{\#endif }\textcolor{comment}{/* BME688\_H\_ */}\textcolor{preprocessor}{}}
+
+\end{DoxyCode}

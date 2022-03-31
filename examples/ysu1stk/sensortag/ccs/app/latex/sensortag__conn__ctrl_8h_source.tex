@@ -1,0 +1,120 @@
+\hypertarget{sensortag__conn__ctrl_8h_source}{}\doxysection{sensortag\+\_\+conn\+\_\+ctrl.\+h}
+\label{sensortag__conn__ctrl_8h_source}\index{app/sensortag\_conn\_ctrl.h@{app/sensortag\_conn\_ctrl.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{comment}{/******************************************************************************}}
+\DoxyCodeLine{2 \textcolor{comment}{}}
+\DoxyCodeLine{3 \textcolor{comment}{ @file  sensortag\_conn\_ctrl.h}}
+\DoxyCodeLine{4 \textcolor{comment}{}}
+\DoxyCodeLine{5 \textcolor{comment}{ @brief This file contains the Sensor Tag sample application,}}
+\DoxyCodeLine{6 \textcolor{comment}{        Connection Control, for use with the TI Bluetooth Low}}
+\DoxyCodeLine{7 \textcolor{comment}{        Energy Protocol Stack.}}
+\DoxyCodeLine{8 \textcolor{comment}{}}
+\DoxyCodeLine{9 \textcolor{comment}{ Group: WCS, BTS}}
+\DoxyCodeLine{10 \textcolor{comment}{ Target Device: CC2650, CC2640, CC1350}}
+\DoxyCodeLine{11 \textcolor{comment}{}}
+\DoxyCodeLine{12 \textcolor{comment}{ ******************************************************************************}}
+\DoxyCodeLine{13 \textcolor{comment}{}}
+\DoxyCodeLine{14 \textcolor{comment}{ Copyright (c) 2014-\/2016, Texas Instruments Incorporated}}
+\DoxyCodeLine{15 \textcolor{comment}{ All rights reserved.}}
+\DoxyCodeLine{16 \textcolor{comment}{}}
+\DoxyCodeLine{17 \textcolor{comment}{ Redistribution and use in source and binary forms, with or without}}
+\DoxyCodeLine{18 \textcolor{comment}{ modification, are permitted provided that the following conditions}}
+\DoxyCodeLine{19 \textcolor{comment}{ are met:}}
+\DoxyCodeLine{20 \textcolor{comment}{}}
+\DoxyCodeLine{21 \textcolor{comment}{ *  Redistributions of source code must retain the above copyright}}
+\DoxyCodeLine{22 \textcolor{comment}{    notice, this list of conditions and the following disclaimer.}}
+\DoxyCodeLine{23 \textcolor{comment}{}}
+\DoxyCodeLine{24 \textcolor{comment}{ *  Redistributions in binary form must reproduce the above copyright}}
+\DoxyCodeLine{25 \textcolor{comment}{    notice, this list of conditions and the following disclaimer in the}}
+\DoxyCodeLine{26 \textcolor{comment}{    documentation and/or other materials provided with the distribution.}}
+\DoxyCodeLine{27 \textcolor{comment}{}}
+\DoxyCodeLine{28 \textcolor{comment}{ *  Neither the name of Texas Instruments Incorporated nor the names of}}
+\DoxyCodeLine{29 \textcolor{comment}{    its contributors may be used to endorse or promote products derived}}
+\DoxyCodeLine{30 \textcolor{comment}{    from this software without specific prior written permission.}}
+\DoxyCodeLine{31 \textcolor{comment}{}}
+\DoxyCodeLine{32 \textcolor{comment}{ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "{}AS IS"{}}}
+\DoxyCodeLine{33 \textcolor{comment}{ AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO,}}
+\DoxyCodeLine{34 \textcolor{comment}{ THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR}}
+\DoxyCodeLine{35 \textcolor{comment}{ PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR}}
+\DoxyCodeLine{36 \textcolor{comment}{ CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL,}}
+\DoxyCodeLine{37 \textcolor{comment}{ EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO,}}
+\DoxyCodeLine{38 \textcolor{comment}{ PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS;}}
+\DoxyCodeLine{39 \textcolor{comment}{ OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY,}}
+\DoxyCodeLine{40 \textcolor{comment}{ WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR}}
+\DoxyCodeLine{41 \textcolor{comment}{ OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE,}}
+\DoxyCodeLine{42 \textcolor{comment}{ EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.}}
+\DoxyCodeLine{43 \textcolor{comment}{}}
+\DoxyCodeLine{44 \textcolor{comment}{ ******************************************************************************}}
+\DoxyCodeLine{45 \textcolor{comment}{ Release Name: ble\_sdk\_2\_02\_01\_18}}
+\DoxyCodeLine{46 \textcolor{comment}{ Release Date: 2016-\/10-\/26 15:20:04}}
+\DoxyCodeLine{47 \textcolor{comment}{ *****************************************************************************/}}
+\DoxyCodeLine{48 }
+\DoxyCodeLine{49 \textcolor{preprocessor}{\#ifndef SENSORTAG\_CONNECTIONCONTROL\_H}}
+\DoxyCodeLine{50 \textcolor{preprocessor}{\#define SENSORTAG\_CONNECTIONCONTROL\_H}}
+\DoxyCodeLine{51 }
+\DoxyCodeLine{52 \textcolor{preprocessor}{\#ifdef \_\_cplusplus}}
+\DoxyCodeLine{53 \textcolor{keyword}{extern} \textcolor{stringliteral}{"{}C"{}}}
+\DoxyCodeLine{54 \{}
+\DoxyCodeLine{55 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{56 }
+\DoxyCodeLine{57 \textcolor{comment}{/*********************************************************************}}
+\DoxyCodeLine{58 \textcolor{comment}{ * INCLUDES}}
+\DoxyCodeLine{59 \textcolor{comment}{ */}}
+\DoxyCodeLine{60 \textcolor{preprocessor}{\#include "{}ysu\_sensortag.h"{}}}
+\DoxyCodeLine{61 }
+\DoxyCodeLine{62 \textcolor{comment}{/*********************************************************************}}
+\DoxyCodeLine{63 \textcolor{comment}{ * CONSTANTS}}
+\DoxyCodeLine{64 \textcolor{comment}{ */}}
+\DoxyCodeLine{65 }
+\DoxyCodeLine{66 \textcolor{comment}{/*********************************************************************}}
+\DoxyCodeLine{67 \textcolor{comment}{ * MACROS}}
+\DoxyCodeLine{68 \textcolor{comment}{ */}}
+\DoxyCodeLine{69 }
+\DoxyCodeLine{70 \textcolor{comment}{/*********************************************************************}}
+\DoxyCodeLine{71 \textcolor{comment}{ * FUNCTIONS}}
+\DoxyCodeLine{72 \textcolor{comment}{ */}}
+\DoxyCodeLine{73 }
+\DoxyCodeLine{74 \textcolor{preprocessor}{\#ifndef EXCLUDE\_OAD}}
+\DoxyCodeLine{75 \textcolor{comment}{/*}}
+\DoxyCodeLine{76 \textcolor{comment}{ * Initialize Connection Control module}}
+\DoxyCodeLine{77 \textcolor{comment}{ */}}
+\DoxyCodeLine{78 \textcolor{keyword}{extern} \textcolor{keywordtype}{void} SensorTagConnectionControl\_init(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{79 }
+\DoxyCodeLine{80 \textcolor{comment}{/*}}
+\DoxyCodeLine{81 \textcolor{comment}{ * Initialization for the  SensorTag}}
+\DoxyCodeLine{82 \textcolor{comment}{ */}}
+\DoxyCodeLine{83 \textcolor{keyword}{extern} \textcolor{keywordtype}{void} SensorTagConnectionControl\_update(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{84 }
+\DoxyCodeLine{85 \textcolor{comment}{/*}}
+\DoxyCodeLine{86 \textcolor{comment}{ * Task Event Processor for Connection Control module}}
+\DoxyCodeLine{87 \textcolor{comment}{ */}}
+\DoxyCodeLine{88 \textcolor{keyword}{extern} \textcolor{keywordtype}{void} SensorTagConnControl\_processCharChangeEvt(uint8\_t paramID);}
+\DoxyCodeLine{89 }
+\DoxyCodeLine{90 \textcolor{comment}{/*}}
+\DoxyCodeLine{91 \textcolor{comment}{ * Connection parameters updated}}
+\DoxyCodeLine{92 \textcolor{comment}{ */}}
+\DoxyCodeLine{93 \textcolor{keywordtype}{void} SensorTagConnControl\_paramUpdateCB(uint16\_t connInterval,}
+\DoxyCodeLine{94     uint16\_t connSlaveLatency, uint16\_t connTimeout);}
+\DoxyCodeLine{95 }
+\DoxyCodeLine{96 \textcolor{preprocessor}{\#else}}
+\DoxyCodeLine{97 }
+\DoxyCodeLine{98 \textcolor{comment}{/* Connection control module onluy required by OAD */}}
+\DoxyCodeLine{99 }
+\DoxyCodeLine{100 \textcolor{preprocessor}{\#define SensorTagConnectionControl\_init()}}
+\DoxyCodeLine{101 \textcolor{preprocessor}{\#define SensorTagConnectionControl\_update()}}
+\DoxyCodeLine{102 \textcolor{preprocessor}{\#define SensorTagConnControl\_processCharChangeEvt(paramID)}}
+\DoxyCodeLine{103 \textcolor{preprocessor}{\#define SensorTagConnControl\_paramUpdateCB(connInterval,connSlaveLatency,connTimeout)}}
+\DoxyCodeLine{104 }
+\DoxyCodeLine{105 \textcolor{preprocessor}{\#endif }\textcolor{comment}{// \#ifndef EXCLUDE\_OAD}}
+\DoxyCodeLine{106 }
+\DoxyCodeLine{107 \textcolor{comment}{/*********************************************************************}}
+\DoxyCodeLine{108 \textcolor{comment}{*********************************************************************/}}
+\DoxyCodeLine{109 }
+\DoxyCodeLine{110 \textcolor{preprocessor}{\#ifdef \_\_cplusplus}}
+\DoxyCodeLine{111 \}}
+\DoxyCodeLine{112 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{113 }
+\DoxyCodeLine{114 \textcolor{preprocessor}{\#endif }\textcolor{comment}{/* SENSORTAG\_CONNECTIONCONTROL\_H */}\textcolor{preprocessor}{}}
+
+\end{DoxyCode}

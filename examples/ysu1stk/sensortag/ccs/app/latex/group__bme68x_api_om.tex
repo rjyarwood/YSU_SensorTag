@@ -1,0 +1,61 @@
+\hypertarget{group__bme68x_api_om}{}\doxysection{Operation mode}
+\label{group__bme68x_api_om}\index{Operation mode@{Operation mode}}
+
+
+API to configure operation mode.  
+
+
+API to configure operation mode. 
+
+\hypertarget{bme68x_api_bme68x_set_op_mode}{}\doxysubsubsection{bme68x\+\_\+set\+\_\+op\+\_\+mode}\label{bme68x_api_bme68x_set_op_mode}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{int8\_t bme68x\_set\_op\_mode(\textcolor{keyword}{const} uint8\_t op\_mode, \textcolor{keyword}{struct} bme68x\_dev *dev);}
+
+\end{DoxyCode}
+
+
+This API is used to set the operation mode of the sensor 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em op\+\_\+mode} & \+: Desired operation mode. \\
+\hline
+\mbox{\texttt{ in}}  & {\em dev} & \+: Structure instance of bme68x\+\_\+dev\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Result of API execution status 
+\end{DoxyReturn}
+
+\begin{DoxyRetVals}{Return values}
+{\em 0} & -\/\texorpdfstring{$>$}{>} Success \\
+\hline
+{\em $<$} & 0 -\/\texorpdfstring{$>$}{>} Fail \\
+\hline
+\end{DoxyRetVals}
+\hypertarget{bme68x_api_bme68x_get_op_mode}{}\doxysubsubsection{bme68x\+\_\+get\+\_\+op\+\_\+mode}\label{bme68x_api_bme68x_get_op_mode}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{int8\_t bme68x\_get\_op\_mode(uint8\_t *op\_mode, \textcolor{keyword}{struct} bme68x\_dev *dev);}
+
+\end{DoxyCode}
+
+
+This API is used to get the operation mode of the sensor.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ out}}  & {\em op\+\_\+mode} & \+: Desired operation mode. \\
+\hline
+\mbox{\texttt{ in,out}}  & {\em dev} & \+: Structure instance of bme68x\+\_\+dev\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Result of API execution status 
+\end{DoxyReturn}
+
+\begin{DoxyRetVals}{Return values}
+{\em 0} & -\/\texorpdfstring{$>$}{>} Success \\
+\hline
+{\em $<$} & 0 -\/\texorpdfstring{$>$}{>} Fail \\
+\hline
+\end{DoxyRetVals}

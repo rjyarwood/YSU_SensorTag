@@ -1,0 +1,111 @@
+\hypertarget{adxl__service_8h_source}{}\doxysection{adxl\+\_\+service.\+h}
+\label{adxl__service_8h_source}\index{ADXL343/ble/adxl\_service.h@{ADXL343/ble/adxl\_service.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{comment}{/******************************************************************************}}
+\DoxyCodeLine{2 \textcolor{comment}{}}
+\DoxyCodeLine{3 \textcolor{comment}{ @file  adxl\_service.h}}
+\DoxyCodeLine{4 \textcolor{comment}{}}
+\DoxyCodeLine{5 \textcolor{comment}{ @brief This file contains ADXL Profile header file.}}
+\DoxyCodeLine{6 \textcolor{comment}{}}
+\DoxyCodeLine{7 \textcolor{comment}{}}
+\DoxyCodeLine{8 \textcolor{comment}{********************************************************************************/}}
+\DoxyCodeLine{9 }
+\DoxyCodeLine{10 }
+\DoxyCodeLine{11 \textcolor{preprocessor}{\#ifndef BLE\_ADXL\_H}}
+\DoxyCodeLine{12 \textcolor{preprocessor}{\#define BLE\_ADXL\_H}}
+\DoxyCodeLine{13 }
+\DoxyCodeLine{14 \textcolor{preprocessor}{\#ifdef \_\_cplusplus}}
+\DoxyCodeLine{15 \textcolor{keyword}{extern} \textcolor{stringliteral}{"{}C"{}}}
+\DoxyCodeLine{16 \{}
+\DoxyCodeLine{17 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{18 }
+\DoxyCodeLine{19 \textcolor{comment}{/*********************************************************************}}
+\DoxyCodeLine{20 \textcolor{comment}{ * INCLUDES}}
+\DoxyCodeLine{21 \textcolor{comment}{ */}}
+\DoxyCodeLine{22 \textcolor{preprocessor}{\#include "{}st\_util.h"{}}}
+\DoxyCodeLine{23 }
+\DoxyCodeLine{24 \textcolor{comment}{/*********************************************************************}}
+\DoxyCodeLine{25 \textcolor{comment}{ * CONSTANTS}}
+\DoxyCodeLine{26 \textcolor{comment}{ */}}
+\DoxyCodeLine{27 \textcolor{preprocessor}{\#define ADXL\_DATA\_DESCR       "{}ADXL. Data"{}}}
+\DoxyCodeLine{28 \textcolor{preprocessor}{\#define ADXL\_CONFIG\_DESCR     "{}ADXL. Conf."{}}}
+\DoxyCodeLine{29 \textcolor{preprocessor}{\#define ADXL\_PERIOD\_DESCR     "{}ADXL. Period"{}}}
+\DoxyCodeLine{30 }
+\DoxyCodeLine{31 \textcolor{comment}{// Service UUID}}
+\DoxyCodeLine{32 \textcolor{preprocessor}{\#define ADXL\_SERV\_UUID         0xAD00}}
+\DoxyCodeLine{33 \textcolor{preprocessor}{\#define ADXL\_DATA\_UUID         0xAD01}}
+\DoxyCodeLine{34 \textcolor{preprocessor}{\#define ADXL\_CONF\_UUID         0xAD02}}
+\DoxyCodeLine{35 \textcolor{preprocessor}{\#define ADXL\_PERI\_UUID         0xAD03}}
+\DoxyCodeLine{36 }
+\DoxyCodeLine{37 \textcolor{comment}{// Length of sensor data in bytes}}
+\DoxyCodeLine{38 \textcolor{preprocessor}{\#define ADXL\_DATA\_LEN          6}}
+\DoxyCodeLine{39 }
+\DoxyCodeLine{40 \textcolor{comment}{/*********************************************************************}}
+\DoxyCodeLine{41 \textcolor{comment}{ * TYPEDEFS}}
+\DoxyCodeLine{42 \textcolor{comment}{ */}}
+\DoxyCodeLine{43 }
+\DoxyCodeLine{44 \textcolor{comment}{/*********************************************************************}}
+\DoxyCodeLine{45 \textcolor{comment}{ * MACROS}}
+\DoxyCodeLine{46 \textcolor{comment}{ */}}
+\DoxyCodeLine{47 }
+\DoxyCodeLine{48 \textcolor{comment}{/*********************************************************************}}
+\DoxyCodeLine{49 \textcolor{comment}{ * API FUNCTIONS}}
+\DoxyCodeLine{50 \textcolor{comment}{ */}}
+\DoxyCodeLine{51 }
+\DoxyCodeLine{52 \textcolor{comment}{// Callback when a characteristic value has changed}}
+\DoxyCodeLine{53 \textcolor{keyword}{typedef} void (*ADXLChange\_t)( uint8 paramID );}
+\DoxyCodeLine{54 }
+\DoxyCodeLine{55 \textcolor{keyword}{typedef} \textcolor{keyword}{struct}}
+\DoxyCodeLine{56 \{}
+\DoxyCodeLine{57   ADXLChange\_t        pfnChangeCb;  \textcolor{comment}{// Called when characteristic value changes}}
+\DoxyCodeLine{58 \} \mbox{\hyperlink{struct_a_d_x_l_c_bs__t}{ADXLCBs\_t}};}
+\DoxyCodeLine{59 }
+\DoxyCodeLine{60 \textcolor{comment}{/*}}
+\DoxyCodeLine{61 \textcolor{comment}{ * IRTemp\_addService-\/ Initializes the Sensor GATT Profile service by registering}}
+\DoxyCodeLine{62 \textcolor{comment}{ *          GATT attributes with the GATT server.}}
+\DoxyCodeLine{63 \textcolor{comment}{ */}}
+\DoxyCodeLine{64 \textcolor{keyword}{extern} bStatus\_t ADXL\_addService(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{65 }
+\DoxyCodeLine{66 \textcolor{comment}{/*}}
+\DoxyCodeLine{67 \textcolor{comment}{ * IRTemp\_registerAppCBs -\/ Registers the application callback function.}}
+\DoxyCodeLine{68 \textcolor{comment}{ *                    Only call this function once.}}
+\DoxyCodeLine{69 \textcolor{comment}{ *}}
+\DoxyCodeLine{70 \textcolor{comment}{ *    appCallbacks -\/ pointer to application callbacks.}}
+\DoxyCodeLine{71 \textcolor{comment}{ */}}
+\DoxyCodeLine{72 \textcolor{keyword}{extern} bStatus\_t ADXL\_registerAppCBs(\mbox{\hyperlink{structsensor_c_bs__t}{sensorCBs\_t}} *appCallbacks);}
+\DoxyCodeLine{73 }
+\DoxyCodeLine{74 \textcolor{comment}{/*}}
+\DoxyCodeLine{75 \textcolor{comment}{ * IRTemp\_setParameter -\/ Set a Sensor GATT Profile parameter.}}
+\DoxyCodeLine{76 \textcolor{comment}{ *}}
+\DoxyCodeLine{77 \textcolor{comment}{ *    param -\/ Profile parameter ID}}
+\DoxyCodeLine{78 \textcolor{comment}{ *    len   -\/ length of data to write}}
+\DoxyCodeLine{79 \textcolor{comment}{ *    value -\/ pointer to data to write.  This is dependent on}}
+\DoxyCodeLine{80 \textcolor{comment}{ *          the parameter ID and WILL be cast to the appropriate}}
+\DoxyCodeLine{81 \textcolor{comment}{ *          data type (example: data type of uint16\_t will be cast to}}
+\DoxyCodeLine{82 \textcolor{comment}{ *          uint16\_t pointer).}}
+\DoxyCodeLine{83 \textcolor{comment}{ */}}
+\DoxyCodeLine{84 \textcolor{keyword}{extern} bStatus\_t ADXL\_setParameter(uint8\_t param, uint8\_t len, \textcolor{keywordtype}{void} *value);}
+\DoxyCodeLine{85 }
+\DoxyCodeLine{86 \textcolor{comment}{/*}}
+\DoxyCodeLine{87 \textcolor{comment}{ * IRTemp\_getParameter -\/ Get a Sensor GATT Profile parameter.}}
+\DoxyCodeLine{88 \textcolor{comment}{ *}}
+\DoxyCodeLine{89 \textcolor{comment}{ *    param -\/ Profile parameter ID}}
+\DoxyCodeLine{90 \textcolor{comment}{ *    value -\/ pointer to data to read.  This is dependent on}}
+\DoxyCodeLine{91 \textcolor{comment}{ *          the parameter ID and WILL be cast to the appropriate}}
+\DoxyCodeLine{92 \textcolor{comment}{ *          data type (example: data type of uint16\_t will be cast to}}
+\DoxyCodeLine{93 \textcolor{comment}{ *          uint16\_t pointer).}}
+\DoxyCodeLine{94 \textcolor{comment}{ */}}
+\DoxyCodeLine{95 \textcolor{keyword}{extern} bStatus\_t ADXL\_getParameter(uint8\_t param, \textcolor{keywordtype}{void} *value);}
+\DoxyCodeLine{96 }
+\DoxyCodeLine{97 }
+\DoxyCodeLine{98 \textcolor{comment}{/*********************************************************************}}
+\DoxyCodeLine{99 \textcolor{comment}{*********************************************************************/}}
+\DoxyCodeLine{100 }
+\DoxyCodeLine{101 \textcolor{preprocessor}{\#ifdef \_\_cplusplus}}
+\DoxyCodeLine{102 \}}
+\DoxyCodeLine{103 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{104 }
+\DoxyCodeLine{105 \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

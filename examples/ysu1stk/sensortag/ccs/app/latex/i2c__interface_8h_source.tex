@@ -1,0 +1,48 @@
+\hypertarget{i2c__interface_8h_source}{}\doxysection{i2c\+\_\+interface.\+h}
+\label{i2c__interface_8h_source}\index{I2C/i2c\_interface.h@{I2C/i2c\_interface.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{comment}{/*}}
+\DoxyCodeLine{2 \textcolor{comment}{ * i2c\_interface.h}}
+\DoxyCodeLine{3 \textcolor{comment}{ *}}
+\DoxyCodeLine{4 \textcolor{comment}{ *  Created on: Jan 20, 2022}}
+\DoxyCodeLine{5 \textcolor{comment}{ *      Author: rjyar}}
+\DoxyCodeLine{6 \textcolor{comment}{ */}}
+\DoxyCodeLine{7 }
+\DoxyCodeLine{8 \textcolor{preprocessor}{\#ifndef I2C\_INTERFACE\_I2C\_INTERFACE\_H\_}}
+\DoxyCodeLine{9 \textcolor{preprocessor}{\#define I2C\_INTERFACE\_I2C\_INTERFACE\_H\_}}
+\DoxyCodeLine{10 }
+\DoxyCodeLine{11 \textcolor{preprocessor}{\#include <xdc/std.h>}}
+\DoxyCodeLine{12 \textcolor{preprocessor}{\#include <xdc/runtime/System.h>}}
+\DoxyCodeLine{13 }
+\DoxyCodeLine{14 \textcolor{comment}{/* BIOS Header files */}}
+\DoxyCodeLine{15 \textcolor{preprocessor}{\#include <ti/sysbios/BIOS.h>}}
+\DoxyCodeLine{16 \textcolor{preprocessor}{\#include <ti/sysbios/knl/Clock.h>}}
+\DoxyCodeLine{17 \textcolor{preprocessor}{\#include <ti/sysbios/knl/Task.h>}}
+\DoxyCodeLine{18 }
+\DoxyCodeLine{19 \textcolor{comment}{/* TI-\/RTOS Header files */}}
+\DoxyCodeLine{20 \textcolor{preprocessor}{\#include <ti/drivers/I2C.h>}}
+\DoxyCodeLine{21 }
+\DoxyCodeLine{22 }
+\DoxyCodeLine{27 \textcolor{keyword}{typedef} \textcolor{keyword}{enum} \{}
+\DoxyCodeLine{28     \mbox{\hyperlink{structbme}{bme}} = 0,}
+\DoxyCodeLine{29     adxl,}
+\DoxyCodeLine{30     total\_count}
+\DoxyCodeLine{31 \}I2C\_Device\_ID;}
+\DoxyCodeLine{32 }
+\DoxyCodeLine{37 \textcolor{keyword}{typedef} \textcolor{keyword}{struct }\{}
+\DoxyCodeLine{38     I2C\_Handle      i2c;}
+\DoxyCodeLine{39     I2C\_Params      i2cParams;}
+\DoxyCodeLine{40     I2C\_Transaction i2cTransaction;}
+\DoxyCodeLine{41 \}\mbox{\hyperlink{structi2c__device}{i2c\_device}};}
+\DoxyCodeLine{42 }
+\DoxyCodeLine{43 }
+\DoxyCodeLine{44 }
+\DoxyCodeLine{53 \textcolor{keywordtype}{void} aquireI2CInterface(I2C\_Device\_ID dev);}
+\DoxyCodeLine{54 }
+\DoxyCodeLine{62 \textcolor{keywordtype}{void} releaseI2CInterface(I2C\_Device\_ID dev);}
+\DoxyCodeLine{63 }
+\DoxyCodeLine{64 }
+\DoxyCodeLine{65 \textcolor{preprocessor}{\#endif }\textcolor{comment}{/* I2C\_INTERFACE\_I2C\_INTERFACE\_H\_ */}\textcolor{preprocessor}{}}
+
+\end{DoxyCode}

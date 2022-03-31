@@ -1,0 +1,100 @@
+\hypertarget{ysu__sensortag_8h_source}{}\doxysection{ysu\+\_\+sensortag.\+h}
+\label{ysu__sensortag_8h_source}\index{ysu\_sensortag/ysu\_sensortag.h@{ysu\_sensortag/ysu\_sensortag.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{comment}{/*}}
+\DoxyCodeLine{2 \textcolor{comment}{ *  @file: ysu\_sensortag.h}}
+\DoxyCodeLine{3 \textcolor{comment}{ *}}
+\DoxyCodeLine{4 \textcolor{comment}{ *  @brief: This is where you will add a service ID for your new sensor and where the main task has its function definitions.}}
+\DoxyCodeLine{5 \textcolor{comment}{ *}}
+\DoxyCodeLine{6 \textcolor{comment}{ *}}
+\DoxyCodeLine{7 \textcolor{comment}{ *  Created on: Feb 11, 2022}}
+\DoxyCodeLine{8 \textcolor{comment}{ *      Author: rjyar}}
+\DoxyCodeLine{9 \textcolor{comment}{ */}}
+\DoxyCodeLine{10 }
+\DoxyCodeLine{11 \textcolor{preprocessor}{\#ifndef YSU\_SENSORTAG\_YSU\_SENSORTAG\_H\_}}
+\DoxyCodeLine{12 \textcolor{preprocessor}{\#define YSU\_SENSORTAG\_YSU\_SENSORTAG\_H\_}}
+\DoxyCodeLine{13 }
+\DoxyCodeLine{14 }
+\DoxyCodeLine{15 }
+\DoxyCodeLine{16 \textcolor{preprocessor}{\#ifdef \_\_cplusplus}}
+\DoxyCodeLine{17 \textcolor{keyword}{extern} \textcolor{stringliteral}{"{}C"{}}}
+\DoxyCodeLine{18 \{}
+\DoxyCodeLine{19 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{20 }
+\DoxyCodeLine{21 \textcolor{comment}{/*********************************************************************}}
+\DoxyCodeLine{22 \textcolor{comment}{ * INCLUDES}}
+\DoxyCodeLine{23 \textcolor{comment}{ */}}
+\DoxyCodeLine{24 \textcolor{preprocessor}{\#include "{}ICall.h"{}}}
+\DoxyCodeLine{25 \textcolor{preprocessor}{\#include "{}peripheral.h"{}}}
+\DoxyCodeLine{26 }
+\DoxyCodeLine{27 \textcolor{preprocessor}{\#include <ti/sysbios/knl/Clock.h>}}
+\DoxyCodeLine{28 \textcolor{preprocessor}{\#include <ti/drivers/PIN.h>}}
+\DoxyCodeLine{29 }
+\DoxyCodeLine{30 }
+\DoxyCodeLine{31 \textcolor{comment}{/*********************************************************************}}
+\DoxyCodeLine{32 \textcolor{comment}{ * CONSTANTS}}
+\DoxyCodeLine{33 \textcolor{comment}{ */}}
+\DoxyCodeLine{34 }
+\DoxyCodeLine{35 \textcolor{comment}{/************************* BEGIN USER CODE 3 ************************/}}
+\DoxyCodeLine{37 \textcolor{comment}{// Service ID's for internal application use}}
+\DoxyCodeLine{38 \textcolor{preprocessor}{\#define SERVICE\_ID\_ADXL       0x01}}
+\DoxyCodeLine{39 \textcolor{preprocessor}{\#define SERVICE\_ID\_BME        0x02}}
+\DoxyCodeLine{40 \textcolor{comment}{/************************** END USER CODE 3 *************************/}}
+\DoxyCodeLine{41 }
+\DoxyCodeLine{42 }
+\DoxyCodeLine{43 }
+\DoxyCodeLine{44 \textcolor{comment}{/*********************************************************************}}
+\DoxyCodeLine{45 \textcolor{comment}{ * MACROS}}
+\DoxyCodeLine{46 \textcolor{comment}{ */}}
+\DoxyCodeLine{47 \textcolor{comment}{/*********************************************************************}}
+\DoxyCodeLine{48 \textcolor{comment}{ * VARIABLES}}
+\DoxyCodeLine{49 \textcolor{comment}{ */}}
+\DoxyCodeLine{50 \textcolor{keyword}{extern} ICall\_Semaphore sem;}
+\DoxyCodeLine{51 \textcolor{keyword}{extern} gaprole\_States\_t gapProfileState;}
+\DoxyCodeLine{52 \textcolor{keyword}{extern} ICall\_EntityID selfEntityMain;}
+\DoxyCodeLine{53 \textcolor{keyword}{extern} PIN\_State pinGpioState;}
+\DoxyCodeLine{54 \textcolor{keyword}{extern} PIN\_Handle hGpioPin;}
+\DoxyCodeLine{55 }
+\DoxyCodeLine{56 }
+\DoxyCodeLine{57 \textcolor{comment}{/*********************************************************************}}
+\DoxyCodeLine{58 \textcolor{comment}{ * FUNCTIONS}}
+\DoxyCodeLine{59 \textcolor{comment}{ */}}
+\DoxyCodeLine{60 }
+\DoxyCodeLine{61 \textcolor{comment}{/*}}
+\DoxyCodeLine{62 \textcolor{comment}{ * Task creation function for SensorTag}}
+\DoxyCodeLine{63 \textcolor{comment}{ */}}
+\DoxyCodeLine{64 \textcolor{keyword}{extern} \textcolor{keywordtype}{void} SensorTag\_createTask(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{65 }
+\DoxyCodeLine{66 \textcolor{comment}{/*}}
+\DoxyCodeLine{67 \textcolor{comment}{ * Function to call when a characteristic value has changed}}
+\DoxyCodeLine{68 \textcolor{comment}{ */}}
+\DoxyCodeLine{69 \textcolor{keyword}{extern} \textcolor{keywordtype}{void} SensorTag\_charValueChangeCB(uint8\_t sensorID, uint8\_t paramID);}
+\DoxyCodeLine{70 }
+\DoxyCodeLine{71 \textcolor{comment}{/*}}
+\DoxyCodeLine{72 \textcolor{comment}{ * Function to load the factory image and reboot it}}
+\DoxyCodeLine{73 \textcolor{comment}{ */}}
+\DoxyCodeLine{74 \textcolor{keyword}{extern} \textcolor{keywordtype}{void} SensorTag\_applyFactoryImage(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{75 }
+\DoxyCodeLine{76 \textcolor{comment}{/*}}
+\DoxyCodeLine{77 \textcolor{comment}{ * Update the advertising data with the latest key press status}}
+\DoxyCodeLine{78 \textcolor{comment}{ */}}
+\DoxyCodeLine{79 \textcolor{keyword}{extern} \textcolor{keywordtype}{void} SensorTag\_updateAdvertisingData(uint8\_t keyStatus);}
+\DoxyCodeLine{80 }
+\DoxyCodeLine{81 \textcolor{comment}{/*}}
+\DoxyCodeLine{82 \textcolor{comment}{ * Return the self-\/test result}}
+\DoxyCodeLine{83 \textcolor{comment}{ */}}
+\DoxyCodeLine{84 \textcolor{keyword}{extern} uint8\_t SensorTag\_testResult(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{85 }
+\DoxyCodeLine{86 \textcolor{comment}{/*********************************************************************}}
+\DoxyCodeLine{87 \textcolor{comment}{*********************************************************************/}}
+\DoxyCodeLine{88 }
+\DoxyCodeLine{89 \textcolor{preprocessor}{\#ifdef \_\_cplusplus}}
+\DoxyCodeLine{90 \}}
+\DoxyCodeLine{91 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{92 }
+\DoxyCodeLine{93 }
+\DoxyCodeLine{94 }
+\DoxyCodeLine{95 \textcolor{preprocessor}{\#endif }\textcolor{comment}{/* YSU\_SENSORTAG\_YSU\_SENSORTAG\_H\_ */}\textcolor{preprocessor}{}}
+
+\end{DoxyCode}

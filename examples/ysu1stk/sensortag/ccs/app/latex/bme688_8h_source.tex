@@ -1,0 +1,70 @@
+\hypertarget{bme688_8h_source}{}\doxysection{bme688.\+h}
+\label{bme688_8h_source}\index{BME688/bme688.h@{BME688/bme688.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{comment}{/*}}
+\DoxyCodeLine{2 \textcolor{comment}{ *  @file bme688.h}}
+\DoxyCodeLine{3 \textcolor{comment}{ *}}
+\DoxyCodeLine{4 \textcolor{comment}{ *  @brief Defines anything for the BME Task}}
+\DoxyCodeLine{5 \textcolor{comment}{ *}}
+\DoxyCodeLine{6 \textcolor{comment}{ *  Created on: Mar 2, 2022}}
+\DoxyCodeLine{7 \textcolor{comment}{ *      Author: rjyar}}
+\DoxyCodeLine{8 \textcolor{comment}{ */}}
+\DoxyCodeLine{9 }
+\DoxyCodeLine{10 \textcolor{preprocessor}{\#ifndef BME688\_BME688\_H\_}}
+\DoxyCodeLine{11 \textcolor{preprocessor}{\#define BME688\_BME688\_H\_}}
+\DoxyCodeLine{12 }
+\DoxyCodeLine{13 }
+\DoxyCodeLine{14 \textcolor{preprocessor}{\#ifdef \_\_cplusplus}}
+\DoxyCodeLine{15 \textcolor{keyword}{extern} \textcolor{stringliteral}{"{}C"{}}}
+\DoxyCodeLine{16 \{}
+\DoxyCodeLine{17 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{18 }
+\DoxyCodeLine{19 \textcolor{comment}{/*********************************************************************}}
+\DoxyCodeLine{20 \textcolor{comment}{ * INCLUDES}}
+\DoxyCodeLine{21 \textcolor{comment}{ */}}
+\DoxyCodeLine{22 }
+\DoxyCodeLine{23 \textcolor{preprocessor}{\#include "{}ysu\_sensortag.h"{}}}
+\DoxyCodeLine{24 }
+\DoxyCodeLine{25 \textcolor{comment}{/*********************************************************************}}
+\DoxyCodeLine{26 \textcolor{comment}{ * CONSTANTS}}
+\DoxyCodeLine{27 \textcolor{comment}{ */}}
+\DoxyCodeLine{28 }
+\DoxyCodeLine{29 \textcolor{comment}{/*********************************************************************}}
+\DoxyCodeLine{30 \textcolor{comment}{ * MACROS}}
+\DoxyCodeLine{31 \textcolor{comment}{ */}}
+\DoxyCodeLine{32 }
+\DoxyCodeLine{33 \textcolor{comment}{/*********************************************************************}}
+\DoxyCodeLine{34 \textcolor{comment}{ * FUNCTIONS}}
+\DoxyCodeLine{35 \textcolor{comment}{ */}}
+\DoxyCodeLine{36 }
+\DoxyCodeLine{37 \textcolor{comment}{/*}}
+\DoxyCodeLine{38 \textcolor{comment}{ * Create the BME temperature sensor task}}
+\DoxyCodeLine{39 \textcolor{comment}{ */}}
+\DoxyCodeLine{40 \textcolor{keyword}{extern} \textcolor{keywordtype}{void} BME\_createTask(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{41 }
+\DoxyCodeLine{42 \textcolor{comment}{/*}}
+\DoxyCodeLine{43 \textcolor{comment}{ * Initialize BME sensor module}}
+\DoxyCodeLine{44 \textcolor{comment}{ */}}
+\DoxyCodeLine{45 \textcolor{keyword}{extern} \textcolor{keywordtype}{void} BME\_init(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{46 }
+\DoxyCodeLine{47 \textcolor{comment}{/*}}
+\DoxyCodeLine{48 \textcolor{comment}{ * Task Event Processor for characteristic changes}}
+\DoxyCodeLine{49 \textcolor{comment}{ */}}
+\DoxyCodeLine{50 \textcolor{keyword}{extern} \textcolor{keywordtype}{void} BME\_processCharChangeEvt(uint8\_t paramID);}
+\DoxyCodeLine{51 }
+\DoxyCodeLine{52 \textcolor{comment}{/*}}
+\DoxyCodeLine{53 \textcolor{comment}{ * Reset BME sensor module}}
+\DoxyCodeLine{54 \textcolor{comment}{ */}}
+\DoxyCodeLine{55 \textcolor{keyword}{extern} \textcolor{keywordtype}{void} BME\_reset(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{56 }
+\DoxyCodeLine{57 \textcolor{comment}{/*********************************************************************}}
+\DoxyCodeLine{58 \textcolor{comment}{*********************************************************************/}}
+\DoxyCodeLine{59 }
+\DoxyCodeLine{60 \textcolor{preprocessor}{\#ifdef \_\_cplusplus}}
+\DoxyCodeLine{61 \}}
+\DoxyCodeLine{62 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{63 }
+\DoxyCodeLine{64 \textcolor{preprocessor}{\#endif }\textcolor{comment}{/* BME688\_BME688\_H\_ */}\textcolor{preprocessor}{}}
+
+\end{DoxyCode}

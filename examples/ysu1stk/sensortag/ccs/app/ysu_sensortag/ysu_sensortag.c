@@ -7,7 +7,6 @@
  *      Author: RJ Yarwood
  */
 
-
 /***************************************/
 #include <string.h>
 #include <xdc/std.h>
@@ -38,10 +37,15 @@
 #include "board.h"
 #include "ysu_sensortag.h"
 
+/**
+ *  \addtogroup sensortag YSU SensorTag 
+ * @{
+ */
 
 /************************* BEGIN USER CODE 4 ************************/
-///TODO USER CODE 4: Add your sensor task file here. The ADXL service is only here for advertising. If you would like to
-///                  advertise another service see below
+/*TODO USER CODE 4: Add your sensor task file here. The ADXL service is only here for advertising. If you would like to
+*                    advertise another service see below           
+*/
 #include "ADXL343/ble/adxl_service.h"
 #include "ADXL343/adxl343.h"
 #include "BME688/bme688.h"
@@ -50,97 +54,122 @@
 
 
 /*************************** BEGIN BLE CONFIG FLAGS ******************/
-/// You should not need to change anything here. You should really understand BLE before changing anything.
-// How often to perform periodic event (in milliseconds)
-#define ST_PERIODIC_EVT_PERIOD               1000
+/**
+ * \addtogroup sensortag_ble SensorTag BLE 
+ * @{
+ */
 
-// What is the advertising interval when device is discoverable
-// (units of 625us, 160=100ms)
-#define DEFAULT_ADVERTISING_INTERVAL          160
+/// What is the advertising interval when device is discoverable (units of 625us, 160=100ms)
+#define DEFAULT_ADVERTISING_INTERVAL          160  
 
-// General discoverable mode advertises indefinitely
+/// General discoverable mode advertises indefinitely
 #define DEFAULT_DISCOVERABLE_MODE             GAP_ADTYPE_FLAGS_LIMITED
 
-// Minimum connection interval (units of 1.25ms, 80=100ms) if automatic
-// parameter update request is enabled
+/// Minimum connection interval (units of 1.25ms, 80=100ms) if automatic parameter update request is enabled
 #define DEFAULT_DESIRED_MIN_CONN_INTERVAL     8
 
-// Maximum connection interval (units of 1.25ms, 800=1000ms) if automatic
-// parameter update request is enabled
+/// Maximum connection interval (units of 1.25ms, 800=1000ms) if automatic parameter update request is enabled
 #define DEFAULT_DESIRED_MAX_CONN_INTERVAL     800
 
-// Slave latency to use if automatic parameter update request is enabled
+/// Slave latency to use if automatic parameter update request is enabled
 #define DEFAULT_DESIRED_SLAVE_LATENCY         0
 
-// Supervision timeout value (units of 10ms, 1000=10s) if automatic parameter
-// update request is enabled
+/// Supervision timeout value (units of 10ms, 1000=10s) if automatic parameter update request is enabled
 #define DEFAULT_DESIRED_CONN_TIMEOUT          100
 
-// Whether to enable automatic parameter update request when a
-// connection is formed
+/// Whether to enable automatic parameter update request when a connection is formed
 #define DEFAULT_ENABLE_UPDATE_REQUEST         GAPROLE_LINK_PARAM_UPDATE_WAIT_BOTH_PARAMS
 
-// Connection Pause Peripheral time value (in seconds)
+/// Connection Pause Peripheral time value (in seconds)
 #define DEFAULT_CONN_PAUSE_PERIPHERAL         1
+/** @} */
 
+/**
+ *  \addtogroup sensortag_ctrl SensorTag Control
+ * @{
+ */
+
+/// How often to perform periodic event (in milliseconds)
+#define ST_PERIODIC_EVT_PERIOD               1000 
+
+/// ID of SensorTag device
 #define ST_DEVICE_ID                          0x03
 #define ST_KEY_DATA_ID                        0x00
 
-// Length of board address
+/// Length of board address
 #define B_ADDR_STR_LEN                        15
 
-// Task configuration
+/// Task configuration
 #define ST_TASK_PRIORITY                      1
 
 #ifndef ST_TASK_STACK_SIZE
-// Stack size may be overridden by project settings
+/// Stack size may be overridden by project settings
 #define ST_TASK_STACK_SIZE                    1024
 #endif
 
-// Internal Events for RTOS application
+/// Mask for an RTOS state event
 #define ST_STATE_CHANGE_EVT                   0x0001
+/// Mask for a BLE Characteristic event
 #define ST_CHAR_CHANGE_EVT                    0x0002
+/// Mask for a Periodic event
 #define ST_PERIODIC_EVT                       0x0004
+/// Mask for an OAD write event
 #define SBP_OAD_WRITE_EVT                     0x0008
 
-// Misc.
+/// Misc.
 #define INVALID_CONNHANDLE                    0xFFFF
 #define TEST_INDICATION_BLINKS                5  // Number of blinks
 #define OAD_PACKET_SIZE                       18
 #define KEY_STATE_OFFSET                      13 // Offset in advertising data
-/****************************** END BLE CONFIG FLAGS ********************************/
 
+/****************************** END BLE CONFIG FLAGS ********************************/
 
 /// Maybe change this but it should be universal for all things developed with this code so don't just change for your project
 #define YSU_COMPANY_ID                        0x0FFA
 
+/******************************************************************************/
+/*************************** BEGIN DO NOT EDIT ********************************/
+/******************************************************************************/
 
-/*************************** DO NOT EDIT **************************************/
 /*******************************************************************************
  * TYPEDEFS
  */
 
-// App event passed from profiles.
+/** 
+ * @brief App event passed from profiles.
+ */
 typedef struct
 {
-  uint8_t event;  // Which profile's event
-  uint8_t serviceID; // New status
-  uint8_t paramID;
+  uint8_t event;  /**< The event */
+  uint8_t serviceID; /**< Which service */
+  uint8_t paramID; /**< Which characteristic flag */
 } stEvt_t;
 
+/** @} */
 /*******************************************************************************
  * GLOBAL VARIABLES
  */
-// Profile state and parameters
+
+/**
+ * \addtogroup sensortag_ble SensorTag BLE 
+ * @{
+ */
+/// Profile state and parameters
 gaprole_States_t gapProfileState = GAPROLE_INIT;
 
-// Semaphore globally used to post events to the application thread
+/// Semaphore globally used to post events to the application thread
 ICall_Semaphore sem;
 
-// Entity ID globally used to check for source and/or destination of messages
+/// Entity ID globally used to check for source and/or destination of messages
 ICall_EntityID selfEntityMain;
+/** @} */ 
 
-// Global pin resources
+
+/**
+ *  \addtogroup sensortag_ctrl SensorTag Control
+ * @{
+ */
+/// Global pin resources
 PIN_State pinGpioState;
 PIN_Handle hGpioPin;
 
@@ -148,32 +177,35 @@ PIN_Handle hGpioPin;
  * LOCAL VARIABLES
  */
 
-// Task configuration
+/// Task configuration
 static Task_Struct sensorTagTask;
 static Char sensorTagTaskStack[ST_TASK_STACK_SIZE];
 
-// Entity ID globally used to check for source and/or destination of messages
-
-// Clock instances for internal periodic events.
+/// Clock instances for internal periodic events.
 static Clock_Struct periodicClock;
 
-// Queue object used for app messages
+/// Queue object used for app messages
 static Queue_Struct appMsg;
 static Queue_Handle appMsgQueue;
 
-// events flag for internal application events.
+/// events flag for internal application events.
 static uint16_t events;
-
+/** @} */
 /******************************************************************************/
-/*************************** DO NOT EDIT **************************************/
+/*************************** END DO NOT EDIT **********************************/
+/******************************************************************************/
 
 
 
-/// Uncomment this if you are going to add a selfcheck feature
+// Uncomment this if you are going to add a selfcheck feature
 // self-test result
 //static uint8_t selfTestMap;
 
-// GAP - SCAN RSP data (max size = 31 bytes)
+/**
+ * \addtogroup sensortag_ble SensorTag BLE 
+ * @{
+ */
+/// GAP - SCAN RSP data (max size = 31 bytes)
 static uint8_t scanRspData[] =
 {
   // complete name
@@ -202,8 +234,8 @@ static uint8_t scanRspData[] =
   0       // 0dBm
 };
 
-// GAP - Advertisement data (max size = 31 bytes, though this is
-// best kept short to conserve power while advertising)
+/// GAP - Advertisement data (max size = 31 bytes, though this is
+/// best kept short to conserve power while advertising)
 static uint8_t advertData[] =
 {
   // Flags; this sets the device to use limited discoverable
@@ -237,7 +269,7 @@ static uint8_t advertData[] =
 
 /********************* BEGIN USER CODE 5 ******************/
 ///TODO USER CODE 5: Add your device info. Do not overwrite, add an ifdef for your device
-// Device information parameters
+/// Device information parameters
 #ifdef YSU
 static const uint8_t devInfoModelNumber[] = "YSU SensorTag";
 #elif  defined(CC1350_LAUNCHXL)
@@ -254,9 +286,9 @@ static const uint8_t *devInfoHardwareRev =  devInfoNA;
 
 
 
-// GAP GATT Attributes
+/// GAP GATT Attributes
 static const uint8_t *attDeviceName = devInfoModelNumber;
-
+/** @} */
 
 /*******************************************************************************
  * LOCAL FUNCTIONS
@@ -276,22 +308,43 @@ static void SensorTag_callback(PIN_Handle handle, PIN_Id pinId);
 static void SensorTag_setDeviceInfo(void);
 /***********************************************************************************/
 
-// GAP Role Callbacks
+/**
+ * \addtogroup sensortag_ble SensorTag BLE 
+ * @{
+ */
+/// GAP Role Callbacks
 static gapRolesCBs_t sensorTag_gapRoleCBs =
 {
   SensorTag_stateChangeCB     // Profile State Change Callbacks
 };
 
-// GAP Bond Manager Callbacks
+/// GAP Bond Manager Callbacks
 /// Where you would add security callbacks
 static gapBondCBs_t sensorTag_bondMgrCBs =
 {
   NULL, // Passcode callback (not used by application)
   NULL  // Pairing / Bonding state Callback (not used by application)
 };
+/** @} */
 
+/********************************************************************************/
+/************************** BEGIN CONTROL FUNCTIONS *****************************/
+/*****************************************************************************//**
+ * \addtogroup sensortag_ctrl SensorTag Control
+ *
+ * @brief Functions to control the flow of the software and hardware of the SensorTag
+ * 
+ * @{
+ */
 
-/// Create the main task for the RTOS kernel
+/**
+ * @brief Creates the main task for the YSU SensorTag
+ * 
+ * @param none
+ * @return none
+ * 
+ * This function sets up the SensorTag Task and registers it with the TIRTOS Kernel
+ */
 void SensorTag_createTask(void)
 {
   Task_Params taskParams;
@@ -305,12 +358,23 @@ void SensorTag_createTask(void)
   Task_construct(&sensorTagTask, SensorTag_taskFxn, &taskParams, NULL);
 }
 
-/// Initialize the board and BLE
+/**
+ * @brief Initializes the SensorTag and its BLE configurations.
+ *  
+ * @param none
+ * @return none
+ * 
+ * This function initializes BLE and any board drivers. This includes
+ * registering the entire app with the ICALL dispatcher, creating a message
+ * queue for RTOS messages. It also initializes a clock for periodic events and initializes the 
+ * GAP and GATT. This is where you call any functions that register services.
+ * 
+ */
 static void SensorTag_init(void)
 {
 
   /****************** BEGIN USER CODE 6 *********************/
-  ///TODO USER CODE 6: Initialize any board level drivers needed
+  /// TODO USER CODE 6: Initialize any board level drivers needed
   Board_initI2C();
   /******************* END USER CODE 6 **********************/
 
@@ -418,7 +482,7 @@ static void SensorTag_init(void)
   SensorTag_setDeviceInfo();
 
   /************************ BEGIN USER CODE 7 *******************/
-  ///TODO USER CODE 8: Call the function to set up your Bluetooth service
+  ///TODO USER CODE 7: Call the function to set up your Bluetooth service
   ADXL_init();
   BME_init();
   /************************ END USER CODE 7 *********************/
@@ -432,19 +496,18 @@ static void SensorTag_init(void)
 }
 
 
-/*******************************************************************************
- * @fn      SensorTag_taskFxn
- *
- * @brief   Application task entry point for the SensorTag
- *
- * @param   a0, a1 (not used)
- *
- * @return  none
+/**
+ * @brief   Main application thread
+ * 
+ * This manages the flow of ICALL and RTOS messages. It also manages the periodic clock and can be used to poll sensors that
+ * do not have their own RTOS task
  */
 static void SensorTag_taskFxn(UArg a0, UArg a1)
 {
 
-  /************************** DO NOT EDIT ************************************/
+  /***************************************************************************/
+  /************************** BEGIN DO NOT EDIT ******************************/
+  /***************************************************************************/
 
   // Initialize application
   SensorTag_init();
@@ -504,13 +567,15 @@ static void SensorTag_taskFxn(UArg a0, UArg a1)
         Util_startClock(&periodicClock);
       }
     }
-    /********************* DO NOT EDIT **************************/
+    /***************************************************************************/
+    /**************************** END DO NOT EDIT ******************************/
+    /***************************************************************************/
 
 
 
-    /****************** BEGIN USER CODE 8 *****************/
+    /*************************** BEGIN USER CODE 8 *****************************/
     ///TODO USER CODE 8: If you are not using a task for your sensor, poll it here
-    /******************* END USER CODE 8 ******************/
+    /**************************** END USER CODE 8 ******************************/
 
 
   } // End of Task Loop
@@ -518,37 +583,58 @@ static void SensorTag_taskFxn(UArg a0, UArg a1)
 
 
 
-/*******************************************************************************
- * @fn      SensorTag_setDeviceInfo
+/**
+ * @brief   Handler function for clock time-outs.
  *
- * @brief   Set application specific Device Information
+ * @param   arg - event type
+ *
+ * @return  none
+ */
+static void SensorTag_clockHandler(UArg arg)
+{
+  // Store the event.
+  events |= arg;
+
+  // Wake up the application.
+  Semaphore_post(sem);
+}
+
+
+/**
+ * @brief   Reset all modules, typically when a connection is terminated.
  *
  * @param   none
  *
  * @return  none
  */
-static void SensorTag_setDeviceInfo(void)
+static void SensorTag_resetAllModules(void)
 {
-  DevInfo_SetParameter(DEVINFO_MODEL_NUMBER, sizeof(devInfoModelNumber),
-                       (void*)devInfoModelNumber);
-  DevInfo_SetParameter(DEVINFO_SERIAL_NUMBER, sizeof(devInfoNA),
-                       (void*)devInfoNA);
-  DevInfo_SetParameter(DEVINFO_SOFTWARE_REV, sizeof(devInfoNA),
-                       (void*)devInfoNA);
-  DevInfo_SetParameter(DEVINFO_FIRMWARE_REV, sizeof(devInfoFirmwareRev),
-                       (void*)devInfoFirmwareRev);
-  DevInfo_SetParameter(DEVINFO_HARDWARE_REV, sizeof(devInfoHardwareRev),
-                       (void*)devInfoHardwareRev);
-  DevInfo_SetParameter(DEVINFO_MANUFACTURER_NAME, sizeof(devInfoMfrName),
-                       (void*)devInfoMfrName);
+
+    /// If you are going to implement a reset this is where you would do it
+
+}
+
+/** 
+ * @brief If you are going to add hwi callbacks, do it here
+ * 
+ * @param handle 
+ * @param pinId
+ * 
+ * @return none
+ */
+static void SensorTag_callback(PIN_Handle handle, PIN_Id pinId)
+{
+  switch (pinId)
+  {
+
+  default:
+    /* Do nothing */
+    break;
+  }
 }
 
 
-
-
-/*******************************************************************************
- * @fn      SensorTag_processAppMsg
- *
+/**
  * @brief   Process an incoming callback from a profile.
  *
  * @param   pMsg - message to process
@@ -573,9 +659,48 @@ static void SensorTag_processAppMsg(stEvt_t *pMsg)
   }
 }
 
-/*******************************************************************************
- * @fn      SensorTag_stateChangeCB
+/** @} **************************************************************************/
+/************************* END OF CONTROL FUNCTIONS *****************************/
+/********************************************************************************/
+
+
+/********************************************************************************/
+/************************** BEGIN BLE FUNCTIONS *********************************/
+/*****************************************************************************//**
+ * \addtogroup sensortag_ble SensorTag BLE
+ * @brief Functions that interface with the BLE stack
+ * @{
+ */
+/********************************************************************************/
+
+
+/**
+ * @brief Set application specific Device Information
+ * This sets Model Number, Serial Number, Software Revision, Firmware Revision, Hardware Revision, Manufacturing Name.
+ * These are set at the top of this file. Define guards should be used
+ * 
+ * @param   none
  *
+ * @return  none
+ */
+static void SensorTag_setDeviceInfo(void)
+{
+  DevInfo_SetParameter(DEVINFO_MODEL_NUMBER, sizeof(devInfoModelNumber),
+                       (void*)devInfoModelNumber);
+  DevInfo_SetParameter(DEVINFO_SERIAL_NUMBER, sizeof(devInfoNA),
+                       (void*)devInfoNA);
+  DevInfo_SetParameter(DEVINFO_SOFTWARE_REV, sizeof(devInfoNA),
+                       (void*)devInfoNA);
+  DevInfo_SetParameter(DEVINFO_FIRMWARE_REV, sizeof(devInfoFirmwareRev),
+                       (void*)devInfoFirmwareRev);
+  DevInfo_SetParameter(DEVINFO_HARDWARE_REV, sizeof(devInfoHardwareRev),
+                       (void*)devInfoHardwareRev);
+  DevInfo_SetParameter(DEVINFO_MANUFACTURER_NAME, sizeof(devInfoMfrName),
+                       (void*)devInfoMfrName);
+}
+
+
+/**
  * @brief   Callback from GAP Role indicating a role state change.
  *
  * @param   newState - new state
@@ -589,9 +714,7 @@ static void SensorTag_stateChangeCB(gaprole_States_t newState)
 
 
 
-/*******************************************************************************
- * @fn      SensorTag_processStateChangeEvt
- *
+/**
  * @brief   Process a pending GAP Role state change event.
  *
  * @param   newState - new state
@@ -676,9 +799,9 @@ static void SensorTag_processStateChangeEvt(gaprole_States_t newState)
 #endif // INCLUDE_DISPLAY
 }
 
-/*******************************************************************************
- * @fn      SensorTag_charValueChangeCB
- *
+
+
+/**
  * @brief   Callback from Sensor Profile indicating a characteristic
  *          value change.
  *
@@ -691,9 +814,9 @@ void SensorTag_charValueChangeCB(uint8_t serviceID, uint8_t paramID)
   SensorTag_enqueueMsg(ST_CHAR_CHANGE_EVT, serviceID, paramID);
 }
 
-/*******************************************************************************
- * @fn      SensorTag_processCharValueChangeEvt
- *
+
+
+/**
  * @brief   Process pending Profile characteristic value change
  *          events. The events are generated by the network task (BLE)
  *
@@ -726,9 +849,9 @@ static void SensorTag_processCharValueChangeEvt(uint8_t serviceID,
   }
 }
 
-/*******************************************************************************
- * @fn      SensorTag_processStackMsg
- *
+
+
+/**
  * @brief   Process an incoming stack message.
  *
  * @param   pMsg - message to process
@@ -750,9 +873,9 @@ static void SensorTag_processStackMsg(ICall_Hdr *pMsg)
   }
 }
 
-/*******************************************************************************
- * @fn      SensorTag_processGATTMsg
- *
+
+
+/**
  * @brief   Process GATT messages
  *
  * @return  none
@@ -762,27 +885,9 @@ static void SensorTag_processGATTMsg(gattMsgEvent_t *pMsg)
   GATT_bm_free(&pMsg->msg, pMsg->method);
 }
 
-/*******************************************************************************
- * @fn      SensorTag_clockHandler
- *
- * @brief   Handler function for clock time-outs.
- *
- * @param   arg - event type
- *
- * @return  none
- */
-static void SensorTag_clockHandler(UArg arg)
-{
-  // Store the event.
-  events |= arg;
 
-  // Wake up the application.
-  Semaphore_post(sem);
-}
 
-/*******************************************************************************
- * @fn      SensorTag_enqueueMsg
- *
+/**
  * @brief   Creates a message and puts the message in RTOS queue.
  *
  * @param   event - message event.
@@ -808,38 +913,8 @@ static void SensorTag_enqueueMsg(uint8_t event, uint8_t serviceID, uint8_t param
 }
 
 
-/*********************************************************************
- * @fn      SensorTag_resetAllModules
- *
- * @brief   Reset all modules, typically when a connection is terminated.
- *
- * @param   none
- *
- * @return  none
- */
-static void SensorTag_resetAllModules(void)
-{
 
-    /// If you are going to implement a reset this is where you would do it
-
-}
-
-
-/// If you are going to add hwi callbacks, do it here
-static void SensorTag_callback(PIN_Handle handle, PIN_Id pinId)
-{
-  switch (pinId)
-  {
-
-  default:
-    /* Do nothing */
-    break;
-  }
-}
-
-/*******************************************************************************
- * @fn      SensorTag_updateAdvertisingData
- *
+/**
  * @brief   Update the advertising data with the latest key press status
  *
  * @return  none
@@ -850,6 +925,16 @@ void SensorTag_updateAdvertisingData(uint8_t keyStatus)
   advertData[KEY_STATE_OFFSET] = keyStatus;
   GAPRole_SetParameter(GAPROLE_ADVERT_DATA, sizeof(advertData), advertData);
 }
+
+/** @} **************************************************************************/
+/************************* END OF BLE FUNCTIONS *********************************/
+/********************************************************************************/
+
+
+
+
+
+/// @}
 
 /*******************************************************************************
 *******************************************************************************/

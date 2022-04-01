@@ -1,8 +1,7 @@
-/*
+/**
  *  @file: ysu_sensortag.h
  *
  *  @brief: This is where you will add a service ID for your new sensor and where the main task has its function definitions.
- *
  *
  *  Created on: Feb 11, 2022
  *      Author: rjyar
@@ -18,6 +17,11 @@ extern "C"
 {
 #endif
 
+/** 
+ * \addtogroup sensortag YSU SensorTag 
+ * @{
+ */
+
 /*********************************************************************
  * INCLUDES
  */
@@ -31,15 +35,28 @@ extern "C"
 /*********************************************************************
  * CONSTANTS
  */
-
+/**
+ * \addtogroup sensortag_ctrl SensorTag Control
+ * @{
+ */
 /************************* BEGIN USER CODE 3 ************************/
-///TODO: USER CODE 3: Add your service ID here for the BLE stack to route to the right service
-// Service ID's for internal application use
-#define SERVICE_ID_ADXL       0x01
-#define SERVICE_ID_BME        0x02
-#define SERVICE_ID_CC         0x09
-/************************** END USER CODE 3 *************************/
+/**
+ *  \addtogroup service_ids Service IDs
+ *  @brief Service ID's for internal application use
+ * 
+ *  When adding a service, you should create a define here so that we can direct mesages to the correct place
+ *  Number does not matter but for simplicity just go in order. CC is to help maintain a steady connection, do not remove
+ * @{
+ */
+//TODO: USER CODE 3: Add your service ID here for the BLE stack to route to the right service
+#define SERVICE_ID_ADXL       0x01 /**< Flag to identify ADXL BLE service */
+#define SERVICE_ID_BME        0x02 /**< Flag to identify BME BLE service  */
 
+#define SERVICE_ID_CC         0x09 /**< Flag to identify Connection Control BLE service  */
+/** @} */
+/** @} */
+/************************** END USER CODE 3 *************************/
+/** @} */
 
 
 /*********************************************************************
@@ -48,9 +65,12 @@ extern "C"
 /*********************************************************************
  * VARIABLES
  */
-extern ICall_Semaphore sem;
-extern gaprole_States_t gapProfileState;
-extern ICall_EntityID selfEntityMain;
+
+extern ICall_Semaphore sem;                 /**< Semaphore used for the main thread */
+extern gaprole_States_t gapProfileState;    /**< State of the GAP Profile */
+extern ICall_EntityID selfEntityMain;       /**< ID to help route notifications to the correct task */
+
+
 extern PIN_State pinGpioState;
 extern PIN_Handle hGpioPin;
 
@@ -59,30 +79,18 @@ extern PIN_Handle hGpioPin;
  * FUNCTIONS
  */
 
-/*
- * Task creation function for SensorTag
- */
 extern void SensorTag_createTask(void);
 
-/*
- * Function to call when a characteristic value has changed
- */
 extern void SensorTag_charValueChangeCB(uint8_t sensorID, uint8_t paramID);
 
-/*
- * Function to load the factory image and reboot it
- */
 extern void SensorTag_applyFactoryImage(void);
 
-/*
- * Update the advertising data with the latest key press status
- */
 extern void SensorTag_updateAdvertisingData(uint8_t keyStatus);
 
-/*
- * Return the self-test result
- */
 extern uint8_t SensorTag_testResult(void);
+
+
+
 
 /*********************************************************************
 *********************************************************************/

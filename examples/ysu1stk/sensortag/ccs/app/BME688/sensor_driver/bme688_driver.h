@@ -94,7 +94,8 @@ uint8_t config_heatr(struct bme *bme);
  */
 uint8_t get_data(struct bme *bme);
 
-/* \ingroup BME_Configuration
+/** \ingroup BME_Configuration
+ * @{
  * @brief API functions from BOSCH to override
 */
 int8_t bme68x_interface_init(struct bme68x_dev *bme, uint8_t intf);
@@ -104,6 +105,7 @@ BME68X_INTF_RET_TYPE bme68x_spi_read(uint8_t reg_addr, uint8_t *reg_data, uint32
 BME68X_INTF_RET_TYPE bme68x_spi_write(uint8_t reg_addr, const uint8_t *reg_data, uint32_t len, void *intf_ptr);
 void bme68x_delay_us(uint32_t period, void *intf_ptr);
 void _check_rslt(const char api_name[], int8_t rslt);
+/** @} */
 
 /** \ingroup BME_Configuration
  * @brief Points the global BME device to null

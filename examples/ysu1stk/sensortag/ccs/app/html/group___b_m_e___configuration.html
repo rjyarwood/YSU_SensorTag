@@ -102,6 +102,28 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>deinit_bme</b> ()</td
 Variables</h2></td></tr>
 <tr class="memitem:ga77fd457ce7920383f3f7f4158a490a00"><td class="memItemLeft" align="right" valign="top">struct <a class="el" href="structbme.html">bme</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___b_m_e___configuration.html#ga77fd457ce7920383f3f7f4158a490a00">gBME</a></td></tr>
 <tr class="separator:ga77fd457ce7920383f3f7f4158a490a00"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga277f3406ea8ecaf8bd58c51950c84c3a"><td class="memItemLeft" align="right" valign="top"><a id="ga277f3406ea8ecaf8bd58c51950c84c3a" name="ga277f3406ea8ecaf8bd58c51950c84c3a"></a>
+int8_t&#160;</td><td class="memItemRight" valign="bottom"><b>bme68x_interface_init</b> (struct bme68x_dev *<a class="el" href="structbme.html">bme</a>, uint8_t intf)</td></tr>
+<tr class="memdesc:ga277f3406ea8ecaf8bd58c51950c84c3a"><td class="mdescLeft">&#160;</td><td class="mdescRight">API functions from BOSCH to override. <br /></td></tr>
+<tr class="separator:ga277f3406ea8ecaf8bd58c51950c84c3a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaff39d4447b878646149f0b7689858872"><td class="memItemLeft" align="right" valign="top"><a id="gaff39d4447b878646149f0b7689858872" name="gaff39d4447b878646149f0b7689858872"></a>
+BME68X_INTF_RET_TYPE&#160;</td><td class="memItemRight" valign="bottom"><b>bme68x_i2c_read</b> (uint8_t reg_addr, uint8_t *reg_data, uint32_t len, void *intf_ptr)</td></tr>
+<tr class="separator:gaff39d4447b878646149f0b7689858872"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga44539482ff6680abf4a3643a1a5625a8"><td class="memItemLeft" align="right" valign="top"><a id="ga44539482ff6680abf4a3643a1a5625a8" name="ga44539482ff6680abf4a3643a1a5625a8"></a>
+BME68X_INTF_RET_TYPE&#160;</td><td class="memItemRight" valign="bottom"><b>bme68x_i2c_write</b> (uint8_t reg_addr, const uint8_t *reg_data, uint32_t len, void *intf_ptr)</td></tr>
+<tr class="separator:ga44539482ff6680abf4a3643a1a5625a8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaaed1f73d14f65dbff94d1be0001088d9"><td class="memItemLeft" align="right" valign="top"><a id="gaaed1f73d14f65dbff94d1be0001088d9" name="gaaed1f73d14f65dbff94d1be0001088d9"></a>
+BME68X_INTF_RET_TYPE&#160;</td><td class="memItemRight" valign="bottom"><b>bme68x_spi_read</b> (uint8_t reg_addr, uint8_t *reg_data, uint32_t len, void *intf_ptr)</td></tr>
+<tr class="separator:gaaed1f73d14f65dbff94d1be0001088d9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gafb1ccbf06ecb66035b0dd76765696990"><td class="memItemLeft" align="right" valign="top"><a id="gafb1ccbf06ecb66035b0dd76765696990" name="gafb1ccbf06ecb66035b0dd76765696990"></a>
+BME68X_INTF_RET_TYPE&#160;</td><td class="memItemRight" valign="bottom"><b>bme68x_spi_write</b> (uint8_t reg_addr, const uint8_t *reg_data, uint32_t len, void *intf_ptr)</td></tr>
+<tr class="separator:gafb1ccbf06ecb66035b0dd76765696990"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaf9798445cafbcbe91dcfb7f196dec4b4"><td class="memItemLeft" align="right" valign="top"><a id="gaf9798445cafbcbe91dcfb7f196dec4b4" name="gaf9798445cafbcbe91dcfb7f196dec4b4"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>bme68x_delay_us</b> (uint32_t period, void *intf_ptr)</td></tr>
+<tr class="separator:gaf9798445cafbcbe91dcfb7f196dec4b4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga0b8ef4ab1cc7f8d6fa626bb9d4b238df"><td class="memItemLeft" align="right" valign="top"><a id="ga0b8ef4ab1cc7f8d6fa626bb9d4b238df" name="ga0b8ef4ab1cc7f8d6fa626bb9d4b238df"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>_check_rslt</b> (const char api_name[], int8_t rslt)</td></tr>
+<tr class="separator:ga0b8ef4ab1cc7f8d6fa626bb9d4b238df"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <p >Group of functions and data-types called by the user to interact with BME688 device. </p>

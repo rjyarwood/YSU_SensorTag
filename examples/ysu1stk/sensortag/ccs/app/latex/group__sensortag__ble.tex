@@ -1,0 +1,408 @@
+\hypertarget{group__sensortag__ble}{}\doxysection{Sensor\+Tag BLE}
+\label{group__sensortag__ble}\index{SensorTag BLE@{SensorTag BLE}}
+
+
+Functions that interface with the BLE stack.  
+
+
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{group__sensortag__ble_gacf5f6bcd3fcaeb6148476be7ea0efa67}\label{group__sensortag__ble_gacf5f6bcd3fcaeb6148476be7ea0efa67}} 
+\#define {\bfseries DEFAULT\+\_\+\+ADVERTISING\+\_\+\+INTERVAL}~160
+\begin{DoxyCompactList}\small\item\em What is the advertising interval when device is discoverable (units of 625us, 160=100ms) \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__sensortag__ble_ga38be789c3aaf3b34fc6a5a0a9b2f96a0}\label{group__sensortag__ble_ga38be789c3aaf3b34fc6a5a0a9b2f96a0}} 
+\#define {\bfseries DEFAULT\+\_\+\+DISCOVERABLE\+\_\+\+MODE}~GAP\+\_\+\+ADTYPE\+\_\+\+FLAGS\+\_\+\+LIMITED
+\begin{DoxyCompactList}\small\item\em General discoverable mode advertises indefinitely. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__sensortag__ble_ga0ac97c4fab20172aa100def2d9dfc60c}\label{group__sensortag__ble_ga0ac97c4fab20172aa100def2d9dfc60c}} 
+\#define {\bfseries DEFAULT\+\_\+\+DESIRED\+\_\+\+MIN\+\_\+\+CONN\+\_\+\+INTERVAL}~8
+\begin{DoxyCompactList}\small\item\em Minimum connection interval (units of 1.\+25ms, 80=100ms) if automatic parameter update request is enabled. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__sensortag__ble_ga7a0eb10434e8efae41961611a5ffaafc}\label{group__sensortag__ble_ga7a0eb10434e8efae41961611a5ffaafc}} 
+\#define {\bfseries DEFAULT\+\_\+\+DESIRED\+\_\+\+MAX\+\_\+\+CONN\+\_\+\+INTERVAL}~800
+\begin{DoxyCompactList}\small\item\em Maximum connection interval (units of 1.\+25ms, 800=1000ms) if automatic parameter update request is enabled. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__sensortag__ble_ga5f856b86f2244ad972b775a7fefddcb7}\label{group__sensortag__ble_ga5f856b86f2244ad972b775a7fefddcb7}} 
+\#define {\bfseries DEFAULT\+\_\+\+DESIRED\+\_\+\+SLAVE\+\_\+\+LATENCY}~0
+\begin{DoxyCompactList}\small\item\em Slave latency to use if automatic parameter update request is enabled. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__sensortag__ble_ga3f9af1186ac2bef83384b81fb29cda68}\label{group__sensortag__ble_ga3f9af1186ac2bef83384b81fb29cda68}} 
+\#define {\bfseries DEFAULT\+\_\+\+DESIRED\+\_\+\+CONN\+\_\+\+TIMEOUT}~100
+\begin{DoxyCompactList}\small\item\em Supervision timeout value (units of 10ms, 1000=10s) if automatic parameter update request is enabled. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__sensortag__ble_ga5bfdd82c09afe61bba762a24aa7e834b}\label{group__sensortag__ble_ga5bfdd82c09afe61bba762a24aa7e834b}} 
+\#define {\bfseries DEFAULT\+\_\+\+ENABLE\+\_\+\+UPDATE\+\_\+\+REQUEST}~GAPROLE\+\_\+\+LINK\+\_\+\+PARAM\+\_\+\+UPDATE\+\_\+\+WAIT\+\_\+\+BOTH\+\_\+\+PARAMS
+\begin{DoxyCompactList}\small\item\em Whether to enable automatic parameter update request when a connection is formed. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__sensortag__ble_ga2315bf74792db9d471649b43f8485f7a}\label{group__sensortag__ble_ga2315bf74792db9d471649b43f8485f7a}} 
+\#define {\bfseries DEFAULT\+\_\+\+CONN\+\_\+\+PAUSE\+\_\+\+PERIPHERAL}~1
+\begin{DoxyCompactList}\small\item\em Connection Pause Peripheral time value (in seconds) \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{group__sensortag__ble_ga57a95a6c46f8af406146e0446216eddd}{Sensor\+Tag\+\_\+char\+Value\+Change\+CB}} (uint8\+\_\+t service\+ID, uint8\+\_\+t param\+ID)
+\begin{DoxyCompactList}\small\item\em Callback from Sensor Profile indicating a characteristic value change. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__sensortag__ble_gac296051ec017eca4a26980a6d474505f}{Sensor\+Tag\+\_\+update\+Advertising\+Data}} (uint8\+\_\+t key\+Status)
+\begin{DoxyCompactList}\small\item\em Update the advertising data with the latest key press status. \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{group__sensortag__ble_ga97d4a4e17a6a8b8bdcef180037aa3636}{Sensor\+Tag\+\_\+set\+Device\+Info}} (void)
+\begin{DoxyCompactList}\small\item\em Set application specific Device Information This sets Model Number, Serial Number, Software Revision, Firmware Revision, Hardware Revision, Manufacturing Name. These are set at the top of this file. Define guards should be used. \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{group__sensortag__ble_ga8188568086d8246b45cab873b298c3d2}{Sensor\+Tag\+\_\+state\+Change\+CB}} (gaprole\+\_\+\+States\+\_\+t new\+State)
+\begin{DoxyCompactList}\small\item\em Callback from GAP Role indicating a role state change. \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{group__sensortag__ble_ga4031ce0db245ffb2a434f8f414480bdb}{Sensor\+Tag\+\_\+process\+State\+Change\+Evt}} (gaprole\+\_\+\+States\+\_\+t new\+State)
+\begin{DoxyCompactList}\small\item\em Process a pending GAP Role state change event. \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{group__sensortag__ble_gae0086a6a3fefd54f7125c95deb4c4e5c}{Sensor\+Tag\+\_\+process\+Char\+Value\+Change\+Evt}} (uint8\+\_\+t service\+ID, uint8\+\_\+t param\+ID)
+\begin{DoxyCompactList}\small\item\em Process pending Profile characteristic value change events. The events are generated by the network task (BLE) \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{group__sensortag__ble_ga930581933870058583178c2c7b5baa37}{Sensor\+Tag\+\_\+process\+Stack\+Msg}} (ICall\+\_\+\+Hdr $\ast$p\+Msg)
+\begin{DoxyCompactList}\small\item\em Process an incoming stack message. \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{group__sensortag__ble_gafc403c06b1679c7e381b2f3a97caade5}{Sensor\+Tag\+\_\+process\+GATTMsg}} (gatt\+Msg\+Event\+\_\+t $\ast$p\+Msg)
+\begin{DoxyCompactList}\small\item\em Process GATT messages. \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{group__sensortag__ble_gae202020560509be55e3309f0928c76fb}{Sensor\+Tag\+\_\+enqueue\+Msg}} (uint8\+\_\+t event, uint8\+\_\+t service\+ID, uint8\+\_\+t param\+ID)
+\begin{DoxyCompactList}\small\item\em Creates a message and puts the message in RTOS queue. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+gaprole\+\_\+\+States\+\_\+t \mbox{\hyperlink{group__sensortag__ble_gad39eed4bad4a078b5b6065c5653d6024}{gap\+Profile\+State}} = GAPROLE\+\_\+\+INIT
+\begin{DoxyCompactList}\small\item\em Profile state and parameters. \end{DoxyCompactList}\item 
+ICall\+\_\+\+Semaphore \mbox{\hyperlink{group__sensortag__ble_ga0f1fcb7fd8baa157de3f2837d1abc5f4}{sem}}
+\begin{DoxyCompactList}\small\item\em Semaphore globally used to post events to the application thread. \end{DoxyCompactList}\item 
+ICall\+\_\+\+Entity\+ID \mbox{\hyperlink{group__sensortag__ble_ga29c4a3d4e25f051c7e9839af8720004b}{self\+Entity\+Main}}
+\begin{DoxyCompactList}\small\item\em Entity ID globally used to check for source and/or destination of messages. \end{DoxyCompactList}\item 
+static uint8\+\_\+t \mbox{\hyperlink{group__sensortag__ble_ga4eae1ac2eef6e4e710ef40a30c2efd6f}{scan\+Rsp\+Data}} \mbox{[}$\,$\mbox{]}
+\begin{DoxyCompactList}\small\item\em GAP -\/ SCAN RSP data (max size = 31 bytes) \end{DoxyCompactList}\item 
+static uint8\+\_\+t \mbox{\hyperlink{group__sensortag__ble_ga3e4f7047184923d23e0b6fb58ac98c20}{advert\+Data}} \mbox{[}$\,$\mbox{]}
+\item 
+static const uint8\+\_\+t \mbox{\hyperlink{group__sensortag__ble_ga89eb91b070c19a65c672c2b788a16251}{dev\+Info\+Model\+Number}} \mbox{[}$\,$\mbox{]} = \char`\"{}CC2650 Launch\+Pad\char`\"{}
+\item 
+\mbox{\Hypertarget{group__sensortag__ble_gafd7e9e561879fe6fcd75cb88187858f6}\label{group__sensortag__ble_gafd7e9e561879fe6fcd75cb88187858f6}} 
+static const uint8\+\_\+t {\bfseries dev\+Info\+NA} \mbox{[}$\,$\mbox{]} = \char`\"{}N.\+A.\char`\"{}
+\item 
+\mbox{\Hypertarget{group__sensortag__ble_ga6b35d3dfc854320391986bef8d178800}\label{group__sensortag__ble_ga6b35d3dfc854320391986bef8d178800}} 
+static const uint8\+\_\+t {\bfseries dev\+Info\+Firmware\+Rev} \mbox{[}$\,$\mbox{]} = \char`\"{}1.\+0\char`\"{}
+\item 
+\mbox{\Hypertarget{group__sensortag__ble_gae7d10525caae105daad120ec33902c7e}\label{group__sensortag__ble_gae7d10525caae105daad120ec33902c7e}} 
+static const uint8\+\_\+t {\bfseries dev\+Info\+Mfr\+Name} \mbox{[}$\,$\mbox{]} = \char`\"{}Youngstown State University\char`\"{}
+\item 
+\mbox{\Hypertarget{group__sensortag__ble_ga75f2ae826a1e2653cc8fe3a555debc59}\label{group__sensortag__ble_ga75f2ae826a1e2653cc8fe3a555debc59}} 
+static const uint8\+\_\+t $\ast$ {\bfseries dev\+Info\+Hardware\+Rev} = dev\+Info\+NA
+\item 
+\mbox{\Hypertarget{group__sensortag__ble_ga7555319ffaf2429ec3721fc64c87c237}\label{group__sensortag__ble_ga7555319ffaf2429ec3721fc64c87c237}} 
+static const uint8\+\_\+t $\ast$ {\bfseries att\+Device\+Name} = \mbox{\hyperlink{group__sensortag__ble_ga89eb91b070c19a65c672c2b788a16251}{dev\+Info\+Model\+Number}}
+\begin{DoxyCompactList}\small\item\em GAP GATT Attributes. \end{DoxyCompactList}\item 
+static gap\+Roles\+CBs\+\_\+t \mbox{\hyperlink{group__sensortag__ble_ga873936e93f1100e1a6e1b00e2aab1181}{sensor\+Tag\+\_\+gap\+Role\+CBs}}
+\begin{DoxyCompactList}\small\item\em GAP Role Callbacks. \end{DoxyCompactList}\item 
+static gap\+Bond\+CBs\+\_\+t \mbox{\hyperlink{group__sensortag__ble_ga08b624e5e398b1070073afcde867b9a6}{sensor\+Tag\+\_\+bond\+Mgr\+CBs}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Functions that interface with the BLE stack. 
+
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{group__sensortag__ble_ga57a95a6c46f8af406146e0446216eddd}\label{group__sensortag__ble_ga57a95a6c46f8af406146e0446216eddd}} 
+\index{SensorTag BLE@{SensorTag BLE}!SensorTag\_charValueChangeCB@{SensorTag\_charValueChangeCB}}
+\index{SensorTag\_charValueChangeCB@{SensorTag\_charValueChangeCB}!SensorTag BLE@{SensorTag BLE}}
+\doxysubsubsection{\texorpdfstring{SensorTag\_charValueChangeCB()}{SensorTag\_charValueChangeCB()}}
+{\footnotesize\ttfamily void Sensor\+Tag\+\_\+char\+Value\+Change\+CB (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{service\+ID,  }\item[{uint8\+\_\+t}]{param\+ID }\end{DoxyParamCaption})}
+
+
+
+Callback from Sensor Profile indicating a characteristic value change. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em param\+ID} & -\/ parameter ID of the value that was changed.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+none 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__sensortag__ble_gae202020560509be55e3309f0928c76fb}\label{group__sensortag__ble_gae202020560509be55e3309f0928c76fb}} 
+\index{SensorTag BLE@{SensorTag BLE}!SensorTag\_enqueueMsg@{SensorTag\_enqueueMsg}}
+\index{SensorTag\_enqueueMsg@{SensorTag\_enqueueMsg}!SensorTag BLE@{SensorTag BLE}}
+\doxysubsubsection{\texorpdfstring{SensorTag\_enqueueMsg()}{SensorTag\_enqueueMsg()}}
+{\footnotesize\ttfamily static void Sensor\+Tag\+\_\+enqueue\+Msg (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{event,  }\item[{uint8\+\_\+t}]{service\+ID,  }\item[{uint8\+\_\+t}]{param\+ID }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Creates a message and puts the message in RTOS queue. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em event} & -\/ message event. \\
+\hline
+{\em service\+ID} & -\/ service identifier \\
+\hline
+{\em param\+ID} & -\/ parameter identifier\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+none 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__sensortag__ble_gae0086a6a3fefd54f7125c95deb4c4e5c}\label{group__sensortag__ble_gae0086a6a3fefd54f7125c95deb4c4e5c}} 
+\index{SensorTag BLE@{SensorTag BLE}!SensorTag\_processCharValueChangeEvt@{SensorTag\_processCharValueChangeEvt}}
+\index{SensorTag\_processCharValueChangeEvt@{SensorTag\_processCharValueChangeEvt}!SensorTag BLE@{SensorTag BLE}}
+\doxysubsubsection{\texorpdfstring{SensorTag\_processCharValueChangeEvt()}{SensorTag\_processCharValueChangeEvt()}}
+{\footnotesize\ttfamily static void Sensor\+Tag\+\_\+process\+Char\+Value\+Change\+Evt (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{service\+ID,  }\item[{uint8\+\_\+t}]{param\+ID }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Process pending Profile characteristic value change events. The events are generated by the network task (BLE) 
+
+
+\begin{DoxyParams}{Parameters}
+{\em service\+ID} & -\/ ID of the affected service \\
+\hline
+{\em param\+ID} & -\/ ID of the affected parameter\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+none 
+\end{DoxyReturn}
+TODO USER CODE 9\+: This is where you add a case statement for that ID you defined earlier. This ensures all BLE messages get where they need to go\mbox{\Hypertarget{group__sensortag__ble_gafc403c06b1679c7e381b2f3a97caade5}\label{group__sensortag__ble_gafc403c06b1679c7e381b2f3a97caade5}} 
+\index{SensorTag BLE@{SensorTag BLE}!SensorTag\_processGATTMsg@{SensorTag\_processGATTMsg}}
+\index{SensorTag\_processGATTMsg@{SensorTag\_processGATTMsg}!SensorTag BLE@{SensorTag BLE}}
+\doxysubsubsection{\texorpdfstring{SensorTag\_processGATTMsg()}{SensorTag\_processGATTMsg()}}
+{\footnotesize\ttfamily static void Sensor\+Tag\+\_\+process\+GATTMsg (\begin{DoxyParamCaption}\item[{gatt\+Msg\+Event\+\_\+t $\ast$}]{p\+Msg }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Process GATT messages. 
+
+\begin{DoxyReturn}{Returns}
+none 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__sensortag__ble_ga930581933870058583178c2c7b5baa37}\label{group__sensortag__ble_ga930581933870058583178c2c7b5baa37}} 
+\index{SensorTag BLE@{SensorTag BLE}!SensorTag\_processStackMsg@{SensorTag\_processStackMsg}}
+\index{SensorTag\_processStackMsg@{SensorTag\_processStackMsg}!SensorTag BLE@{SensorTag BLE}}
+\doxysubsubsection{\texorpdfstring{SensorTag\_processStackMsg()}{SensorTag\_processStackMsg()}}
+{\footnotesize\ttfamily static void Sensor\+Tag\+\_\+process\+Stack\+Msg (\begin{DoxyParamCaption}\item[{ICall\+\_\+\+Hdr $\ast$}]{p\+Msg }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Process an incoming stack message. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+Msg} & -\/ message to process\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+none 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__sensortag__ble_ga4031ce0db245ffb2a434f8f414480bdb}\label{group__sensortag__ble_ga4031ce0db245ffb2a434f8f414480bdb}} 
+\index{SensorTag BLE@{SensorTag BLE}!SensorTag\_processStateChangeEvt@{SensorTag\_processStateChangeEvt}}
+\index{SensorTag\_processStateChangeEvt@{SensorTag\_processStateChangeEvt}!SensorTag BLE@{SensorTag BLE}}
+\doxysubsubsection{\texorpdfstring{SensorTag\_processStateChangeEvt()}{SensorTag\_processStateChangeEvt()}}
+{\footnotesize\ttfamily static void Sensor\+Tag\+\_\+process\+State\+Change\+Evt (\begin{DoxyParamCaption}\item[{gaprole\+\_\+\+States\+\_\+t}]{new\+State }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Process a pending GAP Role state change event. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em new\+State} & -\/ new state\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+none 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__sensortag__ble_ga97d4a4e17a6a8b8bdcef180037aa3636}\label{group__sensortag__ble_ga97d4a4e17a6a8b8bdcef180037aa3636}} 
+\index{SensorTag BLE@{SensorTag BLE}!SensorTag\_setDeviceInfo@{SensorTag\_setDeviceInfo}}
+\index{SensorTag\_setDeviceInfo@{SensorTag\_setDeviceInfo}!SensorTag BLE@{SensorTag BLE}}
+\doxysubsubsection{\texorpdfstring{SensorTag\_setDeviceInfo()}{SensorTag\_setDeviceInfo()}}
+{\footnotesize\ttfamily static void Sensor\+Tag\+\_\+set\+Device\+Info (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Set application specific Device Information This sets Model Number, Serial Number, Software Revision, Firmware Revision, Hardware Revision, Manufacturing Name. These are set at the top of this file. Define guards should be used. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em none} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+none 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__sensortag__ble_ga8188568086d8246b45cab873b298c3d2}\label{group__sensortag__ble_ga8188568086d8246b45cab873b298c3d2}} 
+\index{SensorTag BLE@{SensorTag BLE}!SensorTag\_stateChangeCB@{SensorTag\_stateChangeCB}}
+\index{SensorTag\_stateChangeCB@{SensorTag\_stateChangeCB}!SensorTag BLE@{SensorTag BLE}}
+\doxysubsubsection{\texorpdfstring{SensorTag\_stateChangeCB()}{SensorTag\_stateChangeCB()}}
+{\footnotesize\ttfamily static void Sensor\+Tag\+\_\+state\+Change\+CB (\begin{DoxyParamCaption}\item[{gaprole\+\_\+\+States\+\_\+t}]{new\+State }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Callback from GAP Role indicating a role state change. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em new\+State} & -\/ new state\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+none 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__sensortag__ble_gac296051ec017eca4a26980a6d474505f}\label{group__sensortag__ble_gac296051ec017eca4a26980a6d474505f}} 
+\index{SensorTag BLE@{SensorTag BLE}!SensorTag\_updateAdvertisingData@{SensorTag\_updateAdvertisingData}}
+\index{SensorTag\_updateAdvertisingData@{SensorTag\_updateAdvertisingData}!SensorTag BLE@{SensorTag BLE}}
+\doxysubsubsection{\texorpdfstring{SensorTag\_updateAdvertisingData()}{SensorTag\_updateAdvertisingData()}}
+{\footnotesize\ttfamily void Sensor\+Tag\+\_\+update\+Advertising\+Data (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{key\+Status }\end{DoxyParamCaption})}
+
+
+
+Update the advertising data with the latest key press status. 
+
+\begin{DoxyReturn}{Returns}
+none 
+\end{DoxyReturn}
+
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{group__sensortag__ble_ga3e4f7047184923d23e0b6fb58ac98c20}\label{group__sensortag__ble_ga3e4f7047184923d23e0b6fb58ac98c20}} 
+\index{SensorTag BLE@{SensorTag BLE}!advertData@{advertData}}
+\index{advertData@{advertData}!SensorTag BLE@{SensorTag BLE}}
+\doxysubsubsection{\texorpdfstring{advertData}{advertData}}
+{\footnotesize\ttfamily uint8\+\_\+t advert\+Data\mbox{[}$\,$\mbox{]}\hspace{0.3cm}{\ttfamily [static]}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{=}
+\DoxyCodeLine{\{}
+\DoxyCodeLine{  }
+\DoxyCodeLine{  }
+\DoxyCodeLine{  }
+\DoxyCodeLine{  0x02,   }
+\DoxyCodeLine{  GAP\_ADTYPE\_FLAGS,}
+\DoxyCodeLine{  \mbox{\hyperlink{group__sensortag__ble_ga38be789c3aaf3b34fc6a5a0a9b2f96a0}{DEFAULT\_DISCOVERABLE\_MODE}} | GAP\_ADTYPE\_FLAGS\_BREDR\_NOT\_SUPPORTED,}
+\DoxyCodeLine{}
+\DoxyCodeLine{  }
+\DoxyCodeLine{  }
+\DoxyCodeLine{  0x03,   }
+\DoxyCodeLine{  GAP\_ADTYPE\_16BIT\_MORE, }
+\DoxyCodeLine{}
+\DoxyCodeLine{}
+\DoxyCodeLine{}
+\DoxyCodeLine{}
+\DoxyCodeLine{  LO\_UINT16(0xFF),}
+\DoxyCodeLine{  HI\_UINT16(0xFF),}
+\DoxyCodeLine{}
+\DoxyCodeLine{}
+\DoxyCodeLine{  }
+\DoxyCodeLine{  0x06,}
+\DoxyCodeLine{  GAP\_ADTYPE\_MANUFACTURER\_SPECIFIC,}
+\DoxyCodeLine{  LO\_UINT16(\mbox{\hyperlink{group__sensortag__ctrl_gab9f15748d05c7c76b040b4845d29c517}{YSU\_COMPANY\_ID}}),}
+\DoxyCodeLine{  HI\_UINT16(\mbox{\hyperlink{group__sensortag__ctrl_gab9f15748d05c7c76b040b4845d29c517}{YSU\_COMPANY\_ID}}),}
+\DoxyCodeLine{  \mbox{\hyperlink{group__sensortag__ctrl_ga20f40bdf82cc42c714b937b1e739390f}{ST\_DEVICE\_ID}},}
+\DoxyCodeLine{  ST\_KEY\_DATA\_ID,}
+\DoxyCodeLine{  0x00                                    }
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+GAP -\/ Advertisement data (max size = 31 bytes, though this is best kept short to conserve power while advertising) \mbox{\Hypertarget{group__sensortag__ble_ga89eb91b070c19a65c672c2b788a16251}\label{group__sensortag__ble_ga89eb91b070c19a65c672c2b788a16251}} 
+\index{SensorTag BLE@{SensorTag BLE}!devInfoModelNumber@{devInfoModelNumber}}
+\index{devInfoModelNumber@{devInfoModelNumber}!SensorTag BLE@{SensorTag BLE}}
+\doxysubsubsection{\texorpdfstring{devInfoModelNumber}{devInfoModelNumber}}
+{\footnotesize\ttfamily const uint8\+\_\+t dev\+Info\+Model\+Number\mbox{[}$\,$\mbox{]} = \char`\"{}CC2650 Launch\+Pad\char`\"{}\hspace{0.3cm}{\ttfamily [static]}}
+
+TODO USER CODE 5\+: Add your device info. Do not overwrite, add an ifdef for your device Device information parameters \mbox{\Hypertarget{group__sensortag__ble_gad39eed4bad4a078b5b6065c5653d6024}\label{group__sensortag__ble_gad39eed4bad4a078b5b6065c5653d6024}} 
+\index{SensorTag BLE@{SensorTag BLE}!gapProfileState@{gapProfileState}}
+\index{gapProfileState@{gapProfileState}!SensorTag BLE@{SensorTag BLE}}
+\doxysubsubsection{\texorpdfstring{gapProfileState}{gapProfileState}}
+{\footnotesize\ttfamily gaprole\+\_\+\+States\+\_\+t gap\+Profile\+State = GAPROLE\+\_\+\+INIT}
+
+
+
+Profile state and parameters. 
+
+State of the GAP Profile \mbox{\Hypertarget{group__sensortag__ble_ga4eae1ac2eef6e4e710ef40a30c2efd6f}\label{group__sensortag__ble_ga4eae1ac2eef6e4e710ef40a30c2efd6f}} 
+\index{SensorTag BLE@{SensorTag BLE}!scanRspData@{scanRspData}}
+\index{scanRspData@{scanRspData}!SensorTag BLE@{SensorTag BLE}}
+\doxysubsubsection{\texorpdfstring{scanRspData}{scanRspData}}
+{\footnotesize\ttfamily uint8\+\_\+t scan\+Rsp\+Data\mbox{[}$\,$\mbox{]}\hspace{0.3cm}{\ttfamily [static]}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{=}
+\DoxyCodeLine{\{}
+\DoxyCodeLine{  }
+\DoxyCodeLine{  0x16,                             }
+\DoxyCodeLine{  GAP\_ADTYPE\_LOCAL\_NAME\_COMPLETE,}
+\DoxyCodeLine{}
+\DoxyCodeLine{}
+\DoxyCodeLine{}
+\DoxyCodeLine{}
+\DoxyCodeLine{}
+\DoxyCodeLine{  \textcolor{charliteral}{'C'}, \textcolor{charliteral}{'C'}, \textcolor{charliteral}{'2'}, \textcolor{charliteral}{'6'}, \textcolor{charliteral}{'5'}, \textcolor{charliteral}{'0'}, \textcolor{charliteral}{' '},}
+\DoxyCodeLine{}
+\DoxyCodeLine{  \textcolor{charliteral}{'S'}, \textcolor{charliteral}{'e'}, \textcolor{charliteral}{'n'},  \textcolor{charliteral}{'s'},  \textcolor{charliteral}{'o'},  \textcolor{charliteral}{'r'},  \textcolor{charliteral}{'T'},  \textcolor{charliteral}{'a'},  \textcolor{charliteral}{'g'},}
+\DoxyCodeLine{}
+\DoxyCodeLine{  }
+\DoxyCodeLine{  0x05,   }
+\DoxyCodeLine{  GAP\_ADTYPE\_SLAVE\_CONN\_INTERVAL\_RANGE,}
+\DoxyCodeLine{  LO\_UINT16(\mbox{\hyperlink{group__sensortag__ble_ga0ac97c4fab20172aa100def2d9dfc60c}{DEFAULT\_DESIRED\_MIN\_CONN\_INTERVAL}}),}
+\DoxyCodeLine{  HI\_UINT16(\mbox{\hyperlink{group__sensortag__ble_ga0ac97c4fab20172aa100def2d9dfc60c}{DEFAULT\_DESIRED\_MIN\_CONN\_INTERVAL}}),}
+\DoxyCodeLine{  LO\_UINT16(\mbox{\hyperlink{group__sensortag__ble_ga7a0eb10434e8efae41961611a5ffaafc}{DEFAULT\_DESIRED\_MAX\_CONN\_INTERVAL}}),}
+\DoxyCodeLine{  HI\_UINT16(\mbox{\hyperlink{group__sensortag__ble_ga7a0eb10434e8efae41961611a5ffaafc}{DEFAULT\_DESIRED\_MAX\_CONN\_INTERVAL}}),}
+\DoxyCodeLine{}
+\DoxyCodeLine{  }
+\DoxyCodeLine{  0x02,   }
+\DoxyCodeLine{  GAP\_ADTYPE\_POWER\_LEVEL,}
+\DoxyCodeLine{  0       }
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+
+
+GAP -\/ SCAN RSP data (max size = 31 bytes) 
+
+\mbox{\Hypertarget{group__sensortag__ble_ga29c4a3d4e25f051c7e9839af8720004b}\label{group__sensortag__ble_ga29c4a3d4e25f051c7e9839af8720004b}} 
+\index{SensorTag BLE@{SensorTag BLE}!selfEntityMain@{selfEntityMain}}
+\index{selfEntityMain@{selfEntityMain}!SensorTag BLE@{SensorTag BLE}}
+\doxysubsubsection{\texorpdfstring{selfEntityMain}{selfEntityMain}}
+{\footnotesize\ttfamily ICall\+\_\+\+Entity\+ID self\+Entity\+Main}
+
+
+
+Entity ID globally used to check for source and/or destination of messages. 
+
+ID to help route notifications to the correct task \mbox{\Hypertarget{group__sensortag__ble_ga0f1fcb7fd8baa157de3f2837d1abc5f4}\label{group__sensortag__ble_ga0f1fcb7fd8baa157de3f2837d1abc5f4}} 
+\index{SensorTag BLE@{SensorTag BLE}!sem@{sem}}
+\index{sem@{sem}!SensorTag BLE@{SensorTag BLE}}
+\doxysubsubsection{\texorpdfstring{sem}{sem}}
+{\footnotesize\ttfamily ICall\+\_\+\+Semaphore sem}
+
+
+
+Semaphore globally used to post events to the application thread. 
+
+Semaphore used for the main thread \mbox{\Hypertarget{group__sensortag__ble_ga08b624e5e398b1070073afcde867b9a6}\label{group__sensortag__ble_ga08b624e5e398b1070073afcde867b9a6}} 
+\index{SensorTag BLE@{SensorTag BLE}!sensorTag\_bondMgrCBs@{sensorTag\_bondMgrCBs}}
+\index{sensorTag\_bondMgrCBs@{sensorTag\_bondMgrCBs}!SensorTag BLE@{SensorTag BLE}}
+\doxysubsubsection{\texorpdfstring{sensorTag\_bondMgrCBs}{sensorTag\_bondMgrCBs}}
+{\footnotesize\ttfamily gap\+Bond\+CBs\+\_\+t sensor\+Tag\+\_\+bond\+Mgr\+CBs\hspace{0.3cm}{\ttfamily [static]}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{=}
+\DoxyCodeLine{\{}
+\DoxyCodeLine{  NULL, }
+\DoxyCodeLine{  NULL  }
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+GAP Bond Manager Callbacks Where you would add security callbacks \mbox{\Hypertarget{group__sensortag__ble_ga873936e93f1100e1a6e1b00e2aab1181}\label{group__sensortag__ble_ga873936e93f1100e1a6e1b00e2aab1181}} 
+\index{SensorTag BLE@{SensorTag BLE}!sensorTag\_gapRoleCBs@{sensorTag\_gapRoleCBs}}
+\index{sensorTag\_gapRoleCBs@{sensorTag\_gapRoleCBs}!SensorTag BLE@{SensorTag BLE}}
+\doxysubsubsection{\texorpdfstring{sensorTag\_gapRoleCBs}{sensorTag\_gapRoleCBs}}
+{\footnotesize\ttfamily gap\+Roles\+CBs\+\_\+t sensor\+Tag\+\_\+gap\+Role\+CBs\hspace{0.3cm}{\ttfamily [static]}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{=}
+\DoxyCodeLine{\{}
+\DoxyCodeLine{  \mbox{\hyperlink{group__sensortag__ble_ga8188568086d8246b45cab873b298c3d2}{SensorTag\_stateChangeCB}}     }
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+
+
+GAP Role Callbacks. 
+

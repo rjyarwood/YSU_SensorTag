@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['conf_0',['conf',['../structbme.html#ac6616e2396ec209f4246257cbe04af7d',1,'bme']]]
+  ['bme_5fdev_0',['bme_dev',['../structbme.html#a915016c45aa41edaa7a6a2d4b792a335',1,'bme']]]
 ];

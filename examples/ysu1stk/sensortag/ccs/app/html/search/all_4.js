@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['gbme_0',['gBME',['../group___b_m_e___configuration.html#ga77fd457ce7920383f3f7f4158a490a00',1,'bme688_driver.c']]],
-  ['get_5fdata_1',['get_data',['../group___b_m_e___configuration.html#ga2f5c2cbd887c9ecb931daa08b02f64a0',1,'get_data(struct bme *bme):&#160;bme688_driver.c'],['../group___b_m_e___configuration.html#ga2f5c2cbd887c9ecb931daa08b02f64a0',1,'get_data(struct bme *bme):&#160;bme688_driver.c']]]
+  ['event_0',['event',['../structst_evt__t.html#a1ff7ad663d2a3eabab1ed9ef07e1b8a3',1,'stEvt_t']]],
+  ['events_1',['events',['../group__sensortag__ctrl.html#ga6eba7182f2d70031a4f6ba3a2fc8d569',1,'ysu_sensortag.c']]]
 ];

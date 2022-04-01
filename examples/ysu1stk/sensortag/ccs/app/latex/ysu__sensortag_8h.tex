@@ -1,0 +1,54 @@
+\hypertarget{ysu__sensortag_8h}{}\doxysection{ysu\+\_\+sensortag/ysu\+\_\+sensortag.h File Reference}
+\label{ysu__sensortag_8h}\index{ysu\_sensortag/ysu\_sensortag.h@{ysu\_sensortag/ysu\_sensortag.h}}
+
+
+\+: This is where you will add a service ID for your new sensor and where the main task has its function definitions.  
+
+
+{\ttfamily \#include \char`\"{}ICall.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}peripheral.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$ti/sysbios/knl/\+Clock.\+h$>$}\newline
+{\ttfamily \#include $<$ti/drivers/\+PIN.\+h$>$}\newline
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{group__service__ids_ga597dcf4280efaaa555d6039fce7aca06}{SERVICE\+\_\+\+ID\+\_\+\+ADXL}}~0x01
+\item 
+\#define \mbox{\hyperlink{group__service__ids_ga07a60d8bcf168cfca1830d5dc12e9b3c}{SERVICE\+\_\+\+ID\+\_\+\+BME}}~0x02
+\item 
+\#define \mbox{\hyperlink{group__service__ids_ga57b2a89f59bb9630742a09bb7757ff23}{SERVICE\+\_\+\+ID\+\_\+\+CC}}~0x09
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{group__sensortag__ctrl_ga50b43f4a4fda661dcd44482e9c1a234c}{Sensor\+Tag\+\_\+create\+Task}} (void)
+\begin{DoxyCompactList}\small\item\em Creates the main task for the YSU Sensor\+Tag. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__sensortag__ble_ga57a95a6c46f8af406146e0446216eddd}{Sensor\+Tag\+\_\+char\+Value\+Change\+CB}} (uint8\+\_\+t sensor\+ID, uint8\+\_\+t param\+ID)
+\begin{DoxyCompactList}\small\item\em Callback from Sensor Profile indicating a characteristic value change. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{ysu__sensortag_8h_a2245235d035bee7bc769d674498a09ad}\label{ysu__sensortag_8h_a2245235d035bee7bc769d674498a09ad}} 
+void {\bfseries Sensor\+Tag\+\_\+apply\+Factory\+Image} (void)
+\item 
+void \mbox{\hyperlink{group__sensortag__ble_gac296051ec017eca4a26980a6d474505f}{Sensor\+Tag\+\_\+update\+Advertising\+Data}} (uint8\+\_\+t key\+Status)
+\begin{DoxyCompactList}\small\item\em Update the advertising data with the latest key press status. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{ysu__sensortag_8h_abcc6910cab1146bf6033914ec18c56db}\label{ysu__sensortag_8h_abcc6910cab1146bf6033914ec18c56db}} 
+uint8\+\_\+t {\bfseries Sensor\+Tag\+\_\+test\+Result} (void)
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+ICall\+\_\+\+Semaphore \mbox{\hyperlink{group__sensortag__ble_ga0f1fcb7fd8baa157de3f2837d1abc5f4}{sem}}
+\begin{DoxyCompactList}\small\item\em Semaphore globally used to post events to the application thread. \end{DoxyCompactList}\item 
+gaprole\+\_\+\+States\+\_\+t \mbox{\hyperlink{group__sensortag__ble_gad39eed4bad4a078b5b6065c5653d6024}{gap\+Profile\+State}}
+\begin{DoxyCompactList}\small\item\em Profile state and parameters. \end{DoxyCompactList}\item 
+ICall\+\_\+\+Entity\+ID \mbox{\hyperlink{group__sensortag__ble_ga29c4a3d4e25f051c7e9839af8720004b}{self\+Entity\+Main}}
+\begin{DoxyCompactList}\small\item\em Entity ID globally used to check for source and/or destination of messages. \end{DoxyCompactList}\item 
+PIN\+\_\+\+State {\bfseries pin\+Gpio\+State}
+\begin{DoxyCompactList}\small\item\em Global pin resources. \end{DoxyCompactList}\item 
+PIN\+\_\+\+Handle {\bfseries h\+Gpio\+Pin}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\+: This is where you will add a service ID for your new sensor and where the main task has its function definitions. 
+
+Created on\+: Feb 11, 2022 Author\+: rjyar 

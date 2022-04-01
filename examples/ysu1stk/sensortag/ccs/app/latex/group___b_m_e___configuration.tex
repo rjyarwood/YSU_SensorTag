@@ -29,6 +29,29 @@ void {\bfseries deinit\+\_\+bme} ()
 \item 
 struct \mbox{\hyperlink{structbme}{bme}} $\ast$ \mbox{\hyperlink{group___b_m_e___configuration_ga77fd457ce7920383f3f7f4158a490a00}{g\+BME}}
 \end{DoxyCompactItemize}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{group___b_m_e___configuration_ga277f3406ea8ecaf8bd58c51950c84c3a}\label{group___b_m_e___configuration_ga277f3406ea8ecaf8bd58c51950c84c3a}} 
+int8\+\_\+t {\bfseries bme68x\+\_\+interface\+\_\+init} (struct bme68x\+\_\+dev $\ast$\mbox{\hyperlink{structbme}{bme}}, uint8\+\_\+t intf)
+\begin{DoxyCompactList}\small\item\em API functions from BOSCH to override. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group___b_m_e___configuration_gaff39d4447b878646149f0b7689858872}\label{group___b_m_e___configuration_gaff39d4447b878646149f0b7689858872}} 
+BME68\+X\+\_\+\+INTF\+\_\+\+RET\+\_\+\+TYPE {\bfseries bme68x\+\_\+i2c\+\_\+read} (uint8\+\_\+t reg\+\_\+addr, uint8\+\_\+t $\ast$reg\+\_\+data, uint32\+\_\+t len, void $\ast$intf\+\_\+ptr)
+\item 
+\mbox{\Hypertarget{group___b_m_e___configuration_ga44539482ff6680abf4a3643a1a5625a8}\label{group___b_m_e___configuration_ga44539482ff6680abf4a3643a1a5625a8}} 
+BME68\+X\+\_\+\+INTF\+\_\+\+RET\+\_\+\+TYPE {\bfseries bme68x\+\_\+i2c\+\_\+write} (uint8\+\_\+t reg\+\_\+addr, const uint8\+\_\+t $\ast$reg\+\_\+data, uint32\+\_\+t len, void $\ast$intf\+\_\+ptr)
+\item 
+\mbox{\Hypertarget{group___b_m_e___configuration_gaaed1f73d14f65dbff94d1be0001088d9}\label{group___b_m_e___configuration_gaaed1f73d14f65dbff94d1be0001088d9}} 
+BME68\+X\+\_\+\+INTF\+\_\+\+RET\+\_\+\+TYPE {\bfseries bme68x\+\_\+spi\+\_\+read} (uint8\+\_\+t reg\+\_\+addr, uint8\+\_\+t $\ast$reg\+\_\+data, uint32\+\_\+t len, void $\ast$intf\+\_\+ptr)
+\item 
+\mbox{\Hypertarget{group___b_m_e___configuration_gafb1ccbf06ecb66035b0dd76765696990}\label{group___b_m_e___configuration_gafb1ccbf06ecb66035b0dd76765696990}} 
+BME68\+X\+\_\+\+INTF\+\_\+\+RET\+\_\+\+TYPE {\bfseries bme68x\+\_\+spi\+\_\+write} (uint8\+\_\+t reg\+\_\+addr, const uint8\+\_\+t $\ast$reg\+\_\+data, uint32\+\_\+t len, void $\ast$intf\+\_\+ptr)
+\item 
+\mbox{\Hypertarget{group___b_m_e___configuration_gaf9798445cafbcbe91dcfb7f196dec4b4}\label{group___b_m_e___configuration_gaf9798445cafbcbe91dcfb7f196dec4b4}} 
+void {\bfseries bme68x\+\_\+delay\+\_\+us} (uint32\+\_\+t period, void $\ast$intf\+\_\+ptr)
+\item 
+\mbox{\Hypertarget{group___b_m_e___configuration_ga0b8ef4ab1cc7f8d6fa626bb9d4b238df}\label{group___b_m_e___configuration_ga0b8ef4ab1cc7f8d6fa626bb9d4b238df}} 
+void {\bfseries \+\_\+check\+\_\+rslt} (const char api\+\_\+name\mbox{[}$\,$\mbox{]}, int8\+\_\+t rslt)
+\end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}

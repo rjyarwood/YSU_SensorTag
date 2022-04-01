@@ -1,0 +1,65 @@
+\hypertarget{group___sensor_tag}{}\doxysection{Service IDs}
+\label{group___sensor_tag}\index{Service IDs@{Service IDs}}
+
+
+Service ID\textquotesingle{}s for internal application use.  
+
+
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{group___sensor_tag_ga597dcf4280efaaa555d6039fce7aca06}\label{group___sensor_tag_ga597dcf4280efaaa555d6039fce7aca06}} 
+\#define {\bfseries SERVICE\+\_\+\+ID\+\_\+\+ADXL}~0x01
+\item 
+\mbox{\Hypertarget{group___sensor_tag_ga07a60d8bcf168cfca1830d5dc12e9b3c}\label{group___sensor_tag_ga07a60d8bcf168cfca1830d5dc12e9b3c}} 
+\#define {\bfseries SERVICE\+\_\+\+ID\+\_\+\+BME}~0x02
+\item 
+\mbox{\Hypertarget{group___sensor_tag_ga57b2a89f59bb9630742a09bb7757ff23}\label{group___sensor_tag_ga57b2a89f59bb9630742a09bb7757ff23}} 
+\#define {\bfseries SERVICE\+\_\+\+ID\+\_\+\+CC}~0x09
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{group___sensor_tag_ga50b43f4a4fda661dcd44482e9c1a234c}\label{group___sensor_tag_ga50b43f4a4fda661dcd44482e9c1a234c}} 
+void {\bfseries Sensor\+Tag\+\_\+create\+Task} (void)
+\begin{DoxyCompactList}\small\item\em Creates the main task for the YSU Sensor\+Tag. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group___sensor_tag_ga7e4ad6b063f55e17c3e5c74e2fa2237c}\label{group___sensor_tag_ga7e4ad6b063f55e17c3e5c74e2fa2237c}} 
+void {\bfseries Sensor\+Tag\+\_\+char\+Value\+Change\+CB} (uint8\+\_\+t sensor\+ID, uint8\+\_\+t param\+ID)
+\item 
+\mbox{\Hypertarget{group___sensor_tag_ga2245235d035bee7bc769d674498a09ad}\label{group___sensor_tag_ga2245235d035bee7bc769d674498a09ad}} 
+void {\bfseries Sensor\+Tag\+\_\+apply\+Factory\+Image} (void)
+\item 
+\mbox{\Hypertarget{group___sensor_tag_gac296051ec017eca4a26980a6d474505f}\label{group___sensor_tag_gac296051ec017eca4a26980a6d474505f}} 
+void {\bfseries Sensor\+Tag\+\_\+update\+Advertising\+Data} (uint8\+\_\+t key\+Status)
+\item 
+\mbox{\Hypertarget{group___sensor_tag_gabcc6910cab1146bf6033914ec18c56db}\label{group___sensor_tag_gabcc6910cab1146bf6033914ec18c56db}} 
+uint8\+\_\+t {\bfseries Sensor\+Tag\+\_\+test\+Result} (void)
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{group___sensor_tag_ga0f1fcb7fd8baa157de3f2837d1abc5f4}\label{group___sensor_tag_ga0f1fcb7fd8baa157de3f2837d1abc5f4}} 
+ICall\+\_\+\+Semaphore {\bfseries sem}
+\item 
+\mbox{\Hypertarget{group___sensor_tag_gad39eed4bad4a078b5b6065c5653d6024}\label{group___sensor_tag_gad39eed4bad4a078b5b6065c5653d6024}} 
+gaprole\+\_\+\+States\+\_\+t {\bfseries gap\+Profile\+State}
+\item 
+\mbox{\Hypertarget{group___sensor_tag_ga29c4a3d4e25f051c7e9839af8720004b}\label{group___sensor_tag_ga29c4a3d4e25f051c7e9839af8720004b}} 
+ICall\+\_\+\+Entity\+ID {\bfseries self\+Entity\+Main}
+\item 
+\mbox{\Hypertarget{group___sensor_tag_ga1e42536f2fb05a5ef14f403b45ec8942}\label{group___sensor_tag_ga1e42536f2fb05a5ef14f403b45ec8942}} 
+PIN\+\_\+\+State {\bfseries pin\+Gpio\+State}
+\item 
+\mbox{\Hypertarget{group___sensor_tag_gaaac114d1a5e7723d1c509caa8d453c2c}\label{group___sensor_tag_gaaac114d1a5e7723d1c509caa8d453c2c}} 
+PIN\+\_\+\+Handle {\bfseries h\+Gpio\+Pin}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Service ID\textquotesingle{}s for internal application use. 
+
+Group of functions used to set up and control the flow of the sensortag\textquotesingle{}s operation.
+
+Project global variables used for physical pinouts.
+
+Project global variables used to manage the BLE stack.

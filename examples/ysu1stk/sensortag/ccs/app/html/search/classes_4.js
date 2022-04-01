@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['i2c_5fdevice_0',['i2c_device',['../structi2c__device.html',1,'']]]
+  ['sensorcbs_5ft_0',['sensorCBs_t',['../structsensor_c_bs__t.html',1,'']]],
+  ['stevt_5ft_1',['stEvt_t',['../structst_evt__t.html',1,'']]]
 ];

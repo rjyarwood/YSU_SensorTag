@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['gbme_0',['gBME',['../group___b_m_e___configuration.html#ga77fd457ce7920383f3f7f4158a490a00',1,'bme688_driver.c']]]
+  ['data_0',['data',['../structbme.html#ad62d28fd95d3a570e3b7d8bbc1b897ec',1,'bme']]],
+  ['devinfomodelnumber_1',['devInfoModelNumber',['../group__sensortag__ble.html#ga89eb91b070c19a65c672c2b788a16251',1,'ysu_sensortag.c']]]
 ];

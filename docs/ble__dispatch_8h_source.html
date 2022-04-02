@@ -5,14 +5,21 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.9.3"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>YSU SensorTag v1: src/icall/inc/ble_dispatch.h Source File</title>
+<title>YSU SensorTag: src/icall/inc/ble_dispatch.h Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen-awesome-sidebar-only.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen-awesome-sidebar-only-darkmode-toggle.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -21,7 +28,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">YSU SensorTag v1
+   <div id="projectname">YSU SensorTag
    </div>
   </td>
  </tr>
@@ -46,6 +53,23 @@ $(function() {
 /* @license-end */
 </script>
 <div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('ble__dispatch_8h_source.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -60,11 +84,6 @@ $(function() {
 </iframe>
 </div>
 
-<div id="nav-path" class="navpath">
-  <ul>
-<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_13851fe46cd6dc4a8ef7c61908b68100.html">icall</a></li><li class="navelem"><a class="el" href="dir_ce46c2fa116ac762ff4948b8845e0f55.html">inc</a></li>  </ul>
-</div>
-</div><!-- top -->
 <div class="header">
   <div class="headertitle"><div class="title">ble_dispatch.h</div></div>
 </div><!--header-->
@@ -76,11 +95,11 @@ $(function() {
 <div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="comment"> @brief ICall BLE Dispatcher Definitions.</span></div>
 <div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="comment"></span> </div>
 <div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="comment"> Group: WCS, BTS</span></div>
-<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="comment"> Target Device: CC2650, CC2640, CC1350</span></div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="comment"> Target Device: CC2650, CC2640</span></div>
 <div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="comment"></span> </div>
 <div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="comment"> ******************************************************************************</span></div>
 <div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="comment"> </span></div>
-<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="comment"> Copyright (c) 2013-2016, Texas Instruments Incorporated</span></div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="comment"> Copyright (c) 2013-2021, Texas Instruments Incorporated</span></div>
 <div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="comment"> All rights reserved.</span></div>
 <div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="comment"></span> </div>
 <div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="comment"> Redistribution and use in source and binary forms, with or without</span></div>
@@ -111,8 +130,8 @@ $(function() {
 <div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span><span class="comment"> EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.</span></div>
 <div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span><span class="comment"></span> </div>
 <div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span><span class="comment"> ******************************************************************************</span></div>
-<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span><span class="comment"> Release Name: ble_sdk_2_02_01_18</span></div>
-<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span><span class="comment"> Release Date: 2016-10-26 15:20:04</span></div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span><span class="comment"> Release Name: ble_sdk_2_02_02_</span></div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span><span class="comment"> Release Date: 2021-04-01 13:25:49</span></div>
 <div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span><span class="comment"> *****************************************************************************/</span></div>
 <div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span> </div>
 <div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span><span class="preprocessor">#ifndef ICALLBLE_H</span></div>
@@ -136,7 +155,7 @@ $(function() {
 <div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span><span class="preprocessor">#define DISPATCH_GATT_PROFILE                 0x02 </span><span class="comment">// GATT Profile</span></div>
 <div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span><span class="preprocessor">#define DISPATCH_GAP_GATT_SERV                0x03 </span><span class="comment">// GAP GATT Server (GGS)</span></div>
 <div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span><span class="preprocessor">#define DISPATCH_GATT_SERV_APP                0x04 </span><span class="comment">// GATT Server App (GSA)</span></div>
-<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>  </div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span> </div>
 <div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span><span class="comment">// Common Command IDs reserved for each profile (0x00-0x0F)</span></div>
 <div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span><span class="preprocessor">#define DISPATCH_PROFILE_ADD_SERVICE          0x00 </span><span class="comment">// Add service</span></div>
 <div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span><span class="preprocessor">#define DISPATCH_PROFILE_DEL_SERVICE          0x01 </span><span class="comment">// Delete service</span></div>
@@ -166,12 +185,12 @@ $(function() {
 <div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span><span class="preprocessor">#define DISPATCH_GATT_HTA_FLOW_CTRL           0x13 </span><span class="comment">// Host To App Flow Control</span></div>
 <div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span><span class="preprocessor">#define DISPATCH_GATT_APP_COMPL_MSG           0x14 </span><span class="comment">// App Completed Message</span></div>
 <div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span><span class="preprocessor">#define DISPATCH_GATT_SEND_RSP                0x15 </span><span class="comment">// GATT Send Response message</span></div>
-<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span>   </div>
+<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span> </div>
 <div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span><span class="comment">// GATT Server App (GSA) Command IDs (0x10-0xFF)</span></div>
 <div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span><span class="preprocessor">#define DISPATCH_GSA_ADD_QUAL_SERVICE         0x10 </span><span class="comment">// GSA Add Qualification Services</span></div>
 <div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span><span class="preprocessor">#define DISPATCH_GSA_ADD_TEST_SERVICE         0x11 </span><span class="comment">// GSA Add Test Services</span></div>
 <div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span><span class="preprocessor">#define DISPATCH_GSA_SERVICE_CHANGE_IND       0x12 </span><span class="comment">// GSA Service Change Indication</span></div>
-<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span>  </div>
+<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span> </div>
 <div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span><span class="comment">// ICall Dispatcher General Command IDs (0x10-0xFF)</span></div>
 <div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span><span class="preprocessor">#define DISPATCH_GENERAL_REG_NPI              0x10 </span><span class="comment">// Register NPI task with stack</span></div>
 <div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span><span class="preprocessor">#define DISPATCH_GENERAL_REG_L2CAP_FC         0x11 </span><span class="comment">// Register Task with L2CAP to receive Flow Control Events</span></div>
@@ -246,9 +265,13 @@ $(function() {
 <div class="line"><a id="l00175" name="l00175"></a><span class="lineno">  175</span><span class="preprocessor">#endif </span><span class="comment">/* ICALLBLE_H */</span><span class="preprocessor"></span></div>
 <div class="ttc" id="agroup__sensortag__ctrl_html_ga6eba7182f2d70031a4f6ba3a2fc8d569"><div class="ttname"><a href="group__sensortag__ctrl.html#ga6eba7182f2d70031a4f6ba3a2fc8d569">events</a></div><div class="ttdeci">static uint16_t events</div><div class="ttdoc">events flag for internal application events.</div><div class="ttdef"><b>Definition:</b> ysu_sensortag.c:192</div></div>
 </div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.3
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_13851fe46cd6dc4a8ef7c61908b68100.html">icall</a></li><li class="navelem"><a class="el" href="dir_ce46c2fa116ac762ff4948b8845e0f55.html">inc</a></li><li class="navelem"><b>ble_dispatch.h</b></li>
+    <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.3 </li>
+  </ul>
+</div>
 </body>
 </html>

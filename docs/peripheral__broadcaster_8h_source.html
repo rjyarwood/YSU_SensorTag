@@ -5,14 +5,21 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.9.3"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>YSU SensorTag v1: src/profiles/roles/peripheral_broadcaster.h Source File</title>
+<title>YSU SensorTag: src/profiles/roles/peripheral_broadcaster.h Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen-awesome-sidebar-only.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen-awesome-sidebar-only-darkmode-toggle.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -21,7 +28,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">YSU SensorTag v1
+   <div id="projectname">YSU SensorTag
    </div>
   </td>
  </tr>
@@ -46,6 +53,23 @@ $(function() {
 /* @license-end */
 </script>
 <div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('peripheral__broadcaster_8h_source.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -60,11 +84,6 @@ $(function() {
 </iframe>
 </div>
 
-<div id="nav-path" class="navpath">
-  <ul>
-<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_811d189fad8613e93338d357a0eac4d3.html">profiles</a></li><li class="navelem"><a class="el" href="dir_f7e7d80d2156b97e91570de87e079bb5.html">roles</a></li>  </ul>
-</div>
-</div><!-- top -->
 <div class="header">
   <div class="headertitle"><div class="title">peripheral_broadcaster.h</div></div>
 </div><!--header-->
@@ -74,16 +93,16 @@ $(function() {
 <div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="comment"> @file  peripheral_broadcaster.h</span></div>
 <div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="comment"></span> </div>
 <div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="comment"> @brief TI BLE GAP Peripheral + Broadcaster Roles</span></div>
-<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="comment">        </span></div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="comment"></span> </div>
 <div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="comment">        This GAP profile advertises and allows connections and adds the ability</span></div>
 <div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="comment">        to  advertise (non-connectable) during a connection.</span></div>
 <div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="comment"></span> </div>
 <div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="comment"> Group: WCS, BTS</span></div>
-<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="comment"> Target Device: CC2650, CC2640, CC1350</span></div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="comment"> Target Device: CC2650, CC2640</span></div>
 <div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="comment"></span> </div>
 <div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="comment"> ******************************************************************************</span></div>
 <div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="comment"> </span></div>
-<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="comment"> Copyright (c) 2010-2016, Texas Instruments Incorporated</span></div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="comment"> Copyright (c) 2010-2021, Texas Instruments Incorporated</span></div>
 <div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><span class="comment"> All rights reserved.</span></div>
 <div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="comment"></span> </div>
 <div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="comment"> Redistribution and use in source and binary forms, with or without</span></div>
@@ -114,8 +133,8 @@ $(function() {
 <div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span><span class="comment"> EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.</span></div>
 <div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span><span class="comment"></span> </div>
 <div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span><span class="comment"> ******************************************************************************</span></div>
-<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span><span class="comment"> Release Name: ble_sdk_2_02_01_18</span></div>
-<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span><span class="comment"> Release Date: 2016-10-26 15:20:04</span></div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span><span class="comment"> Release Name: ble_sdk_2_02_02_</span></div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span><span class="comment"> Release Date: 2021-04-01 13:25:49</span></div>
 <div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span><span class="comment"> *****************************************************************************/</span></div>
 <div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span> </div>
 <div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span><span class="preprocessor">#ifndef PERIPHERAL_BROADCASTER_H</span></div>
@@ -191,17 +210,17 @@ $(function() {
 <div class="line"><a id="l00138" name="l00138"></a><span class="lineno">  138</span>} <a class="code hl_struct" href="structgap_roles_c_bs__t.html">gapRolesCBs_t</a>;</div>
 <div class="line"><a id="l00139" name="l00139"></a><span class="lineno">  139</span> </div>
 <div class="line"><a id="l00140" name="l00140"></a><span class="lineno">  140</span><span class="comment">/*-------------------------------------------------------------------</span></div>
-<div class="line"><a id="l00141" name="l00141"></a><span class="lineno">  141</span><span class="comment"> * API FUNCTIONS </span></div>
+<div class="line"><a id="l00141" name="l00141"></a><span class="lineno">  141</span><span class="comment"> * API FUNCTIONS</span></div>
 <div class="line"><a id="l00142" name="l00142"></a><span class="lineno">  142</span><span class="comment"> */</span></div>
 <div class="line"><a id="l00143" name="l00143"></a><span class="lineno">  143</span> </div>
 <div class="line"><a id="l00167" name="l00167"></a><span class="lineno">  167</span><span class="keyword">extern</span> <a class="code hl_typedef" href="group___b_l_e___c_o_m_m_o_n___d_e_f_i_n_e_s.html#ga5ac2ea318e3aa14ec7ac5b9426ac4067">bStatus_t</a> <a class="code hl_function" href="group___g_a_p_r_o_l_e_s___p_e_r_i_p_h_e_r_a_l___b_r_o_a_d_c_a_s_t_e_r___a_p_i.html#ga951a64ccae7a5c1373642836d2afd4ce">GAPRole_SetParameter</a>( uint16 param, uint8 len, <span class="keywordtype">void</span> *pValue );</div>
-<div class="line"><a id="l00168" name="l00168"></a><span class="lineno">  168</span>  </div>
+<div class="line"><a id="l00168" name="l00168"></a><span class="lineno">  168</span> </div>
 <div class="line"><a id="l00184" name="l00184"></a><span class="lineno">  184</span><span class="keyword">extern</span> <a class="code hl_typedef" href="group___b_l_e___c_o_m_m_o_n___d_e_f_i_n_e_s.html#ga5ac2ea318e3aa14ec7ac5b9426ac4067">bStatus_t</a> <a class="code hl_function" href="group___g_a_p_r_o_l_e_s___p_e_r_i_p_h_e_r_a_l___b_r_o_a_d_c_a_s_t_e_r___a_p_i.html#ga19000077e8b36bcdee262b4897e53ed8">GAPRole_GetParameter</a>( uint16 param, <span class="keywordtype">void</span> *pValue );</div>
 <div class="line"><a id="l00185" name="l00185"></a><span class="lineno">  185</span> </div>
 <div class="line"><a id="l00193" name="l00193"></a><span class="lineno">  193</span><span class="keyword">extern</span> <a class="code hl_typedef" href="group___b_l_e___c_o_m_m_o_n___d_e_f_i_n_e_s.html#ga5ac2ea318e3aa14ec7ac5b9426ac4067">bStatus_t</a> <a class="code hl_function" href="group___g_a_p_r_o_l_e_s___p_e_r_i_p_h_e_r_a_l___b_r_o_a_d_c_a_s_t_e_r___a_p_i.html#ga835a1ca8b91828b4092f471cd510724d">GAPRole_StartDevice</a>( <a class="code hl_struct" href="structgap_roles_c_bs__t.html">gapRolesCBs_t</a> *pAppCallbacks );</div>
 <div class="line"><a id="l00194" name="l00194"></a><span class="lineno">  194</span> </div>
 <div class="line"><a id="l00200" name="l00200"></a><span class="lineno">  200</span><span class="keyword">extern</span> <a class="code hl_typedef" href="group___b_l_e___c_o_m_m_o_n___d_e_f_i_n_e_s.html#ga5ac2ea318e3aa14ec7ac5b9426ac4067">bStatus_t</a> <a class="code hl_function" href="group___g_a_p_r_o_l_e_s___p_e_r_i_p_h_e_r_a_l___b_r_o_a_d_c_a_s_t_e_r___a_p_i.html#ga1e1ad911e721a59bf4746dba194fbb7d">GAPRole_TerminateConnection</a>( <span class="keywordtype">void</span> );</div>
-<div class="line"><a id="l00201" name="l00201"></a><span class="lineno">  201</span>  </div>
+<div class="line"><a id="l00201" name="l00201"></a><span class="lineno">  201</span> </div>
 <div class="line"><a id="l00207" name="l00207"></a><span class="lineno">  207</span><span class="comment">/*-------------------------------------------------------------------</span></div>
 <div class="line"><a id="l00208" name="l00208"></a><span class="lineno">  208</span><span class="comment"> * TASK FUNCTIONS - Don&#39;t call these. These are system functions.</span></div>
 <div class="line"><a id="l00209" name="l00209"></a><span class="lineno">  209</span><span class="comment"> */</span></div>
@@ -227,9 +246,13 @@ $(function() {
 <div class="ttc" id="astructgap_roles_c_bs__t_html"><div class="ttname"><a href="structgap_roles_c_bs__t.html">gapRolesCBs_t</a></div><div class="ttdef"><b>Definition:</b> broadcaster.h:116</div></div>
 <div class="ttc" id="astructgap_roles_c_bs__t_html_a781573c7ad85632ec36700f51fb1c585"><div class="ttname"><a href="structgap_roles_c_bs__t.html#a781573c7ad85632ec36700f51fb1c585">gapRolesCBs_t::pfnRssiRead</a></div><div class="ttdeci">gapRolesRssiRead_t pfnRssiRead</div><div class="ttdoc">When a valid RSSI is read from controller.</div><div class="ttdef"><b>Definition:</b> peripheral_broadcaster.h:137</div></div>
 </div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.3
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_811d189fad8613e93338d357a0eac4d3.html">profiles</a></li><li class="navelem"><a class="el" href="dir_f7e7d80d2156b97e91570de87e079bb5.html">roles</a></li><li class="navelem"><b>peripheral_broadcaster.h</b></li>
+    <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.3 </li>
+  </ul>
+</div>
 </body>
 </html>

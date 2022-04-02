@@ -5,14 +5,21 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.9.3"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>YSU SensorTag v1: API: GATT related</title>
+<title>YSU SensorTag: API: GATT related</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen-awesome-sidebar-only.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen-awesome-sidebar-only-darkmode-toggle.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -21,7 +28,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">YSU SensorTag v1
+   <div id="projectname">YSU SensorTag
    </div>
   </td>
  </tr>
@@ -46,6 +53,23 @@ $(function() {
 /* @license-end */
 </script>
 <div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('_g_a_t_t.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -60,7 +84,6 @@ $(function() {
 </iframe>
 </div>
 
-</div><!-- top -->
 <div><div class="header">
   <div class="headertitle"><div class="title">API: GATT related </div></div>
 </div><!--header-->
@@ -71,8 +94,7 @@ $(function() {
 <li>SNP_addCharDescDecl</li>
 <li>SNP_service_register</li>
 </ul>
-<p >Access to characteristics value can be done through a set of API. <br  />
-</p>
+<p >Access to characteristics value can be done through a set of API.</p>
 <h1><a class="anchor" id="gatt_api"></a>
 GATT API summary</h1>
 <table class="markdownTable">
@@ -144,8 +166,7 @@ Add a Service</h1>
 Add a Characteristic to a service</h1>
 <p >User can create their own custom services. User needs to know what he wants and how services and characteristics are working. Consider reading BLE core spec, vol 3, Part G, chapter 3. To give enough flexibility to create a custom service, the following commands are available:</p><ul>
 <li>SNP_addCharValueDecl</li>
-<li>SNP_addCharDescDecl <br  />
-</li>
+<li>SNP_addCharDescDecl</li>
 </ul>
 <p >The SNP_addCharValueDecl command will add the following attribute to the service:</p><ul>
 <li>Characteristic declaration.</li>
@@ -160,8 +181,7 @@ Add a Characteristic to a service</h1>
 <p >This SNP_addCharValueDecl_req request takes as parameter the structure #snpAddCharValueDeclReq_t .</p>
 <p >The SNP_addCharValueDecl_rap response uses as parameter the structure #snpAddCharValueDeclRsp_t .</p>
 <p >The #snpAddCharValueDeclReq_t structure has a permission field. Attribute permissions are define by higher layer profile or are implementation specific. TI BLE STACK has define its own value for this field. it is also performing basic filtering using those value (e.g. a read request on a characteristic value those not permit read will be rejected by the stack directly). Permission value are define here: <a class="el" href="group___s_n_p___p_e_r_m_i_t___b_i_t_m_a_p_s___d_e_f_i_n_e_s.html">GATT Attribute Access Permissions Bit Fields</a></p>
-<p >The #snpAddCharValueDeclReq_t structure has a property field. Attribute properties are defined by the BLE specification. TI BLE STACK expect the properties to be align logically with the permission, meaning a read permission should lead to a the read properties enable. <br  />
- Properties value are define here: <a class="el" href="group___s_n_p___p_r_o_p___b_i_t_m_a_p_s___d_e_f_i_n_e_s.html">GATT Characteristic Properties Bit Fields</a></p>
+<p >The #snpAddCharValueDeclReq_t structure has a property field. Attribute properties are defined by the BLE specification. TI BLE STACK expect the properties to be align logically with the permission, meaning a read permission should lead to a the read properties enable. Properties value are define here: <a class="el" href="group___s_n_p___p_r_o_p___b_i_t_m_a_p_s___d_e_f_i_n_e_s.html">GATT Characteristic Properties Bit Fields</a></p>
 <h1><a class="anchor" id="SNP_addCharDescDecl"></a>
 Add a optional attribute to a characteristic</h1>
 <p >This API is used to add the following attributes to the service:</p><ul>
@@ -175,25 +195,24 @@ Add a optional attribute to a characteristic</h1>
 </ul>
 <p >The attribute permission for the user description is force to READ ONLY.</p>
 <p >All those attributes are optional. But at least one needs to be added when this API is call. CCCD, presentation format and user description attribute can only be present each once for each characteristic. Trying to create a second one will lead to a #SNP_CMD_REJECTED error.</p>
-<p >The first parameter of the API is a header indicating which attribute need to be added. When a bit is set, the corresponding attribute is present on the following parameters and will be added to the characteristic. The parameter for an attribute needs to appear in the same order as the bit appear in the header.</p>
-<p >For example, if both CCCD and user description attribute needs to be added. Then the header will have the value 0x5 (b101). The CCCD parameter (1 byte) will then follow the header, and the user description parameter (N Bytes) will follow the CCCD parameter. Other parameters must be omitted.</p>
-<p >the SNP_addCharDescDecl_req command TL frame is the following:</p>
-<table class="markdownTable">
-<tr class="markdownTableHead">
-<th class="markdownTableHeadNone"><a class="el" href="union_header.html">Header</a> (1 Bytes)   </th><th class="markdownTableHeadNone">Generic short UUID (5 Byte) <br  />
- present only if bit set in header   </th><th class="markdownTableHeadNone">Generic long UUID (19 Byte) <br  />
- present only if bit set in header   </th><th class="markdownTableHeadNone">CCCD (1 Byte) <br  />
- present only if bit set in header   </th><th class="markdownTableHeadNone">Format (7 Bytes) <br  />
- present only if bit set in header   </th><th class="markdownTableHeadNone">User Description (N Bytes) <br  />
- present only if bit set in header    </th></tr>
-<tr class="markdownTableRowOdd">
-<td class="markdownTableBodyNone">bit 7: user Descr <br  />
+<pre class="fragment">The first parameter of the API is a header indicating which attribute need to be added.
+When a bit is set, the corresponding attribute is present on the following parameters and will be added to the characteristic.
+The parameter for an attribute needs to appear in the same order as the bit appear in the header.
+
+For example, if both CCCD and user description attribute needs to be added.
+Then the header will have the value 0x5 (b101).
+The CCCD parameter (1 byte) will then follow the header, and the user description parameter (N Bytes) will follow the CCCD parameter.
+Other parameters must be omitted.
+
+the SNP_addCharDescDecl_req command TL frame is the following:
+
+Header (1 Bytes)                                                                                                                    | Generic short UUID (5 Byte) \n present only if bit set in header  | Generic long UUID (19 Byte) \n present only if bit set in header | CCCD (1 Byte) \n present only if bit set in header  | Format (7 Bytes)  \n present only if bit set in header  | User Description  (N Bytes)  \n present only if bit set in header
+</pre><p> -------------------------------------------------------------------------------------------------------------------------------------&mdash;|----------------------------------------------------------------&mdash;|---------------------------------------------------------------&mdash;|--------------------------------------------------&mdash;|------------------------------------------------------&mdash;|---------------------&mdash; bit 7: user Descr <br  />
  bit 6:4 RFU <br  />
  bit 3: Format Descr. <br  />
  bit 2 : CCCD <br  />
  bit 1: Generic-Long UUID <br  />
- bit 0 : Generic-Short UUID   </td><td class="markdownTableBodyNone">#snpAddAttrGenShortUUID_t   </td><td class="markdownTableBodyNone">#snpAddAttrGenLongUUID_t   </td><td class="markdownTableBodyNone">#snpAddAttrCccd_t   </td><td class="markdownTableBodyNone">#snpAddAttrFormat_t   </td><td class="markdownTableBodyNone">#snpAddAttrUserDesc_t   </td></tr>
-</table>
+ bit 0 : Generic-Short UUID | #snpAddAttrGenShortUUID_t | #snpAddAttrGenLongUUID_t | #snpAddAttrCccd_t | #snpAddAttrFormat_t | #snpAddAttrUserDesc_t</p>
 <p >The Generic Short UUID descriptor parameters are mapped on structure #snpAddAttrGenShortUUID_t</p>
 <p >The Generic Long UUID descriptor parameters are mapped on structure #snpAddAttrGenLongUUID_t</p>
 <p >The CCCD descriptor parameters are mapped on structure #snpAddAttrCccd_t</p>
@@ -221,9 +240,9 @@ Add a optional attribute to a characteristic</h1>
 <pre class="fragment">@subsection about_CCCD About CCCD
   If the NOTIFY and INDICATE properties are enabled, the CCCD attribute must be added, or those properties will never been usable.
 
-  This attribute has some default permission set at BLE core spec level : it is always readable without authentication or authorization. 
+  This attribute has some default permission set at BLE core spec level : it is always readable without authentication or authorization.
   However, right of this characteristic by a remote GATT client is subject to authentication or authorization by a higher layer.
-  Since security in not enable yet, the automatic management of this authentication/authorization is not done by the BLE stack. 
+  Since security in not enable yet, the automatic management of this authentication/authorization is not done by the BLE stack.
   Therefore this is implementation specific. When this write request comes for this CCCD from the GATT client, it is forwarded to the AP for validation through the @ref SNP_charConfigUpdated command.
   This is an ATT transaction, the application has 30s to confirm the update or return an error (if the application does not allow the attribute value to be update, it must reply an error).
 
@@ -296,15 +315,17 @@ Get GATT parameters</h1>
 <h1><a class="anchor" id="SNP_charConfigUpdated"></a>
 CCCD update indication</h1>
 <p >The SNP_charConfigUpdated_req Event is sent by the SNP when a remote GATT client request to update the CCCD value(to enable notification or indication). The AP is responsible to remember the CCCD attribute for the GATT client if needed. The AP is responsible to accept (authorize) the modification of the CCCD. In the case notification has been enabled, the AP is able to notify or indicate the remote GATT client that the characteristic value has changed by calling API SNP_send_notiInd_req. Only one indication can be send at a time to a particular client. To send a new indication to the same client, the AP must wait the SNP_charConfigUpdated_rsp, see <a class="el" href="_g_a_t_t.html#SNP_charConfigUpdated">CCCD update indication</a>.</p>
-<p >The snpCharWriteInd_t::rspNeeded field set to 1 indicates that the AP must send the SNP_charConfigUpdated_rap back within 30s. <br  />
- if the field is set to 0, the SNP_charConfigUpdated_rsp is not needed. This last case can happen if a ATT_WRITE_CMD operation has been used by the remote GATT client. If a confirmation is send anyway, it will be ignore by the NP.</p>
+<p >The snpCharWriteInd_t::rspNeeded field set to 1 indicates that the AP must send the SNP_charConfigUpdated_rap back within 30s. if the field is set to 0, the SNP_charConfigUpdated_rsp is not needed. This last case can happen if a ATT_WRITE_CMD operation has been used by the remote GATT client. If a confirmation is send anyway, it will be ignore by the NP.</p>
 <p >This SNP_charConfigUpdated_req request is mapped on the #snpCharCfgUpdatedInd_t structure.</p>
 <p >This SNP_charConfigUpdated_rsp confirmation is mapped on the #snpCharCfgUpdatedRsp_t structure. </p>
 </div></div><!-- contents -->
 </div><!-- PageDoc -->
+</div><!-- doc-content -->
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.3
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.3 </li>
+  </ul>
+</div>
 </body>
 </html>

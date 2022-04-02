@@ -5,14 +5,21 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.9.3"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>YSU SensorTag v1: src/inc/gap.h Source File</title>
+<title>YSU SensorTag: src/inc/gap.h Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen-awesome-sidebar-only.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen-awesome-sidebar-only-darkmode-toggle.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -21,7 +28,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">YSU SensorTag v1
+   <div id="projectname">YSU SensorTag
    </div>
   </td>
  </tr>
@@ -46,6 +53,23 @@ $(function() {
 /* @license-end */
 </script>
 <div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('gap_8h_source.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -60,11 +84,6 @@ $(function() {
 </iframe>
 </div>
 
-<div id="nav-path" class="navpath">
-  <ul>
-<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_6bc6ad22483805bbbda55258ad2a62ea.html">inc</a></li>  </ul>
-</div>
-</div><!-- top -->
 <div class="header">
   <div class="headertitle"><div class="title">gap.h</div></div>
 </div><!--header-->
@@ -74,15 +93,15 @@ $(function() {
 <div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="comment"> @file  gap.h</span></div>
 <div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="comment"></span> </div>
 <div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="comment"> @brief BLE GAP API</span></div>
-<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="comment">        </span></div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="comment"></span> </div>
 <div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="comment">        This file contains the interface to the GAP.</span></div>
-<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="comment">        </span></div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="comment"></span> </div>
 <div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="comment">        \image html HighLevelGAP.PNG</span></div>
-<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="comment">        </span></div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="comment"></span> </div>
 <div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="comment">        \htmlinclude GAPDesc.html</span></div>
-<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="comment">        </span></div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="comment"></span> </div>
 <div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="comment">        \image html CentralDeviceDiscoveryProcess.PNG</span></div>
-<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="comment">        </span></div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="comment"></span> </div>
 <div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="comment">        A central device can scan for advertising peripheral and broadcaster</span></div>
 <div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><span class="comment">        devices. The Observer process is similar to the central process except</span></div>
 <div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="comment">        that will not receive the SCAN_RSP data. &lt;BR&gt;&lt;BR&gt;</span></div>
@@ -92,27 +111,27 @@ $(function() {
 <div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span><span class="comment">        device discovery parameters passed in when GAP_DeviceDiscoveryRequest()</span></div>
 <div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span><span class="comment">        was called. Then, when the scan is complete, it will return an array of</span></div>
 <div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span><span class="comment">        devices that pass through its filter. &lt;BR&gt;&lt;BR&gt;</span></div>
-<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span><span class="comment">        </span></div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span><span class="comment"></span> </div>
 <div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span><span class="comment">        \image html CentralLinkEstablishmentProcess.PNG</span></div>
-<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span><span class="comment">        </span></div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span><span class="comment"></span> </div>
 <div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span><span class="comment">        After the Device Discovery Process, the central device can establish a</span></div>
 <div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span><span class="comment">        connection with a peripheral device by calling</span></div>
 <div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span><span class="comment">        GAP_EstablishLinkRequest().  When the link has been established the GAP</span></div>
 <div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span><span class="comment">        will send back the @ref GAP_LINK_ESTABLISHED_EVENT</span></div>
 <div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span><span class="comment">        [GAP_LinkEstablished]. &lt;BR&gt;&lt;BR&gt;</span></div>
-<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span><span class="comment">        </span></div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span><span class="comment"></span> </div>
 <div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span><span class="comment">        \image html CentralPairingProcess.PNG</span></div>
-<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span><span class="comment">        </span></div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span><span class="comment"></span> </div>
 <div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span><span class="comment">        After a link is established, the central device can initiate a pairing</span></div>
 <div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span><span class="comment">        process to either encrypt the link or exchange keys for bonding.</span></div>
 <div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span><span class="comment">        &lt;BR&gt;&lt;BR&gt;&lt;BR&gt;&lt;BR&gt;&lt;BR&gt;&lt;BR&gt;</span></div>
 <div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span><span class="comment"></span> </div>
 <div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span><span class="comment"> Group: WCS, BTS</span></div>
-<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span><span class="comment"> Target Device: CC2650, CC2640, CC1350</span></div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span><span class="comment"> Target Device: CC2650, CC2640</span></div>
 <div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span><span class="comment"></span> </div>
 <div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span><span class="comment"> ******************************************************************************</span></div>
 <div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span><span class="comment"> </span></div>
-<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span><span class="comment"> Copyright (c) 2009-2016, Texas Instruments Incorporated</span></div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span><span class="comment"> Copyright (c) 2009-2021, Texas Instruments Incorporated</span></div>
 <div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span><span class="comment"> All rights reserved.</span></div>
 <div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span><span class="comment"></span> </div>
 <div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span><span class="comment"> IMPORTANT: Your use of this Software is limited to those specific rights</span></div>
@@ -129,7 +148,7 @@ $(function() {
 <div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span><span class="comment"> its documentation for any purpose.</span></div>
 <div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span><span class="comment"></span> </div>
 <div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span><span class="comment"> YOU FURTHER ACKNOWLEDGE AND AGREE THAT THE SOFTWARE AND DOCUMENTATION ARE</span></div>
-<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span><span class="comment"> PROVIDED ìAS ISî WITHOUT WARRANTY OF ANY KIND, EITHER EXPRESS OR IMPLIED,</span></div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span><span class="comment"> PROVIDED ‚ÄúAS IS‚Äù WITHOUT WARRANTY OF ANY KIND, EITHER EXPRESS OR IMPLIED,</span></div>
 <div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span><span class="comment"> INCLUDING WITHOUT LIMITATION, ANY WARRANTY OF MERCHANTABILITY, TITLE,</span></div>
 <div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span><span class="comment"> NON-INFRINGEMENT AND FITNESS FOR A PARTICULAR PURPOSE. IN NO EVENT SHALL</span></div>
 <div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span><span class="comment"> TEXAS INSTRUMENTS OR ITS LICENSORS BE LIABLE OR OBLIGATED UNDER CONTRACT,</span></div>
@@ -144,8 +163,8 @@ $(function() {
 <div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span><span class="comment"> contact Texas Instruments Incorporated at www.TI.com.</span></div>
 <div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span><span class="comment"></span> </div>
 <div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span><span class="comment"> ******************************************************************************</span></div>
-<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span><span class="comment"> Release Name: ble_sdk_2_02_01_18</span></div>
-<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span><span class="comment"> Release Date: 2016-10-26 15:20:04</span></div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span><span class="comment"> Release Name: ble_sdk_2_02_02_</span></div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span><span class="comment"> Release Date: 2021-04-01 13:25:49</span></div>
 <div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span><span class="comment"> *****************************************************************************/</span></div>
 <div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span> </div>
 <div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span> </div>
@@ -163,11 +182,11 @@ $(function() {
 <div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span><span class="preprocessor">#include &quot;bcomdef.h&quot;</span></div>
 <div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span><span class="preprocessor">#include &quot;osal.h&quot;</span></div>
 <div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span><span class="preprocessor">#include &quot;sm.h&quot;</span></div>
-<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>  </div>
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span> </div>
 <div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span><span class="comment">/*-------------------------------------------------------------------</span></div>
 <div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span><span class="comment"> * MACROS</span></div>
 <div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span><span class="comment"> */</span></div>
-<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span>        </div>
+<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span> </div>
 <div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span><span class="comment">/*-------------------------------------------------------------------</span></div>
 <div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span><span class="comment"> * CONSTANTS</span></div>
 <div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span><span class="comment"> */</span></div>
@@ -679,7 +698,7 @@ $(function() {
 <div class="line"><a id="l00974" name="l00974"></a><span class="lineno">  974</span>  <span class="keyword">extern</span> <span class="keywordtype">void</span> <a class="code hl_function" href="group___g_a_p___a_p_i.html#ga29744ff36f2789227405780eea015a24">GAP_RegisterForMsgs</a>( uint8 taskID );</div>
 <div class="line"><a id="l00975" name="l00975"></a><span class="lineno">  975</span> </div>
 <div class="line"><a id="l00983" name="l00983"></a><span class="lineno"><a class="line" href="group___g_a_p___a_p_i.html#gaf17ced2616f8b7f67b110e8e5ad141bc">  983</a></span>  <span class="keyword">extern</span> <span class="keywordtype">void</span> <a class="code hl_function" href="group___g_a_p___a_p_i.html#gaf17ced2616f8b7f67b110e8e5ad141bc">GAP_RegisterBondMgrCBs</a>( <a class="code hl_struct" href="structgap_bond_mgr_c_bs__t.html">gapBondMgrCBs_t</a> *pCBs );</div>
-<div class="line"><a id="l00984" name="l00984"></a><span class="lineno">  984</span>  </div>
+<div class="line"><a id="l00984" name="l00984"></a><span class="lineno">  984</span> </div>
 <div class="line"><a id="l00985" name="l00985"></a><span class="lineno">  985</span><span class="comment">/*-------------------------------------------------------------------</span></div>
 <div class="line"><a id="l00986" name="l00986"></a><span class="lineno">  986</span><span class="comment"> * FUNCTIONS - Device Discovery</span></div>
 <div class="line"><a id="l00987" name="l00987"></a><span class="lineno">  987</span><span class="comment"> */</span></div>
@@ -710,7 +729,7 @@ $(function() {
 <div class="line"><a id="l01109" name="l01109"></a><span class="lineno"> 1109</span>  <span class="keyword">extern</span> <a class="code hl_typedef" href="group___b_l_e___c_o_m_m_o_n___d_e_f_i_n_e_s.html#ga5ac2ea318e3aa14ec7ac5b9426ac4067">bStatus_t</a> <a class="code hl_function" href="group___g_a_p___a_p_i.html#gaad99f6598df0ee36c4cd2608afa09618">GAP_UpdateLinkParamReq</a>( <a class="code hl_struct" href="structgap_update_link_param_req__t.html">gapUpdateLinkParamReq_t</a> *pParams );</div>
 <div class="line"><a id="l01110" name="l01110"></a><span class="lineno"> 1110</span> </div>
 <div class="line"><a id="l01123" name="l01123"></a><span class="lineno"> 1123</span>  <span class="keyword">extern</span> <a class="code hl_typedef" href="group___b_l_e___c_o_m_m_o_n___d_e_f_i_n_e_s.html#ga5ac2ea318e3aa14ec7ac5b9426ac4067">bStatus_t</a> <a class="code hl_function" href="group___g_a_p___a_p_i.html#gaed1b6299bfe3b0469e2baf53cba04fe1">GAP_UpdateLinkParamReqReply</a>(<a class="code hl_struct" href="structgap_update_link_param_req_reply__t.html">gapUpdateLinkParamReqReply_t</a> *pParams);</div>
-<div class="line"><a id="l01124" name="l01124"></a><span class="lineno"> 1124</span>  </div>
+<div class="line"><a id="l01124" name="l01124"></a><span class="lineno"> 1124</span> </div>
 <div class="line"><a id="l01130" name="l01130"></a><span class="lineno"><a class="line" href="group___g_a_p___a_p_i.html#gafe7f1125452478c395a09f4874c6374a"> 1130</a></span>  <span class="keyword">extern</span> uint8 <a class="code hl_function" href="group___g_a_p___a_p_i.html#gafe7f1125452478c395a09f4874c6374a">GAP_NumActiveConnections</a>( <span class="keywordtype">void</span> );</div>
 <div class="line"><a id="l01131" name="l01131"></a><span class="lineno"> 1131</span> </div>
 <div class="line"><a id="l01132" name="l01132"></a><span class="lineno"> 1132</span><span class="comment">/*-------------------------------------------------------------------</span></div>
@@ -730,7 +749,7 @@ $(function() {
 <div class="line"><a id="l01234" name="l01234"></a><span class="lineno"> 1234</span>  <span class="keyword">extern</span> <a class="code hl_typedef" href="group___b_l_e___c_o_m_m_o_n___d_e_f_i_n_e_s.html#ga5ac2ea318e3aa14ec7ac5b9426ac4067">bStatus_t</a> <a class="code hl_function" href="group___g_a_p___a_p_i.html#ga6a978b3a5b0441b2538a5da87ee9c409">GAP_Signable</a>( uint16 connectionHandle, uint8 authenticated, <a class="code hl_struct" href="structsm_signing_info__t.html">smSigningInfo_t</a> *pParams );</div>
 <div class="line"><a id="l01235" name="l01235"></a><span class="lineno"> 1235</span> </div>
 <div class="line"><a id="l01253" name="l01253"></a><span class="lineno"> 1253</span>  <span class="keyword">extern</span> <a class="code hl_typedef" href="group___b_l_e___c_o_m_m_o_n___d_e_f_i_n_e_s.html#ga5ac2ea318e3aa14ec7ac5b9426ac4067">bStatus_t</a> <a class="code hl_function" href="group___g_a_p___a_p_i.html#ga54c684222fd69ffdfed61ed57cb5e64e">GAP_Bond</a>( uint16 connectionHandle, uint8 authenticated,</div>
-<div class="line"><a id="l01254" name="l01254"></a><span class="lineno"> 1254</span>                             uint8 secureConnections, <a class="code hl_struct" href="structsm_security_info__t.html">smSecurityInfo_t</a> *pParams, </div>
+<div class="line"><a id="l01254" name="l01254"></a><span class="lineno"> 1254</span>                             uint8 secureConnections, <a class="code hl_struct" href="structsm_security_info__t.html">smSecurityInfo_t</a> *pParams,</div>
 <div class="line"><a id="l01255" name="l01255"></a><span class="lineno"> 1255</span>                             uint8 startEncryption );</div>
 <div class="line"><a id="l01256" name="l01256"></a><span class="lineno"> 1256</span> </div>
 <div class="line"><a id="l01261" name="l01261"></a><span class="lineno"> 1261</span><span class="comment">/*-------------------------------------------------------------------</span></div>
@@ -746,7 +765,7 @@ $(function() {
 <div class="line"><a id="l01313" name="l01313"></a><span class="lineno"> 1313</span>  <span class="keyword">extern</span> <span class="keywordtype">void</span> GAP_SecParamsInit( uint8 *pSRK, uint32 *pSignCounter );</div>
 <div class="line"><a id="l01314" name="l01314"></a><span class="lineno"> 1314</span> </div>
 <div class="line"><a id="l01324" name="l01324"></a><span class="lineno"> 1324</span>  <span class="keyword">extern</span> <a class="code hl_typedef" href="group___b_l_e___c_o_m_m_o_n___d_e_f_i_n_e_s.html#ga5ac2ea318e3aa14ec7ac5b9426ac4067">bStatus_t</a> GAP_PeriDevMgrInit( <span class="keywordtype">void</span> );</div>
-<div class="line"><a id="l01325" name="l01325"></a><span class="lineno"> 1325</span>  </div>
+<div class="line"><a id="l01325" name="l01325"></a><span class="lineno"> 1325</span> </div>
 <div class="line"><a id="l01335" name="l01335"></a><span class="lineno"> 1335</span>  <span class="keyword">extern</span> <span class="keywordtype">void</span> GAP_PeriConnRegister( <span class="keywordtype">void</span> );</div>
 <div class="line"><a id="l01336" name="l01336"></a><span class="lineno"> 1336</span> </div>
 <div class="line"><a id="l01347" name="l01347"></a><span class="lineno"> 1347</span>  <span class="keyword">extern</span> <a class="code hl_typedef" href="group___b_l_e___c_o_m_m_o_n___d_e_f_i_n_e_s.html#ga5ac2ea318e3aa14ec7ac5b9426ac4067">bStatus_t</a> GAP_CentDevMgrInit( uint8 maxScanResponses );</div>
@@ -961,9 +980,13 @@ $(function() {
 <div class="ttc" id="astructsm_security_info__t_html"><div class="ttname"><a href="structsm_security_info__t.html">smSecurityInfo_t</a></div><div class="ttdef"><b>Definition:</b> sm.h:216</div></div>
 <div class="ttc" id="astructsm_signing_info__t_html"><div class="ttname"><a href="structsm_signing_info__t.html">smSigningInfo_t</a></div><div class="ttdef"><b>Definition:</b> sm.h:237</div></div>
 </div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.3
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_6bc6ad22483805bbbda55258ad2a62ea.html">inc</a></li><li class="navelem"><b>gap.h</b></li>
+    <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.3 </li>
+  </ul>
+</div>
 </body>
 </html>

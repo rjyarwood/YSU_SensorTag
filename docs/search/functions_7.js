@@ -27,5 +27,7 @@ var searchData=
   ['l2cap_5fsenddata_24',['L2CAP_SendData',['../group___l2_c_a_p___a_p_i.html#gafdf95c8f4d3529773e9ca93a54271da9',1,'l2cap.h']]],
   ['l2cap_5fsendsdu_25',['L2CAP_SendSDU',['../group___l2_c_a_p___a_p_i.html#ga4756c83b98db5cf43ff8d4e82b84e2db',1,'L2CAP_SendSDU(l2capPacket_t *pPkt):&#160;icall_api.c'],['../group___l2_c_a_p___a_p_i.html#ga4756c83b98db5cf43ff8d4e82b84e2db',1,'L2CAP_SendSDU(l2capPacket_t *pPkt):&#160;icall_api.c']]],
   ['l2cap_5fsetbufsize_26',['L2CAP_SetBufSize',['../group___l2_c_a_p___a_p_i.html#gaa4bf1b7a49f6d94ab4203d756befd6bb',1,'l2cap.h']]],
-  ['l2cap_5fsetuserconfig_27',['L2CAP_SetUserConfig',['../group___l2_c_a_p___a_p_i.html#ga0f90cf482e569b524c5ad02de7e420ff',1,'l2cap.h']]]
+  ['l2cap_5fsetuserconfig_27',['L2CAP_SetUserConfig',['../group___l2_c_a_p___a_p_i.html#ga0f90cf482e569b524c5ad02de7e420ff',1,'l2cap.h']]],
+  ['lib_5fsearch_28',['lib_search',['../namespacelib__search.html#ac004e7fdb6e818324d4bede9d6c3a0ec',1,'lib_search']]],
+  ['libstosearch_29',['libsToSearch',['../namespacelib__search.html#ae52b9d59d68180b3bb2a9515de670713',1,'lib_search']]]
 ];

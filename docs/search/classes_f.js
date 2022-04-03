@@ -14,10 +14,9 @@ var searchData=
   ['perbychan_5ft_11',['perByChan_t',['../structper_by_chan__t.html',1,'']]],
   ['perinfo_5ft_12',['perInfo_t',['../structper_info__t.html',1,'']]],
   ['phyinfo_5ft_13',['phyInfo_t',['../structphy_info__t.html',1,'']]],
-  ['pka_5feccparam256_14',['PKA_EccParam256',['../union_p_k_a___ecc_param256.html',1,'']]],
-  ['preparewrites_5ft_15',['prepareWrites_t',['../structprepare_writes__t.html',1,'']]],
-  ['privinfo_5ft_16',['privInfo_t',['../structpriv_info__t.html',1,'']]],
-  ['proximityevt_5ft_17',['proximityEvt_t',['../structproximity_evt__t.html',1,'']]],
-  ['proxreportercbs_5ft_18',['proxReporterCBs_t',['../structprox_reporter_c_bs__t.html',1,'']]],
-  ['pwrmgr_5fattribute_5ft_19',['pwrmgr_attribute_t',['../structpwrmgr__attribute__t.html',1,'']]]
+  ['preparewrites_5ft_14',['prepareWrites_t',['../structprepare_writes__t.html',1,'']]],
+  ['privinfo_5ft_15',['privInfo_t',['../structpriv_info__t.html',1,'']]],
+  ['proximityevt_5ft_16',['proximityEvt_t',['../structproximity_evt__t.html',1,'']]],
+  ['proxreportercbs_5ft_17',['proxReporterCBs_t',['../structprox_reporter_c_bs__t.html',1,'']]],
+  ['pwrmgr_5fattribute_5ft_18',['pwrmgr_attribute_t',['../structpwrmgr__attribute__t.html',1,'']]]
 ];

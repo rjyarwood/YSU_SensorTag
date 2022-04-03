@@ -18,6 +18,7 @@ var searchData=
   ['formathandle_15',['formatHandle',['../group___s_a_p___a_p_i.html#ga4735a5a8fa1f27672fba1423ceffb2c9',1,'SAP_CharHandle_t']]],
   ['free_16',['free',['../struct_e_c_c_r_o_m_c_c26_x_x___params.html#a194bafd364944d49c97f6bcd67a6ab2b',1,'ECCROMCC26XX_Params']]],
   ['freefxn_17',['freeFxn',['../struct_p_d_m_c_c26_x_x___params.html#ae0149ca1615d25422c7e0d9c473ccd2e',1,'PDMCC26XX_Params::freeFxn()'],['../struct_p_d_m_c_c26_x_x___object.html#a1c7fe813d98d451be08b4d7f7618f2f3',1,'PDMCC26XX_Object::freeFxn()']]],
-  ['func_18',['func',['../struct__icall__func__args__hdr__t.html#a38dda71a3a6e5c6d73626b1c6598875b',1,'_icall_func_args_hdr_t']]],
-  ['fxntableptr_19',['fxnTablePtr',['../struct_watchdog___config.html#a89184eb9474db817513b06dfd86bf96f',1,'Watchdog_Config']]]
+  ['frontier_18',['frontier',['../namespacefrontier.html',1,'']]],
+  ['func_19',['func',['../struct__icall__func__args__hdr__t.html#a38dda71a3a6e5c6d73626b1c6598875b',1,'_icall_func_args_hdr_t']]],
+  ['fxntableptr_20',['fxnTablePtr',['../struct_watchdog___config.html#a89184eb9474db817513b06dfd86bf96f',1,'Watchdog_Config']]]
 ];

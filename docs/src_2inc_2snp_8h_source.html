@@ -5,21 +5,14 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.9.3"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>YSU SensorTag: src/inc/snp.h Source File</title>
+<title>YSU SensorTag v1: src/inc/snp.h Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
-<link href="navtree.css" rel="stylesheet" type="text/css"/>
-<script type="text/javascript" src="resize.js"></script>
-<script type="text/javascript" src="navtreedata.js"></script>
-<script type="text/javascript" src="navtree.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
-<link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
-<link href="doxygen-awesome-sidebar-only.css" rel="stylesheet" type="text/css"/>
-<link href="doxygen-awesome-sidebar-only-darkmode-toggle.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -28,7 +21,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">YSU SensorTag
+   <div id="projectname">YSU SensorTag v1
    </div>
   </td>
  </tr>
@@ -53,23 +46,6 @@ $(function() {
 /* @license-end */
 </script>
 <div id="main-nav"></div>
-</div><!-- top -->
-<div id="side-nav" class="ui-resizable side-nav-resizable">
-  <div id="nav-tree">
-    <div id="nav-tree-contents">
-      <div id="nav-sync" class="sync"></div>
-    </div>
-  </div>
-  <div id="splitbar" style="-moz-user-select:none;" 
-       class="ui-resizable-handle">
-  </div>
-</div>
-<script type="text/javascript">
-/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-$(document).ready(function(){initNavTree('src_2inc_2snp_8h_source.html',''); initResizable(); });
-/* @license-end */
-</script>
-<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -84,6 +60,11 @@ $(document).ready(function(){initNavTree('src_2inc_2snp_8h_source.html',''); ini
 </iframe>
 </div>
 
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_6bc6ad22483805bbbda55258ad2a62ea.html">inc</a></li>  </ul>
+</div>
+</div><!-- top -->
 <div class="header">
   <div class="headertitle"><div class="title">snp.h</div></div>
 </div><!--header-->
@@ -95,11 +76,11 @@ $(document).ready(function(){initNavTree('src_2inc_2snp_8h_source.html',''); ini
 <div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="comment"> @brief main header file for the serial network processor</span></div>
 <div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="comment"></span> </div>
 <div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="comment"> Group: WCS, BTS</span></div>
-<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="comment"> Target Device: CC2650, CC2640</span></div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="comment"> Target Device: CC2650, CC2640, CC1350</span></div>
 <div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="comment"></span> </div>
 <div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="comment"> ******************************************************************************</span></div>
 <div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="comment"> </span></div>
-<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="comment"> Copyright (c) 2015-2021, Texas Instruments Incorporated</span></div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="comment"> Copyright (c) 2015-2016, Texas Instruments Incorporated</span></div>
 <div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="comment"> All rights reserved.</span></div>
 <div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="comment"></span> </div>
 <div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="comment"> Redistribution and use in source and binary forms, with or without</span></div>
@@ -130,8 +111,8 @@ $(document).ready(function(){initNavTree('src_2inc_2snp_8h_source.html',''); ini
 <div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span><span class="comment"> EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.</span></div>
 <div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span><span class="comment"></span> </div>
 <div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span><span class="comment"> ******************************************************************************</span></div>
-<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span><span class="comment"> Release Name: ble_sdk_2_02_02_</span></div>
-<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span><span class="comment"> Release Date: 2021-04-01 13:25:49</span></div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span><span class="comment"> Release Name: ble_sdk_2_02_01_18</span></div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span><span class="comment"> Release Date: 2016-10-26 15:20:04</span></div>
 <div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span><span class="comment"> *****************************************************************************/</span></div>
 <div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span> </div>
 <div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span><span class="preprocessor">#ifndef SNP_H</span></div>
@@ -145,9 +126,9 @@ $(document).ready(function(){initNavTree('src_2inc_2snp_8h_source.html',''); ini
 <div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span><span class="comment">/*********************************************************************</span></div>
 <div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span><span class="comment"> * INCLUDES</span></div>
 <div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span><span class="comment"> */</span></div>
-<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span> </div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>  </div>
 <div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span><span class="preprocessor">#include &quot;hal_types.h&quot;</span></div>
-<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span> </div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>  </div>
 <div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span><span class="comment">/*********************************************************************</span></div>
 <div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span><span class="comment">*  EXTERNAL VARIABLES</span></div>
 <div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span><span class="comment">*/</span></div>
@@ -157,7 +138,7 @@ $(document).ready(function(){initNavTree('src_2inc_2snp_8h_source.html',''); ini
 <div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span><span class="comment"> */</span></div>
 <div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span> </div>
 <div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span><span class="preprocessor">#define SNP_IMAGE_START           0x00000000</span></div>
-<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span> </div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>   </div>
 <div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span> </div>
 <div class="line"><a id="l00077" name="l00077"></a><span class="lineno"><a class="line" href="group___s_n_p___n_p_i___t_y_p_e.html#ga9baba627781c846634ce07570d2e8dc1">   77</a></span><span class="preprocessor">#define SNP_NPI_ASYNC_CMD_TYPE    (RPC_SYS_BLE_SNP+(NPI_MSG_TYPE_ASYNC&lt;&lt;5))</span></div>
 <div class="line"><a id="l00079" name="l00079"></a><span class="lineno"><a class="line" href="group___s_n_p___n_p_i___t_y_p_e.html#ga7aa4b6eb012a8d2d26c5990d473e9b6c">   79</a></span><span class="preprocessor">#define SNP_NPI_SYNC_REQ_TYPE     (RPC_SYS_BLE_SNP+(NPI_MSG_TYPE_SYNCREQ&lt;&lt;5))</span></div>
@@ -170,7 +151,7 @@ $(document).ready(function(){initNavTree('src_2inc_2snp_8h_source.html',''); ini
 <div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>    SNP_GATT_GRP,</div>
 <div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>    SNP_RFU_GRP</div>
 <div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>};</div>
-<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span> </div>
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>                 </div>
 <div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span><span class="preprocessor">#define SNP_MASK_EVT_REQ                       0x02</span></div>
 <div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span><span class="preprocessor">#define SNP_GET_REVISION_REQ                   0x03</span></div>
 <div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span><span class="preprocessor">#define SNP_HCI_CMD_REQ                        0x04</span></div>
@@ -223,7 +204,7 @@ $(document).ready(function(){initNavTree('src_2inc_2snp_8h_source.html',''); ini
 <div class="line"><a id="l00150" name="l00150"></a><span class="lineno">  150</span><span class="preprocessor">#define SNP_SET_GATT_PARAM_REQ                 0x8C</span></div>
 <div class="line"><a id="l00151" name="l00151"></a><span class="lineno">  151</span><span class="preprocessor">#define SNP_GET_GATT_PARAM_REQ                 0x8D</span></div>
 <div class="line"><a id="l00152" name="l00152"></a><span class="lineno">  152</span><span class="preprocessor">#define SNP_REG_PREDEF_SRV_REQ                 0x8E</span></div>
-<div class="line"><a id="l00153" name="l00153"></a><span class="lineno">  153</span> </div>
+<div class="line"><a id="l00153" name="l00153"></a><span class="lineno">  153</span>                                                </div>
 <div class="line"><a id="l00155" name="l00155"></a><span class="lineno">  155</span><span class="preprocessor">#define SNP_ADD_SERVICE_RSP                    0x81</span></div>
 <div class="line"><a id="l00156" name="l00156"></a><span class="lineno">  156</span><span class="preprocessor">#define SNP_ADD_CHAR_VAL_DECL_RSP              0x82</span></div>
 <div class="line"><a id="l00157" name="l00157"></a><span class="lineno">  157</span><span class="preprocessor">#define SNP_ADD_CHAR_DESC_DECL_RSP             0x83</span></div>
@@ -237,7 +218,7 @@ $(document).ready(function(){initNavTree('src_2inc_2snp_8h_source.html',''); ini
 <div class="line"><a id="l00165" name="l00165"></a><span class="lineno">  165</span><span class="preprocessor">#define SNP_SET_GATT_PARAM_RSP                 0x8C</span></div>
 <div class="line"><a id="l00166" name="l00166"></a><span class="lineno">  166</span><span class="preprocessor">#define SNP_GET_GATT_PARAM_RSP                 0x8D</span></div>
 <div class="line"><a id="l00167" name="l00167"></a><span class="lineno">  167</span><span class="preprocessor">#define SNP_REG_PREDEF_SRV_RSP                 0x8E</span></div>
-<div class="line"><a id="l00168" name="l00168"></a><span class="lineno">  168</span> </div>
+<div class="line"><a id="l00168" name="l00168"></a><span class="lineno">  168</span>   </div>
 <div class="line"><a id="l00173" name="l00173"></a><span class="lineno"><a class="line" href="group___s_n_p___e_r_r_o_r_s.html#gabba6ef602457f8a682412ffb96f192c8">  173</a></span><span class="preprocessor">#define SNP_SUCCESS                            0x00</span></div>
 <div class="line"><a id="l00174" name="l00174"></a><span class="lineno">  174</span><span class="preprocessor">#define SNP_FAILURE                            0x83</span></div>
 <div class="line"><a id="l00175" name="l00175"></a><span class="lineno">  175</span><span class="preprocessor">#define SNP_INVALID_PARAMS                     0x84</span></div>
@@ -256,15 +237,15 @@ $(document).ready(function(){initNavTree('src_2inc_2snp_8h_source.html',''); ini
 <div class="line"><a id="l00188" name="l00188"></a><span class="lineno">  188</span><span class="preprocessor">#define SNP_NOTIF_IND_NO_CCCD_ATTRIBUTE        0x91</span></div>
 <div class="line"><a id="l00189" name="l00189"></a><span class="lineno">  189</span><span class="preprocessor">#define SNP_NOT_CONNECTED                      0x92</span></div>
 <div class="line"><a id="l00190" name="l00190"></a><span class="lineno">  190</span><span class="preprocessor">#define SNP_FAILURE_NO_ATT_RSP                 0x93</span></div>
-<div class="line"><a id="l00199" name="l00199"></a><span class="lineno"><a class="line" href="group___s_n_p___e_v_e_n_t.html#gaf3a1e5d1d2451160b88935678c806d07">  199</a></span><span class="preprocessor">#define  SNP_CONN_EST_EVT                      0x0001</span></div>
-<div class="line"><a id="l00200" name="l00200"></a><span class="lineno">  200</span><span class="preprocessor">#define  SNP_CONN_TERM_EVT                     0x0002</span></div>
-<div class="line"><a id="l00201" name="l00201"></a><span class="lineno">  201</span><span class="preprocessor">#define  SNP_CONN_PARAM_UPDATED_EVT            0x0004</span></div>
-<div class="line"><a id="l00202" name="l00202"></a><span class="lineno">  202</span><span class="preprocessor">#define  SNP_ADV_STARTED_EVT                   0x0008</span></div>
-<div class="line"><a id="l00203" name="l00203"></a><span class="lineno">  203</span><span class="preprocessor">#define  SNP_ADV_ENDED_EVT                     0x0010</span></div>
-<div class="line"><a id="l00204" name="l00204"></a><span class="lineno">  204</span><span class="preprocessor">#define  SNP_ATT_MTU_EVT                       0x0020</span></div>
+<div class="line"><a id="l00199" name="l00199"></a><span class="lineno"><a class="line" href="group___s_n_p___e_v_e_n_t.html#gaf3a1e5d1d2451160b88935678c806d07">  199</a></span><span class="preprocessor">#define  SNP_CONN_EST_EVT                      0x0001  </span></div>
+<div class="line"><a id="l00200" name="l00200"></a><span class="lineno">  200</span><span class="preprocessor">#define  SNP_CONN_TERM_EVT                     0x0002  </span></div>
+<div class="line"><a id="l00201" name="l00201"></a><span class="lineno">  201</span><span class="preprocessor">#define  SNP_CONN_PARAM_UPDATED_EVT            0x0004  </span></div>
+<div class="line"><a id="l00202" name="l00202"></a><span class="lineno">  202</span><span class="preprocessor">#define  SNP_ADV_STARTED_EVT                   0x0008  </span></div>
+<div class="line"><a id="l00203" name="l00203"></a><span class="lineno">  203</span><span class="preprocessor">#define  SNP_ADV_ENDED_EVT                     0x0010  </span></div>
+<div class="line"><a id="l00204" name="l00204"></a><span class="lineno">  204</span><span class="preprocessor">#define  SNP_ATT_MTU_EVT                       0x0020  </span></div>
 <div class="line"><a id="l00205" name="l00205"></a><span class="lineno">  205</span><span class="preprocessor">#define  SNP_SECURITY_EVT                      0x0040</span></div>
 <div class="line"><a id="l00206" name="l00206"></a><span class="lineno">  206</span><span class="preprocessor">#define  SNP_AUTHENTICATION_EVT                0x0080</span></div>
-<div class="line"><a id="l00207" name="l00207"></a><span class="lineno">  207</span><span class="preprocessor">#define  SNP_ERROR_EVT                         0x8000</span></div>
+<div class="line"><a id="l00207" name="l00207"></a><span class="lineno">  207</span><span class="preprocessor">#define  SNP_ERROR_EVT                         0x8000  </span></div>
 <div class="line"><a id="l00212" name="l00212"></a><span class="lineno">  212</span><span class="preprocessor">#define SNP_DEV_ALL_EVENT_MASK (SNP_CONN_EST_EVT | SNP_CONN_TERM_EVT | \</span></div>
 <div class="line"><a id="l00213" name="l00213"></a><span class="lineno">  213</span><span class="preprocessor">SNP_CONN_PARAM_UPDATED_EVT | SNP_ADV_STARTED_EVT | SNP_ADV_ENDED_EVT | \</span></div>
 <div class="line"><a id="l00214" name="l00214"></a><span class="lineno">  214</span><span class="preprocessor">  SNP_ATT_MTU_EVT | SNP_ERROR_EVT)</span></div>
@@ -293,16 +274,16 @@ $(document).ready(function(){initNavTree('src_2inc_2snp_8h_source.html',''); ini
 <div class="line"><a id="l00240" name="l00240"></a><span class="lineno"><a class="line" href="group___s_n_p___a_l_l_o_w_e_d___h_c_i.html#ga14cfca589355e7b4cfabb479b4229398">  240</a></span><span class="preprocessor">#define SNP_HCI_OPCODE_EXT_GET_CONNECTION_INFO          0xFC20 </span></div>
 <div class="line"><a id="l00244" name="l00244"></a><span class="lineno">  244</span><span class="preprocessor">#define SNP_HCI_OPCODE_SIZE              0x02</span></div>
 <div class="line"><a id="l00245" name="l00245"></a><span class="lineno">  245</span> </div>
-<div class="line"><a id="l00246" name="l00246"></a><span class="lineno">  246</span> </div>
+<div class="line"><a id="l00246" name="l00246"></a><span class="lineno">  246</span>  </div>
 <div class="line"><a id="l00247" name="l00247"></a><span class="lineno">  247</span><span class="comment">/* Advertising */</span></div>
 <div class="line"><a id="l00251" name="l00251"></a><span class="lineno"><a class="line" href="group___s_n_p___adv_type.html#ga1077d17da27751ba542e5ccfa1d9ea81">  251</a></span><span class="preprocessor">#define SNP_ADV_TYPE_CONN                0x00 </span></div>
 <div class="line"><a id="l00252" name="l00252"></a><span class="lineno"><a class="line" href="group___s_n_p___adv_type.html#ga4f97f18e2232f96aa61047da3ae79ad8">  252</a></span><span class="preprocessor">#define SNP_ADV_TYPE_SCANABLE            0x02 </span></div>
 <div class="line"><a id="l00253" name="l00253"></a><span class="lineno"><a class="line" href="group___s_n_p___adv_type.html#ga278d5d290df39a225dfec831e3d7589a">  253</a></span><span class="preprocessor">#define SNP_ADV_TYPE_NONCONN             0x03 </span></div>
 <div class="line"><a id="l00261" name="l00261"></a><span class="lineno"><a class="line" href="group___s_n_p___adv_filter_policy_type.html#ga10b88cf9c51251d6dd2c85d89ca942f8">  261</a></span><span class="preprocessor">#define SNP_FILTER_POLICY_ALL             0x00 </span></div>
 <div class="line"><a id="l00262" name="l00262"></a><span class="lineno"><a class="line" href="group___s_n_p___adv_filter_policy_type.html#ga71136970d614766a6d7193317e36cf91">  262</a></span><span class="preprocessor">#define SNP_FILTER_POLICY_WHITE           0x03 </span></div>
-<div class="line"><a id="l00271" name="l00271"></a><span class="lineno"><a class="line" href="group___s_n_p___adv_behavior.html#gac146bf2f247b1ded755425570eacf46c">  271</a></span><span class="preprocessor">#define SNP_ADV_STOP_ON_CONN             0x00</span></div>
-<div class="line"><a id="l00274" name="l00274"></a><span class="lineno"><a class="line" href="group___s_n_p___adv_behavior.html#ga2c307b7f6482063ef29936d232d14e1d">  274</a></span><span class="preprocessor">#define SNP_ADV_RESTART_ON_CONN_EST      0x01</span></div>
-<div class="line"><a id="l00277" name="l00277"></a><span class="lineno"><a class="line" href="group___s_n_p___adv_behavior.html#ga1e679c527cc7bc702bbea7385b25b92c">  277</a></span><span class="preprocessor">#define SNP_ADV_RESTART_ON_CONN_TERM     0x02</span></div>
+<div class="line"><a id="l00271" name="l00271"></a><span class="lineno"><a class="line" href="group___s_n_p___adv_behavior.html#gac146bf2f247b1ded755425570eacf46c">  271</a></span><span class="preprocessor">#define SNP_ADV_STOP_ON_CONN             0x00 </span></div>
+<div class="line"><a id="l00274" name="l00274"></a><span class="lineno"><a class="line" href="group___s_n_p___adv_behavior.html#ga2c307b7f6482063ef29936d232d14e1d">  274</a></span><span class="preprocessor">#define SNP_ADV_RESTART_ON_CONN_EST      0x01 </span></div>
+<div class="line"><a id="l00277" name="l00277"></a><span class="lineno"><a class="line" href="group___s_n_p___adv_behavior.html#ga1e679c527cc7bc702bbea7385b25b92c">  277</a></span><span class="preprocessor">#define SNP_ADV_RESTART_ON_CONN_TERM     0x02 </span></div>
 <div class="line"><a id="l00286" name="l00286"></a><span class="lineno"><a class="line" href="group___s_n_p___advbuffer.html#ga445653f5e5fc0213128e343d5b6fb52c">  286</a></span><span class="preprocessor">#define SNP_SCANRSP_DATA                 0x00 </span><span class="comment">// Scan response data</span></div>
 <div class="line"><a id="l00288" name="l00288"></a><span class="lineno"><a class="line" href="group___s_n_p___advbuffer.html#ga25521b6a111bcfaab72caacbe8b67d78">  288</a></span><span class="comment"></span>#define SNP_NONCONN_ADV_DATA             0x01 <span class="comment">// Non-connectable advertising data.</span></div>
 <div class="line"><a id="l00290" name="l00290"></a><span class="lineno"><a class="line" href="group___s_n_p___advbuffer.html#gaece67d21a9a7302d18f9bbb653ef3483">  290</a></span><span class="comment"></span>#define SNP_CONN_ADV_DATA                0x02 <span class="comment">// Connectable advertising data.</span></div>
@@ -320,10 +301,10 @@ $(document).ready(function(){initNavTree('src_2inc_2snp_8h_source.html',''); ini
 <div class="line"><a id="l00313" name="l00313"></a><span class="lineno">  313</span><span class="comment">/* Connection Parameters and Updates */</span></div>
 <div class="line"><a id="l00315" name="l00315"></a><span class="lineno">  315</span><span class="preprocessor">#define SNP_CONN_INT_MIN                 0x0006  </span></div>
 <div class="line"><a id="l00316" name="l00316"></a><span class="lineno">  316</span><span class="preprocessor">#define SNP_CONN_INT_MAX                 0x0C80  </span></div>
-<div class="line"><a id="l00317" name="l00317"></a><span class="lineno">  317</span> </div>
+<div class="line"><a id="l00317" name="l00317"></a><span class="lineno">  317</span>   </div>
 <div class="line"><a id="l00319" name="l00319"></a><span class="lineno">  319</span><span class="preprocessor">#define SNP_CONN_SL_MIN                  0x0000 </span></div>
 <div class="line"><a id="l00320" name="l00320"></a><span class="lineno">  320</span><span class="preprocessor">#define SNP_CONN_SL_MAX                  0x01F3 </span></div>
-<div class="line"><a id="l00321" name="l00321"></a><span class="lineno">  321</span> </div>
+<div class="line"><a id="l00321" name="l00321"></a><span class="lineno">  321</span>   </div>
 <div class="line"><a id="l00323" name="l00323"></a><span class="lineno">  323</span><span class="preprocessor">#define SNP_CONN_SUPERVISOR_TIMEOUT_MIN  0x000A </span></div>
 <div class="line"><a id="l00324" name="l00324"></a><span class="lineno">  324</span><span class="preprocessor">#define SNP_CONN_SUPERVISOR_TIMEOUT_MAX  0x0C80 </span></div>
 <div class="line"><a id="l00325" name="l00325"></a><span class="lineno">  325</span> </div>
@@ -348,7 +329,7 @@ $(document).ready(function(){initNavTree('src_2inc_2snp_8h_source.html',''); ini
 <div class="line"><a id="l00366" name="l00366"></a><span class="lineno">  366</span><span class="preprocessor">                                  SNP_GATT_PERMIT_AUTHEN_WRITE | \</span></div>
 <div class="line"><a id="l00367" name="l00367"></a><span class="lineno">  367</span><span class="preprocessor">                                  SNP_GATT_PERMIT_ENCRYPT_READ | \</span></div>
 <div class="line"><a id="l00368" name="l00368"></a><span class="lineno">  368</span><span class="preprocessor">                                  SNP_GATT_PERMIT_ENCRYPT_WRITE)</span></div>
-<div class="line"><a id="l00369" name="l00369"></a><span class="lineno">  369</span> </div>
+<div class="line"><a id="l00369" name="l00369"></a><span class="lineno">  369</span>   </div>
 <div class="line"><a id="l00373" name="l00373"></a><span class="lineno">  373</span><span class="preprocessor">#define SNP_GATT_PROP_READ               0x0002 </span><span class="comment">// Read</span></div>
 <div class="line"><a id="l00374" name="l00374"></a><span class="lineno">  374</span><span class="preprocessor">#define SNP_GATT_PROP_WRITE_NORSP        0x0004 </span><span class="comment">// Write without response</span></div>
 <div class="line"><a id="l00375" name="l00375"></a><span class="lineno">  375</span><span class="preprocessor">#define SNP_GATT_PROP_WRITE              0x0008 </span><span class="comment">// Writes</span></div>
@@ -357,7 +338,7 @@ $(document).ready(function(){initNavTree('src_2inc_2snp_8h_source.html',''); ini
 <div class="line"><a id="l00380" name="l00380"></a><span class="lineno">  380</span><span class="comment"></span> </div>
 <div class="line"><a id="l00381" name="l00381"></a><span class="lineno">  381</span><span class="preprocessor">#define SNP_GATT_CHAR_MAX_LENGTH            512</span></div>
 <div class="line"><a id="l00382" name="l00382"></a><span class="lineno">  382</span> </div>
-<div class="line"><a id="l00387" name="l00387"></a><span class="lineno"><a class="line" href="group___s_n_p___i_n_d___t_y_p_e.html#ga64f356d5f345e49b8a4e587bb9a95bef">  387</a></span><span class="preprocessor">#define SNP_SEND_NOTIFICATION               0x01</span></div>
+<div class="line"><a id="l00387" name="l00387"></a><span class="lineno"><a class="line" href="group___s_n_p___i_n_d___t_y_p_e.html#ga64f356d5f345e49b8a4e587bb9a95bef">  387</a></span><span class="preprocessor">#define SNP_SEND_NOTIFICATION               0x01  </span></div>
 <div class="line"><a id="l00389" name="l00389"></a><span class="lineno"><a class="line" href="group___s_n_p___i_n_d___t_y_p_e.html#ga508aa84834be24e595e4aeb4d1d069bb">  389</a></span><span class="preprocessor">#define SNP_SEND_INDICATION                 0x02</span></div>
 <div class="line"><a id="l00397" name="l00397"></a><span class="lineno"><a class="line" href="group___s_n_p___p_r_e_d_e_f___s_e_r_v_i_c_e.html#ga92488e207805d68f1f22ca6452187aa3">  397</a></span><span class="preprocessor">#define SNP_GGS_SERV_ID                     0x01 </span><span class="comment">// Generic Access Service</span></div>
 <div class="line"><a id="l00398" name="l00398"></a><span class="lineno">  398</span><span class="preprocessor">#define SNP_DIS_SERV_ID                     0x02 </span><span class="comment">// Device Info Service</span></div>
@@ -394,7 +375,7 @@ $(document).ready(function(){initNavTree('src_2inc_2snp_8h_source.html',''); ini
 <div class="line"><a id="l00440" name="l00440"></a><span class="lineno">  440</span><span class="comment">// Privacy Flag States</span></div>
 <div class="line"><a id="l00441" name="l00441"></a><span class="lineno">  441</span><span class="preprocessor">#define SNP_GAP_PRIVACY_DISABLED            0x00</span></div>
 <div class="line"><a id="l00442" name="l00442"></a><span class="lineno">  442</span><span class="preprocessor">#define SNP_GAP_PRIVACY_ENABLED             0x01</span></div>
-<div class="line"><a id="l00443" name="l00443"></a><span class="lineno">  443</span> </div>
+<div class="line"><a id="l00443" name="l00443"></a><span class="lineno">  443</span>                                         </div>
 <div class="line"><a id="l00447" name="l00447"></a><span class="lineno">  447</span><span class="comment">//  characteristic declaration message.</span></div>
 <div class="line"><a id="l00448" name="l00448"></a><span class="lineno">  448</span><span class="preprocessor">#define SNP_DESC_HEADER_GEN_SHORT_UUID      0x01</span></div>
 <div class="line"><a id="l00449" name="l00449"></a><span class="lineno">  449</span><span class="preprocessor">#define SNP_DESC_HEADER_GEN_LONG_UUID       0x02</span></div>
@@ -402,14 +383,14 @@ $(document).ready(function(){initNavTree('src_2inc_2snp_8h_source.html',''); ini
 <div class="line"><a id="l00451" name="l00451"></a><span class="lineno">  451</span><span class="preprocessor">#define SNP_DESC_HEADER_FORMAT              0x08</span></div>
 <div class="line"><a id="l00452" name="l00452"></a><span class="lineno">  452</span><span class="preprocessor">#define SNP_DESC_HEADER_USER_DESC           0x80</span></div>
 <div class="line"><a id="l00453" name="l00453"></a><span class="lineno">  453</span><span class="preprocessor">#define SNP_DESC_HEADER_UNSUPPORTED_MASK    0x70</span></div>
-<div class="line"><a id="l00454" name="l00454"></a><span class="lineno">  454</span> </div>
-<div class="line"><a id="l00455" name="l00455"></a><span class="lineno">  455</span> </div>
+<div class="line"><a id="l00454" name="l00454"></a><span class="lineno">  454</span>                                         </div>
+<div class="line"><a id="l00455" name="l00455"></a><span class="lineno">  455</span>                                         </div>
 <div class="line"><a id="l00456" name="l00456"></a><span class="lineno">  456</span><span class="preprocessor">#define SNP_GATT_CLIENT_CFG_NOTIFY          0x0001 </span></div>
 <div class="line"><a id="l00457" name="l00457"></a><span class="lineno">  457</span><span class="preprocessor">#define SNP_GATT_CLIENT_CFG_INDICATE        0x0002 </span></div>
-<div class="line"><a id="l00458" name="l00458"></a><span class="lineno">  458</span> </div>
+<div class="line"><a id="l00458" name="l00458"></a><span class="lineno">  458</span>                                         </div>
 <div class="line"><a id="l00459" name="l00459"></a><span class="lineno">  459</span><span class="preprocessor">#define SNP_RESPONSE_NOT_NEEDED             0x00</span></div>
 <div class="line"><a id="l00460" name="l00460"></a><span class="lineno">  460</span><span class="preprocessor">#define SNP_RESPONSE_NEEDED                 0x01</span></div>
-<div class="line"><a id="l00461" name="l00461"></a><span class="lineno">  461</span> </div>
+<div class="line"><a id="l00461" name="l00461"></a><span class="lineno">  461</span>                                         </div>
 <div class="line"><a id="l00462" name="l00462"></a><span class="lineno">  462</span><span class="preprocessor">#define SNP_INVALID_HANDLE                  0x0000</span></div>
 <div class="line"><a id="l00463" name="l00463"></a><span class="lineno">  463</span> </div>
 <div class="line"><a id="l00464" name="l00464"></a><span class="lineno">  464</span> </div>
@@ -628,7 +609,7 @@ $(document).ready(function(){initNavTree('src_2inc_2snp_8h_source.html',''); ini
 <div class="line"><a id="l00803" name="l00803"></a><span class="lineno">  803</span>  uint16_t attrHandle;  </div>
 <div class="line"><a id="l00804" name="l00804"></a><span class="lineno">  804</span>  uint16_t offset;      </div>
 <div class="line"><a id="l00805" name="l00805"></a><span class="lineno">  805</span>  uint16_t maxSize;     </div>
-<div class="line"><a id="l00806" name="l00806"></a><span class="lineno">  806</span>} snpCharReadInd_t;</div>
+<div class="line"><a id="l00806" name="l00806"></a><span class="lineno">  806</span>} snpCharReadInd_t;  </div>
 <div class="line"><a id="l00807" name="l00807"></a><span class="lineno">  807</span> </div>
 <div class="line"><a id="l00810" name="l00810"></a><span class="lineno">  810</span>PACKED_TYPEDEF_STRUCT</div>
 <div class="line"><a id="l00811" name="l00811"></a><span class="lineno">  811</span>{</div>
@@ -667,8 +648,8 @@ $(document).ready(function(){initNavTree('src_2inc_2snp_8h_source.html',''); ini
 <div class="line"><a id="l00859" name="l00859"></a><span class="lineno">  859</span>PACKED_TYPEDEF_STRUCT</div>
 <div class="line"><a id="l00860" name="l00860"></a><span class="lineno">  860</span>{</div>
 <div class="line"><a id="l00861" name="l00861"></a><span class="lineno">  861</span>  uint8_t status;       </div>
-<div class="line"><a id="l00862" name="l00862"></a><span class="lineno">  862</span>}snpSetGattParamRsp_t, snpSetAdvDataCnf_t, snpSetGapParamRsp_t,</div>
-<div class="line"><a id="l00863" name="l00863"></a><span class="lineno">  863</span>snpAddServiceRsp_t, snpSetSecParamRsp_t, snpSetAuthDataRsp_t,</div>
+<div class="line"><a id="l00862" name="l00862"></a><span class="lineno">  862</span>}snpSetGattParamRsp_t, snpSetAdvDataCnf_t, snpSetGapParamRsp_t,  </div>
+<div class="line"><a id="l00863" name="l00863"></a><span class="lineno">  863</span>snpAddServiceRsp_t, snpSetSecParamRsp_t, snpSetAuthDataRsp_t, </div>
 <div class="line"><a id="l00864" name="l00864"></a><span class="lineno">  864</span>snpSetWhiteListRsp_t;</div>
 <div class="line"><a id="l00865" name="l00865"></a><span class="lineno">  865</span> </div>
 <div class="line"><a id="l00869" name="l00869"></a><span class="lineno">  869</span>PACKED_TYPEDEF_STRUCT</div>
@@ -727,49 +708,49 @@ $(document).ready(function(){initNavTree('src_2inc_2snp_8h_source.html',''); ini
 <div class="line"><a id="l00938" name="l00938"></a><span class="lineno">  938</span>  <span class="comment">//Mask events</span></div>
 <div class="line"><a id="l00939" name="l00939"></a><span class="lineno">  939</span>  snpMaskEventReq_t        maskEventReq;        </div>
 <div class="line"><a id="l00940" name="l00940"></a><span class="lineno">  940</span>  snpMaskEventRsp_t        maskEventCnf;        </div>
-<div class="line"><a id="l00941" name="l00941"></a><span class="lineno">  941</span> </div>
-<div class="line"><a id="l00942" name="l00942"></a><span class="lineno">  942</span>  <span class="comment">//Revision</span></div>
+<div class="line"><a id="l00941" name="l00941"></a><span class="lineno">  941</span>                          </div>
+<div class="line"><a id="l00942" name="l00942"></a><span class="lineno">  942</span>  <span class="comment">//Revision              </span></div>
 <div class="line"><a id="l00943" name="l00943"></a><span class="lineno">  943</span>  snpGetRevisionRsp_t      revisionRsp;         </div>
-<div class="line"><a id="l00944" name="l00944"></a><span class="lineno">  944</span> </div>
+<div class="line"><a id="l00944" name="l00944"></a><span class="lineno">  944</span>  </div>
 <div class="line"><a id="l00945" name="l00945"></a><span class="lineno">  945</span>  <span class="comment">//Rand</span></div>
 <div class="line"><a id="l00946" name="l00946"></a><span class="lineno">  946</span>  snpGetRandRsp_t          randRsp;             </div>
-<div class="line"><a id="l00947" name="l00947"></a><span class="lineno">  947</span> </div>
-<div class="line"><a id="l00948" name="l00948"></a><span class="lineno">  948</span>  <span class="comment">//HCI</span></div>
+<div class="line"><a id="l00947" name="l00947"></a><span class="lineno">  947</span>                          </div>
+<div class="line"><a id="l00948" name="l00948"></a><span class="lineno">  948</span>  <span class="comment">//HCI                   </span></div>
 <div class="line"><a id="l00949" name="l00949"></a><span class="lineno">  949</span>  snpHciCmdReq_t           hciCmdReq;           </div>
 <div class="line"><a id="l00950" name="l00950"></a><span class="lineno">  950</span>  snpHciCmdRsp_t           hciCmdRsp;           </div>
-<div class="line"><a id="l00951" name="l00951"></a><span class="lineno">  951</span> </div>
+<div class="line"><a id="l00951" name="l00951"></a><span class="lineno">  951</span>  </div>
 <div class="line"><a id="l00952" name="l00952"></a><span class="lineno">  952</span>  <span class="comment">//Status</span></div>
 <div class="line"><a id="l00953" name="l00953"></a><span class="lineno">  953</span>  snpGetStatusCmdRsp_t     getStatusRsp;        </div>
-<div class="line"><a id="l00954" name="l00954"></a><span class="lineno">  954</span> </div>
+<div class="line"><a id="l00954" name="l00954"></a><span class="lineno">  954</span>  </div>
 <div class="line"><a id="l00955" name="l00955"></a><span class="lineno">  955</span>  <span class="comment">//Test</span></div>
 <div class="line"><a id="l00956" name="l00956"></a><span class="lineno">  956</span>  snpTestCmdRsp_t          testCmdRsp;          </div>
-<div class="line"><a id="l00957" name="l00957"></a><span class="lineno">  957</span> </div>
+<div class="line"><a id="l00957" name="l00957"></a><span class="lineno">  957</span>  </div>
 <div class="line"><a id="l00958" name="l00958"></a><span class="lineno">  958</span>  <span class="comment">//Advertising</span></div>
 <div class="line"><a id="l00959" name="l00959"></a><span class="lineno">  959</span>  snpStartAdvReq_t         startAdv;            </div>
 <div class="line"><a id="l00960" name="l00960"></a><span class="lineno">  960</span>  snpSetAdvDataReq_t       setAdvDataReq;       </div>
 <div class="line"><a id="l00961" name="l00961"></a><span class="lineno">  961</span>  snpSetAdvDataCnf_t       setAdvDataCnf;       </div>
-<div class="line"><a id="l00962" name="l00962"></a><span class="lineno">  962</span> </div>
-<div class="line"><a id="l00963" name="l00963"></a><span class="lineno">  963</span>  <span class="comment">//Connection</span></div>
+<div class="line"><a id="l00962" name="l00962"></a><span class="lineno">  962</span>                           </div>
+<div class="line"><a id="l00963" name="l00963"></a><span class="lineno">  963</span>  <span class="comment">//Connection             </span></div>
 <div class="line"><a id="l00964" name="l00964"></a><span class="lineno">  964</span>  snpTermConnReq_t         connTermReq;         </div>
 <div class="line"><a id="l00965" name="l00965"></a><span class="lineno">  965</span>  snpUpdateConnParamReq_t  updateConnParamsReq; </div>
 <div class="line"><a id="l00966" name="l00966"></a><span class="lineno">  966</span>  snpUpdateConnParamCnf_t  updateConnParamsCnf; </div>
-<div class="line"><a id="l00967" name="l00967"></a><span class="lineno">  967</span> </div>
-<div class="line"><a id="l00968" name="l00968"></a><span class="lineno">  968</span>  <span class="comment">//GAP Parameters</span></div>
+<div class="line"><a id="l00967" name="l00967"></a><span class="lineno">  967</span>                           </div>
+<div class="line"><a id="l00968" name="l00968"></a><span class="lineno">  968</span>  <span class="comment">//GAP Parameters         </span></div>
 <div class="line"><a id="l00969" name="l00969"></a><span class="lineno">  969</span>  snpSetGapParamReq_t      setGapParamReq;      </div>
 <div class="line"><a id="l00970" name="l00970"></a><span class="lineno">  970</span>  snpSetGapParamRsp_t      setGapParamRsp;      </div>
 <div class="line"><a id="l00971" name="l00971"></a><span class="lineno">  971</span>  snpGetGapParamReq_t      getGapParamReq;      </div>
 <div class="line"><a id="l00972" name="l00972"></a><span class="lineno">  972</span>  snpGetGapParamRsp_t      getGapParamRsp;      </div>
-<div class="line"><a id="l00973" name="l00973"></a><span class="lineno">  973</span> </div>
+<div class="line"><a id="l00973" name="l00973"></a><span class="lineno">  973</span>  </div>
 <div class="line"><a id="l00974" name="l00974"></a><span class="lineno">  974</span>  <span class="comment">//Security</span></div>
 <div class="line"><a id="l00975" name="l00975"></a><span class="lineno">  975</span>  snpSetSecParamReq_t      setSecParamReq;      </div>
 <div class="line"><a id="l00976" name="l00976"></a><span class="lineno">  976</span>  snpSetSecParamRsp_t      setSecParamRsp;      </div>
 <div class="line"><a id="l00977" name="l00977"></a><span class="lineno">  977</span>  snpSetAuthDataReq_t      setAuthDataReq;      </div>
 <div class="line"><a id="l00978" name="l00978"></a><span class="lineno">  978</span>  snpSetAuthDataRsp_t      setAuthDataRsp;      </div>
-<div class="line"><a id="l00979" name="l00979"></a><span class="lineno">  979</span> </div>
+<div class="line"><a id="l00979" name="l00979"></a><span class="lineno">  979</span>  </div>
 <div class="line"><a id="l00980" name="l00980"></a><span class="lineno">  980</span>  <span class="comment">//White List</span></div>
 <div class="line"><a id="l00981" name="l00981"></a><span class="lineno">  981</span>  snpSetWhiteListReq_t     setWhiteListReq;    </div>
 <div class="line"><a id="l00982" name="l00982"></a><span class="lineno">  982</span>  snpSetWhiteListRsp_t     setWhiteListRsp;    </div>
-<div class="line"><a id="l00983" name="l00983"></a><span class="lineno">  983</span> </div>
+<div class="line"><a id="l00983" name="l00983"></a><span class="lineno">  983</span>  </div>
 <div class="line"><a id="l00984" name="l00984"></a><span class="lineno">  984</span>  <span class="comment">//Services</span></div>
 <div class="line"><a id="l00985" name="l00985"></a><span class="lineno">  985</span>  snpAddServiceReq_t       addServiceReq;       </div>
 <div class="line"><a id="l00986" name="l00986"></a><span class="lineno">  986</span>  snpAddServiceRsp_t       addServiceRsp;       </div>
@@ -778,7 +759,7 @@ $(document).ready(function(){initNavTree('src_2inc_2snp_8h_source.html',''); ini
 <div class="line"><a id="l00989" name="l00989"></a><span class="lineno">  989</span>  snpAddCharDescDeclReq_t  addCharDescDeclReq;  </div>
 <div class="line"><a id="l00990" name="l00990"></a><span class="lineno">  990</span>  snpAddCharDescDeclRsp_t  addCharDescDeclRsp;  </div>
 <div class="line"><a id="l00991" name="l00991"></a><span class="lineno">  991</span>  snpRegisterServiceRsp_t  registerService;     </div>
-<div class="line"><a id="l00992" name="l00992"></a><span class="lineno">  992</span> </div>
+<div class="line"><a id="l00992" name="l00992"></a><span class="lineno">  992</span>  </div>
 <div class="line"><a id="l00993" name="l00993"></a><span class="lineno">  993</span>  <span class="comment">//Incoming GATT Requests</span></div>
 <div class="line"><a id="l00994" name="l00994"></a><span class="lineno">  994</span>  snpCharReadInd_t         readInd;             </div>
 <div class="line"><a id="l00995" name="l00995"></a><span class="lineno">  995</span>  snpCharReadCnf_t         readCnf;             </div>
@@ -786,14 +767,14 @@ $(document).ready(function(){initNavTree('src_2inc_2snp_8h_source.html',''); ini
 <div class="line"><a id="l00997" name="l00997"></a><span class="lineno">  997</span>  snpCharWriteCnf_t        charWriteCnf;        </div>
 <div class="line"><a id="l00998" name="l00998"></a><span class="lineno">  998</span>  snpNotifIndReq_t         notifIndReq;         </div>
 <div class="line"><a id="l00999" name="l00999"></a><span class="lineno">  999</span>  snpNotifIndCnf_t         notifIndCnf;         </div>
-<div class="line"><a id="l01000" name="l01000"></a><span class="lineno"> 1000</span> </div>
+<div class="line"><a id="l01000" name="l01000"></a><span class="lineno"> 1000</span>  </div>
 <div class="line"><a id="l01001" name="l01001"></a><span class="lineno"> 1001</span>  <span class="comment">//NP GATT Parameters of predefined services</span></div>
 <div class="line"><a id="l01002" name="l01002"></a><span class="lineno"> 1002</span>  snpSetGattParamReq_t     setGattParamReq;     </div>
 <div class="line"><a id="l01003" name="l01003"></a><span class="lineno"> 1003</span>  snpSetGattParamRsp_t     setGattParamRsp;     </div>
 <div class="line"><a id="l01004" name="l01004"></a><span class="lineno"> 1004</span>  snpGetGattParamReq_t     getGattParamReq;     </div>
 <div class="line"><a id="l01005" name="l01005"></a><span class="lineno"> 1005</span>  snpGetGattParamRsp_t     getGattParamRsp;     </div>
-<div class="line"><a id="l01006" name="l01006"></a><span class="lineno"> 1006</span> </div>
-<div class="line"><a id="l01007" name="l01007"></a><span class="lineno"> 1007</span>  <span class="comment">//CCCD Updates</span></div>
+<div class="line"><a id="l01006" name="l01006"></a><span class="lineno"> 1006</span>                          </div>
+<div class="line"><a id="l01007" name="l01007"></a><span class="lineno"> 1007</span>  <span class="comment">//CCCD Updates          </span></div>
 <div class="line"><a id="l01008" name="l01008"></a><span class="lineno"> 1008</span>  snpCharCfgUpdatedInd_t   charCfgUpdatedReq;   </div>
 <div class="line"><a id="l01009" name="l01009"></a><span class="lineno"> 1009</span>  snpCharCfgUpdatedRsp_t   charcfgUpdatedRsp;   </div>
 <div class="line"><a id="l01010" name="l01010"></a><span class="lineno"> 1010</span>} <a class="code hl_union" href="unionsnp__msg__t.html">snp_msg_t</a>;</div>
@@ -905,13 +886,9 @@ $(document).ready(function(){initNavTree('src_2inc_2snp_8h_source.html',''); ini
 <div class="ttc" id="aunionsnp__msg__t_html"><div class="ttname"><a href="unionsnp__msg__t.html">snp_msg_t</a></div><div class="ttdef"><b>Definition:</b> snp.h:923</div></div>
 <div class="ttc" id="aunionsnp_event_param__t_html"><div class="ttname"><a href="unionsnp_event_param__t.html">snpEventParam_t</a></div><div class="ttdef"><b>Definition:</b> snp.h:1074</div></div>
 </div><!-- fragment --></div><!-- contents -->
-</div><!-- doc-content -->
 <!-- start footer part -->
-<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
-  <ul>
-    <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_6bc6ad22483805bbbda55258ad2a62ea.html">inc</a></li><li class="navelem"><b>snp.h</b></li>
-    <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.3 </li>
-  </ul>
-</div>
+<hr class="footer"/><address class="footer"><small>
+Generated by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.3
+</small></address>
 </body>
 </html>

@@ -2,6 +2,7 @@ var dir_e931c1a3f0014e624d0645a271726ad2 =
 [
     [ "blood_pressure", "dir_b2a94caa07c3064f489aaadcf00aa1ea.html", "dir_b2a94caa07c3064f489aaadcf00aa1ea" ],
     [ "cycling_sensor", "dir_6b0c510bac754d74c2785a632aaaeea4.html", "dir_6b0c510bac754d74c2785a632aaaeea4" ],
+    [ "dual_image_concept", "dir_baa90378cadf4183f0255514cf98b198.html", "dir_baa90378cadf4183f0255514cf98b198" ],
     [ "glucose_collector", "dir_5e11f273d1c48444b1e926f1f3a7ad6d.html", "dir_5e11f273d1c48444b1e926f1f3a7ad6d" ],
     [ "glucose_sensor", "dir_940f78de3982eb7c5e649681164c7ca1.html", "dir_940f78de3982eb7c5e649681164c7ca1" ],
     [ "heart_rate", "dir_00f6666293307983f63adbeda90e281a.html", "dir_00f6666293307983f63adbeda90e281a" ],

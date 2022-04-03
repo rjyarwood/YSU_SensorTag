@@ -1,5 +1,6 @@
 var dir_cc2a9ab7046f8ee412557415ee3efd10 =
 [
+    [ "cc13xx", "dir_158f66236e7b54df8e52ef5ce4e955af.html", "dir_158f66236e7b54df8e52ef5ce4e955af" ],
     [ "cc26xx", "dir_c1b3b3013074950210813524e6f06769.html", "dir_c1b3b3013074950210813524e6f06769" ],
     [ "ecc_api.h", "ecc__api_8h_source.html", null ],
     [ "hal_aes.h", "hal__aes_8h_source.html", null ],

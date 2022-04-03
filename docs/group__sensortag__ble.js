@@ -1,6 +1,5 @@
 var group__sensortag__ble =
 [
-    [ "sensorCBs_t", "structsensor_c_bs__t.html", null ],
     [ "DEFAULT_ADVERTISING_INTERVAL", "group__sensortag__ble.html#gacf5f6bcd3fcaeb6148476be7ea0efa67", null ],
     [ "DEFAULT_CONN_PAUSE_PERIPHERAL", "group__sensortag__ble.html#ga2315bf74792db9d471649b43f8485f7a", null ],
     [ "DEFAULT_DESIRED_CONN_TIMEOUT", "group__sensortag__ble.html#ga3f9af1186ac2bef83384b81fb29cda68", null ],
@@ -9,8 +8,6 @@ var group__sensortag__ble =
     [ "DEFAULT_DESIRED_SLAVE_LATENCY", "group__sensortag__ble.html#ga5f856b86f2244ad972b775a7fefddcb7", null ],
     [ "DEFAULT_DISCOVERABLE_MODE", "group__sensortag__ble.html#ga38be789c3aaf3b34fc6a5a0a9b2f96a0", null ],
     [ "DEFAULT_ENABLE_UPDATE_REQUEST", "group__sensortag__ble.html#ga5bfdd82c09afe61bba762a24aa7e834b", null ],
-    [ "TI_UUID_SIZE", "group__sensortag__ble.html#ga54754311c0d40614a6fce05e58dad3d7", null ],
-    [ "sensorChange_t", "group__sensortag__ble.html#gaf833d908332a2a23485569424eee32ff", null ],
     [ "SensorTag_charValueChangeCB", "group__sensortag__ble.html#ga57a95a6c46f8af406146e0446216eddd", null ],
     [ "SensorTag_enqueueMsg", "group__sensortag__ble.html#gae202020560509be55e3309f0928c76fb", null ],
     [ "SensorTag_processCharValueChangeEvt", "group__sensortag__ble.html#gae0086a6a3fefd54f7125c95deb4c4e5c", null ],

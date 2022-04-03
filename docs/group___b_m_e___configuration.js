@@ -13,5 +13,7 @@ var group___b_m_e___configuration =
     [ "deinit_bme", "group___b_m_e___configuration.html#ga427b5e9af48fdc53c618c5f613a08a75", null ],
     [ "get_data", "group___b_m_e___configuration.html#ga2f5c2cbd887c9ecb931daa08b02f64a0", null ],
     [ "init_bme", "group___b_m_e___configuration.html#gafbda4c7bc18f2b5fb9c1db6dc2f69a09", null ],
+    [ "gBME", "group___b_m_e___configuration.html#ga77fd457ce7920383f3f7f4158a490a00", null ],
+    [ "gBME", "group___b_m_e___configuration.html#ga77fd457ce7920383f3f7f4158a490a00", null ],
     [ "gBME", "group___b_m_e___configuration.html#ga77fd457ce7920383f3f7f4158a490a00", null ]
 ];

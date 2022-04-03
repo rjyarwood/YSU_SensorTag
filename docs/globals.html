@@ -9,10 +9,16 @@
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen-awesome-sidebar-only.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -47,6 +53,22 @@ $(function() {
 </script>
 <div id="main-nav"></div>
 </div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('globals.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -64,7 +86,17 @@ $(function() {
 <div class="contents">
 <div class="textblock">Here is a list of all documented file members with links to the documentation:</div>
 
+<h3><a id="index_a" name="index_a"></a>- a -</h3><ul>
+<li>advertData&#160;:&#160;<a class="el" href="group__sensortag__ble.html#ga3e4f7047184923d23e0b6fb58ac98c20">ysu_sensortag.c</a></li>
+<li>appMsg&#160;:&#160;<a class="el" href="group__sensortag__ctrl.html#ga24095f45f00638b7707c6feb2f77c6b5">ysu_sensortag.c</a></li>
+<li>aquireI2CInterface()&#160;:&#160;<a class="el" href="group__i2c.html#ga377e3b0147239b2440bd7ad01b21908b">i2c_interface.c</a>, <a class="el" href="group__i2c.html#ga377e3b0147239b2440bd7ad01b21908b">i2c_interface.h</a></li>
+<li>attDeviceName&#160;:&#160;<a class="el" href="group__sensortag__ble.html#ga7555319ffaf2429ec3721fc64c87c237">ysu_sensortag.c</a></li>
+</ul>
+
+
 <h3><a id="index_b" name="index_b"></a>- b -</h3><ul>
+<li>B_ADDR_STR_LEN&#160;:&#160;<a class="el" href="group__sensortag__ctrl.html#gaaa0f78ed174d212fb0e4d4a903dcf4e2">ysu_sensortag.c</a></li>
+<li>bmeRegistered&#160;:&#160;<a class="el" href="ysu1stk_2sensortag_2ccs_2app_2_b_m_e688_2bme688_8c.html#ab2fcf6071970c92de251b2d287dbb057">bme688.c</a></li>
 <li>Board_CRYPTO&#160;:&#160;<a class="el" href="_c_c2650_r_c_8h.html#a0047403755ba10e4775c61df16d09973">CC2650RC.h</a></li>
 <li>Board_I2C&#160;:&#160;<a class="el" href="_c_c1350_s_t_k_8h.html#acf2f181e5fc9f5b0859959e652dac9c1">CC1350STK.h</a>, <a class="el" href="_c_c2650___l_a_u_n_c_h_x_l_8h.html#acf2f181e5fc9f5b0859959e652dac9c1">CC2650_LAUNCHXL.h</a>, <a class="el" href="_c_c2650_s_t_k_8h.html#acf2f181e5fc9f5b0859959e652dac9c1">CC2650STK.h</a></li>
 <li>Board_LED_ON&#160;:&#160;<a class="el" href="_c_c1310_d_k__5_x_d_8h.html#a427527c56a51ba01aaa4fbc8365f74c7">CC1310DK_5XD.h</a>, <a class="el" href="_c_c1310_d_k__7_x_d_8h.html#a427527c56a51ba01aaa4fbc8365f74c7">CC1310DK_7XD.h</a>, <a class="el" href="_c_c2650_d_k__4_x_s_8h.html#a427527c56a51ba01aaa4fbc8365f74c7">CC2650DK_4XS.h</a>, <a class="el" href="_c_c2650_d_k__5_x_d_8h.html#a427527c56a51ba01aaa4fbc8365f74c7">CC2650DK_5XD.h</a>, <a class="el" href="_c_c2650_d_k__7_i_d_8h.html#a427527c56a51ba01aaa4fbc8365f74c7">CC2650DK_7ID.h</a>, <a class="el" href="_c_c2650_d_k___c_x_s_8h.html#a427527c56a51ba01aaa4fbc8365f74c7">CC2650DK_CXS.h</a></li>
@@ -87,6 +119,19 @@ $(function() {
 </ul>
 
 
+<h3><a id="index_d" name="index_d"></a>- d -</h3><ul>
+<li>DEFAULT_ADVERTISING_INTERVAL&#160;:&#160;<a class="el" href="group__sensortag__ble.html#gacf5f6bcd3fcaeb6148476be7ea0efa67">ysu_sensortag.c</a></li>
+<li>DEFAULT_CONN_PAUSE_PERIPHERAL&#160;:&#160;<a class="el" href="group__sensortag__ble.html#ga2315bf74792db9d471649b43f8485f7a">ysu_sensortag.c</a></li>
+<li>DEFAULT_DESIRED_CONN_TIMEOUT&#160;:&#160;<a class="el" href="group__sensortag__ble.html#ga3f9af1186ac2bef83384b81fb29cda68">ysu_sensortag.c</a></li>
+<li>DEFAULT_DESIRED_MAX_CONN_INTERVAL&#160;:&#160;<a class="el" href="group__sensortag__ble.html#ga7a0eb10434e8efae41961611a5ffaafc">ysu_sensortag.c</a></li>
+<li>DEFAULT_DESIRED_MIN_CONN_INTERVAL&#160;:&#160;<a class="el" href="group__sensortag__ble.html#ga0ac97c4fab20172aa100def2d9dfc60c">ysu_sensortag.c</a></li>
+<li>DEFAULT_DESIRED_SLAVE_LATENCY&#160;:&#160;<a class="el" href="group__sensortag__ble.html#ga5f856b86f2244ad972b775a7fefddcb7">ysu_sensortag.c</a></li>
+<li>DEFAULT_DISCOVERABLE_MODE&#160;:&#160;<a class="el" href="group__sensortag__ble.html#ga38be789c3aaf3b34fc6a5a0a9b2f96a0">ysu_sensortag.c</a></li>
+<li>DEFAULT_ENABLE_UPDATE_REQUEST&#160;:&#160;<a class="el" href="group__sensortag__ble.html#ga5bfdd82c09afe61bba762a24aa7e834b">ysu_sensortag.c</a></li>
+<li>devInfoModelNumber&#160;:&#160;<a class="el" href="group__sensortag__ble.html#ga89eb91b070c19a65c672c2b788a16251">ysu_sensortag.c</a></li>
+</ul>
+
+
 <h3><a id="index_e" name="index_e"></a>- e -</h3><ul>
 <li>ECCROMCC26XX_CurveParams&#160;:&#160;<a class="el" href="_e_c_c_r_o_m_c_c26_x_x_8h.html#a8330390ac829ae4bf421ec13c055778a">ECCROMCC26XX.h</a></li>
 <li>ECCROMCC26XX_FreeCB&#160;:&#160;<a class="el" href="_e_c_c_r_o_m_c_c26_x_x_8h.html#aa50cee1ebb718a064595777a7fa7ea7d">ECCROMCC26XX.h</a></li>
@@ -103,12 +148,20 @@ $(function() {
 <li>ECCROMCC26XX_STATUS_SUCCESS&#160;:&#160;<a class="el" href="group___e_c_c___s_t_a_t_u_s.html#gaa215d32395c68c9aa8e62bdf7e6d46da">ECCROMCC26XX.h</a></li>
 <li>ECCROMCC26XX_STATUS_TIMEOUT&#160;:&#160;<a class="el" href="group___e_c_c___s_t_a_t_u_s.html#ga5b074ba744c746d8f3c98c6bdfd05eea">ECCROMCC26XX.h</a></li>
 <li>ECCROMCC26XX_WORKZONE_LEN_IN_BYTES&#160;:&#160;<a class="el" href="_e_c_c_r_o_m_c_c26_x_x_8h.html#abafac2fa1a8c010d3e66a8d4e9cf97d0">ECCROMCC26XX.h</a></li>
+<li>events&#160;:&#160;<a class="el" href="group__sensortag__ctrl.html#ga6eba7182f2d70031a4f6ba3a2fc8d569">ysu_sensortag.c</a></li>
 <li>EXT_FLASH_MAN_ID&#160;:&#160;<a class="el" href="_c_c2650_r_c_8h.html#ad1972afed29680a90b437a13db797057">CC2650RC.h</a></li>
 </ul>
 
 
 <h3><a id="index_g" name="index_g"></a>- g -</h3><ul>
-<li>gapProfileState&#160;:&#160;<a class="el" href="group__sensortag__ble.html#gad39eed4bad4a078b5b6065c5653d6024">ysu_sensortag.h</a></li>
+<li>gapProfileState&#160;:&#160;<a class="el" href="group__sensortag__ble.html#gad39eed4bad4a078b5b6065c5653d6024">ysu_sensortag.c</a>, <a class="el" href="group__sensortag__ble.html#gad39eed4bad4a078b5b6065c5653d6024">ysu_sensortag.h</a></li>
+</ul>
+
+
+<h3><a id="index_i" name="index_i"></a>- i -</h3><ul>
+<li>I2C_Device_ID&#160;:&#160;<a class="el" href="group__i2c.html#ga06cbc78d2305af02e2015f28e8816281">i2c_interface.h</a></li>
+<li>i2c_devices&#160;:&#160;<a class="el" href="group__i2c.html#gaad499476834781e4ff8e8eb3d59ce3c1">i2c_interface.c</a></li>
+<li>INVALID_CONNHANDLE&#160;:&#160;<a class="el" href="group__sensortag__ctrl.html#gad4957cb1be5c3ce6d4d11f836676c2b2">ysu_sensortag.c</a></li>
 </ul>
 
 
@@ -167,19 +220,51 @@ $(function() {
 <li>PDMCC26XX_STREAM_STOPPING&#160;:&#160;<a class="el" href="_p_d_m_c_c26_x_x_8h.html#afbfe993e790be75708df00186070a779a57716d15faf09d4f066fe77f473de9db">PDMCC26XX.h</a></li>
 <li>PDMCC26XX_StreamNotification&#160;:&#160;<a class="el" href="_p_d_m_c_c26_x_x_8h.html#a9d9b04fe5598429652588b5acc4e8701">PDMCC26XX.h</a></li>
 <li>pdmSample_t&#160;:&#160;<a class="el" href="_p_d_m_c_c26_x_x_8h.html#a93dc78b6cc4eec24352aa7e0eedab91d">PDMCC26XX.h</a></li>
-<li>pinGpioState&#160;:&#160;<a class="el" href="group__sensortag__ctrl.html#ga1e42536f2fb05a5ef14f403b45ec8942">ysu_sensortag.h</a></li>
+<li>periodicClock&#160;:&#160;<a class="el" href="group__sensortag__ctrl.html#ga1d24e15553a5efaa1c6cb136e8c92580">ysu_sensortag.c</a></li>
+<li>pinGpioState&#160;:&#160;<a class="el" href="group__sensortag__ctrl.html#ga1e42536f2fb05a5ef14f403b45ec8942">ysu_sensortag.c</a>, <a class="el" href="group__sensortag__ctrl.html#ga1e42536f2fb05a5ef14f403b45ec8942">ysu_sensortag.h</a></li>
+</ul>
+
+
+<h3><a id="index_r" name="index_r"></a>- r -</h3><ul>
+<li>releaseI2CInterface()&#160;:&#160;<a class="el" href="group__i2c.html#ga7666f1fb559a6887dbc670f09327be88">i2c_interface.c</a>, <a class="el" href="group__i2c.html#ga7666f1fb559a6887dbc670f09327be88">i2c_interface.h</a></li>
 </ul>
 
 
 <h3><a id="index_s" name="index_s"></a>- s -</h3><ul>
-<li>selfEntityMain&#160;:&#160;<a class="el" href="group__sensortag__ble.html#ga29c4a3d4e25f051c7e9839af8720004b">ysu_sensortag.h</a></li>
-<li>sem&#160;:&#160;<a class="el" href="group__sensortag__ble.html#ga0f1fcb7fd8baa157de3f2837d1abc5f4">ysu_sensortag.h</a></li>
-<li>SensorTag_charValueChangeCB()&#160;:&#160;<a class="el" href="group__sensortag__ble.html#ga57a95a6c46f8af406146e0446216eddd">ysu_sensortag.h</a></li>
-<li>SensorTag_createTask()&#160;:&#160;<a class="el" href="group__sensortag__ctrl.html#ga50b43f4a4fda661dcd44482e9c1a234c">ysu_sensortag.h</a></li>
-<li>SensorTag_updateAdvertisingData()&#160;:&#160;<a class="el" href="group__sensortag__ble.html#gac296051ec017eca4a26980a6d474505f">ysu_sensortag.h</a></li>
+<li>SBP_OAD_WRITE_EVT&#160;:&#160;<a class="el" href="group__sensortag__ctrl.html#ga5f48eb0ae0217d21dc4903ee025ca0ca">ysu_sensortag.c</a></li>
+<li>scanRspData&#160;:&#160;<a class="el" href="group__sensortag__ble.html#ga4eae1ac2eef6e4e710ef40a30c2efd6f">ysu_sensortag.c</a></li>
+<li>selfEntityMain&#160;:&#160;<a class="el" href="group__sensortag__ble.html#ga29c4a3d4e25f051c7e9839af8720004b">ysu_sensortag.c</a>, <a class="el" href="group__sensortag__ble.html#ga29c4a3d4e25f051c7e9839af8720004b">ysu_sensortag.h</a></li>
+<li>sem&#160;:&#160;<a class="el" href="group__sensortag__ble.html#ga0f1fcb7fd8baa157de3f2837d1abc5f4">ysu_sensortag.c</a>, <a class="el" href="group__sensortag__ble.html#ga0f1fcb7fd8baa157de3f2837d1abc5f4">ysu_sensortag.h</a></li>
+<li>sensorTag_bondMgrCBs&#160;:&#160;<a class="el" href="group__sensortag__ble.html#ga08b624e5e398b1070073afcde867b9a6">ysu_sensortag.c</a></li>
+<li>SensorTag_callback()&#160;:&#160;<a class="el" href="group__sensortag__ctrl.html#ga7ce64fe3d0805204d263fca045d3c6f6">ysu_sensortag.c</a></li>
+<li>SensorTag_charValueChangeCB()&#160;:&#160;<a class="el" href="group__sensortag__ble.html#ga57a95a6c46f8af406146e0446216eddd">ysu_sensortag.c</a>, <a class="el" href="group__sensortag__ble.html#ga57a95a6c46f8af406146e0446216eddd">ysu_sensortag.h</a></li>
+<li>SensorTag_clockHandler()&#160;:&#160;<a class="el" href="group__sensortag__ctrl.html#ga241534fd653e204565880b6d768ae9ec">ysu_sensortag.c</a></li>
+<li>SensorTag_createTask()&#160;:&#160;<a class="el" href="group__sensortag__ctrl.html#ga50b43f4a4fda661dcd44482e9c1a234c">ysu_sensortag.c</a>, <a class="el" href="group__sensortag__ctrl.html#ga50b43f4a4fda661dcd44482e9c1a234c">ysu_sensortag.h</a></li>
+<li>SensorTag_enqueueMsg()&#160;:&#160;<a class="el" href="group__sensortag__ble.html#gae202020560509be55e3309f0928c76fb">ysu_sensortag.c</a></li>
+<li>sensorTag_gapRoleCBs&#160;:&#160;<a class="el" href="group__sensortag__ble.html#ga873936e93f1100e1a6e1b00e2aab1181">ysu_sensortag.c</a></li>
+<li>SensorTag_init()&#160;:&#160;<a class="el" href="group__sensortag__ctrl.html#ga2f6fd326eb97aef2e3c414bc20b7cb61">ysu_sensortag.c</a></li>
+<li>SensorTag_processAppMsg()&#160;:&#160;<a class="el" href="group__sensortag__ctrl.html#ga4e4160ff3c12d89b6d8a79cbbbce8909">ysu_sensortag.c</a></li>
+<li>SensorTag_processCharValueChangeEvt()&#160;:&#160;<a class="el" href="group__sensortag__ble.html#gae0086a6a3fefd54f7125c95deb4c4e5c">ysu_sensortag.c</a></li>
+<li>SensorTag_processGATTMsg()&#160;:&#160;<a class="el" href="group__sensortag__ble.html#gafc403c06b1679c7e381b2f3a97caade5">ysu_sensortag.c</a></li>
+<li>SensorTag_processStackMsg()&#160;:&#160;<a class="el" href="group__sensortag__ble.html#ga930581933870058583178c2c7b5baa37">ysu_sensortag.c</a></li>
+<li>SensorTag_processStateChangeEvt()&#160;:&#160;<a class="el" href="group__sensortag__ble.html#ga4031ce0db245ffb2a434f8f414480bdb">ysu_sensortag.c</a></li>
+<li>SensorTag_resetAllModules()&#160;:&#160;<a class="el" href="group__sensortag__ctrl.html#ga9158d7d5d4e6d6832895ea8c1868af6a">ysu_sensortag.c</a></li>
+<li>SensorTag_setDeviceInfo()&#160;:&#160;<a class="el" href="group__sensortag__ble.html#ga97d4a4e17a6a8b8bdcef180037aa3636">ysu_sensortag.c</a></li>
+<li>SensorTag_stateChangeCB()&#160;:&#160;<a class="el" href="group__sensortag__ble.html#ga8188568086d8246b45cab873b298c3d2">ysu_sensortag.c</a></li>
+<li>SensorTag_taskFxn()&#160;:&#160;<a class="el" href="group__sensortag__ctrl.html#gac9e9c40cd9c1e8d56a2825bc20291ceb">ysu_sensortag.c</a></li>
+<li>SensorTag_updateAdvertisingData()&#160;:&#160;<a class="el" href="group__sensortag__ble.html#gac296051ec017eca4a26980a6d474505f">ysu_sensortag.c</a>, <a class="el" href="group__sensortag__ble.html#gac296051ec017eca4a26980a6d474505f">ysu_sensortag.h</a></li>
+<li>sensorTagTask&#160;:&#160;<a class="el" href="group__sensortag__ctrl.html#ga8f8709c3156aaec4fafdd92a204eecf0">ysu_sensortag.c</a></li>
+<li>sensorTaskFxn()&#160;:&#160;<a class="el" href="ysu1stk_2sensortag_2ccs_2app_2_b_m_e688_2bme688_8c.html#a730b3b2460d648eb59a7dacb1811e28e">bme688.c</a></li>
 <li>SERVICE_ID_ADXL&#160;:&#160;<a class="el" href="group__service__ids.html#ga597dcf4280efaaa555d6039fce7aca06">ysu_sensortag.h</a></li>
 <li>SERVICE_ID_BME&#160;:&#160;<a class="el" href="group__service__ids.html#ga07a60d8bcf168cfca1830d5dc12e9b3c">ysu_sensortag.h</a></li>
 <li>SERVICE_ID_CC&#160;:&#160;<a class="el" href="group__service__ids.html#ga57b2a89f59bb9630742a09bb7757ff23">ysu_sensortag.h</a></li>
+<li>ST_CHAR_CHANGE_EVT&#160;:&#160;<a class="el" href="group__sensortag__ctrl.html#gaa31c9cb09ca1f8cb52990ae00bbf5ae8">ysu_sensortag.c</a></li>
+<li>ST_DEVICE_ID&#160;:&#160;<a class="el" href="group__sensortag__ctrl.html#ga20f40bdf82cc42c714b937b1e739390f">ysu_sensortag.c</a></li>
+<li>ST_PERIODIC_EVT&#160;:&#160;<a class="el" href="group__sensortag__ctrl.html#ga3906c76a2b535cbbc495cbb3f9034a02">ysu_sensortag.c</a></li>
+<li>ST_PERIODIC_EVT_PERIOD&#160;:&#160;<a class="el" href="group__sensortag__ctrl.html#ga2a07efb2523275f6e61b77d2f1034a78">ysu_sensortag.c</a></li>
+<li>ST_STATE_CHANGE_EVT&#160;:&#160;<a class="el" href="group__sensortag__ctrl.html#ga5aab9239f883ad8058f513aad7414b66">ysu_sensortag.c</a></li>
+<li>ST_TASK_PRIORITY&#160;:&#160;<a class="el" href="group__sensortag__ctrl.html#ga3f09a28e0fdb334ff1d37a3f5dc248f8">ysu_sensortag.c</a></li>
+<li>ST_TASK_STACK_SIZE&#160;:&#160;<a class="el" href="group__sensortag__ctrl.html#ga5979db39a4841bdc3b9d98c98b5609c0">ysu_sensortag.c</a></li>
 </ul>
 
 
@@ -201,10 +286,18 @@ $(function() {
 <li>TRNGCC26XX_Params&#160;:&#160;<a class="el" href="group___t_r_n_g___s_t_a_t_u_s.html#gac10858f9789e861729c383ef5ad48d4d">TRNGCC26XX.h</a></li>
 <li>TRNGCC26XX_Params_init()&#160;:&#160;<a class="el" href="group___t_r_n_g___s_t_a_t_u_s.html#ga71e12002e2dec081459ef9fd328e1890">TRNGCC26XX.h</a></li>
 </ul>
+
+
+<h3><a id="index_y" name="index_y"></a>- y -</h3><ul>
+<li>YSU_COMPANY_ID&#160;:&#160;<a class="el" href="group__sensortag__ctrl.html#gab9f15748d05c7c76b040b4845d29c517">ysu_sensortag.c</a></li>
+</ul>
 </div><!-- contents -->
+</div><!-- doc-content -->
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.3
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.3 </li>
+  </ul>
+</div>
 </body>
 </html>

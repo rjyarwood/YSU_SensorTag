@@ -1,4 +1,4 @@
-# YSU_SensorTag
+# YSU SensorTag
 Repository for TI-based boards developed at YSU
 
 ## Needed Software

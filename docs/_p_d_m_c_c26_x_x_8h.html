@@ -9,10 +9,16 @@
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen-awesome-sidebar-only.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -46,6 +52,23 @@ $(function() {
 /* @license-end */
 </script>
 <div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('_p_d_m_c_c26_x_x_8h.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -60,11 +83,6 @@ $(function() {
 </iframe>
 </div>
 
-<div id="nav-path" class="navpath">
-  <ul>
-<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_3c4c7c1a85608ccd561c026bec818e51.html">components</a></li><li class="navelem"><a class="el" href="dir_0a34958ece62b88d5f4fac9c00fe2117.html">hal</a></li><li class="navelem"><a class="el" href="dir_38c3cacc9a381efce0aa75aab3acacb5.html">src</a></li><li class="navelem"><a class="el" href="dir_417c773b25c8ee516e66d9072c868b04.html">target</a></li><li class="navelem"><a class="el" href="dir_0fedb0c71f9959ad770933eb4ca379c2.html">cc2650rc</a></li>  </ul>
-</div>
-</div><!-- top -->
 <div class="header">
   <div class="summary">
 <a href="#nested-classes">Classes</a> &#124;
@@ -267,7 +285,7 @@ Variables</h2></td></tr>
 <div class="textblock"><p >PDM driver implementation for a CC26XX PDM controller. </p>
 <p >============================================================================</p>
 <p >The PDM header file should be included in an application as follows: </p><div class="fragment"><div class="line"><span class="preprocessor">#include &lt;ti/drivers/pdm/PDMCC26XX.h&gt;</span></div>
-</div><!-- fragment --><h1><a class="anchor" id="autotoc_md137"></a>
+</div><!-- fragment --><h1><a class="anchor" id="autotoc_md140"></a>
 Overview</h1>
 <p >This driver is written to be able to perform continuous audio streaming of PDM data from a microphone. It also controls one DIO to be able to turn on power to the microphone.</p>
 <p >This PDM driver performs two operations that requires processing</p><ul>
@@ -278,7 +296,7 @@ Overview</h1>
 <p >The driver creates a separate task to run in.</p>
 <dl class="section note"><dt>Note</dt><dd>The application must allow for the PDM driver task to run often enough to process the data received from I2S driver approximately every 2ms.</dd></dl>
 <p>The driver currently only samples on a single edge of the I2S clock.</p>
-<h1><a class="anchor" id="autotoc_md138"></a>
+<h1><a class="anchor" id="autotoc_md141"></a>
 General Behaviour</h1>
 <p >Before using PDM on CC26XX:</p><ul>
 <li>The PDM driver is initialized by calling <a class="el" href="_p_d_m_c_c26_x_x_8h.html#a8347c3f56db0ad7c3f357f13be098cf2" title="PDM CC26XX initialization.">PDMCC26XX_init()</a>. This should be done in main before BIOS_start() is called.</li>
@@ -292,15 +310,15 @@ General Behaviour</h1>
 <p >After PDM operation has ended:</p><ul>
 <li>Release system dependencies and free up all memory on the heap allocated for the PDM driver by calling <a class="el" href="_p_d_m_c_c26_x_x_8h.html#afb9597d25d6b2e02f6903bf6652d4371" title="Function to close a given CC26XX PDM peripheral specified by the PDM handle.">PDMCC26XX_close()</a>.</li>
 </ul>
-<h1><a class="anchor" id="autotoc_md139"></a>
+<h1><a class="anchor" id="autotoc_md142"></a>
 Error Handling</h1>
 <p >The application is notified of errors via the registered callback function.</p>
-<h2><a class="anchor" id="autotoc_md140"></a>
+<h2><a class="anchor" id="autotoc_md143"></a>
 Lost Frames</h2>
 <p >If the application fails to consume buffers in a timely manner and consequently the heap is full when driver tries to allocate a new buffer for new incoming data, the driver will drop all new incoming data until a buffer can be allocated to store it. Data is dropped one PCM data buffer at a time , even though it is streamed into the device and copied into the buffer in smaller chunks. This is done to keep the data expected in any buffer in sync with the sequence number of the buffer that keeps incrementing even when the buffer is dopped. The application may keep track of lost frames by comparing sequence numbers.</p>
 <p >Hence, the PDM stream will never have a buffer overflow, but if the memory available in the heap is too low it may lose frames because because there is nowhere to put the incoming</p>
 <p >If the heap frees up again and the PDM task runs, it will automatically resume normal operation again. The only application-observable difference is the incremented version number.</p>
-<h2><a class="anchor" id="autotoc_md141"></a>
+<h2><a class="anchor" id="autotoc_md144"></a>
 PDMCC26XX_open Failing</h2>
 <p ><a class="el" href="_p_d_m_c_c26_x_x_8h.html#a431d9b71e0d0eebd5ab85960f1c82ee0" title="Function to initialize the CC26XX PDM peripheral specified by the particular handle....">PDMCC26XX_open()</a> returns NULL and rolls back all prior parts of the initialisation if any part of the initialisation fails. The following can cause <a class="el" href="_p_d_m_c_c26_x_x_8h.html#a431d9b71e0d0eebd5ab85960f1c82ee0" title="Function to initialize the CC26XX PDM peripheral specified by the particular handle....">PDMCC26XX_open()</a> to fail:</p><ul>
 <li>The driver is already open</li>
@@ -308,19 +326,19 @@ PDMCC26XX_open Failing</h2>
 <li>The PIN driver could not allocate the requested pins for the PDM driver</li>
 <li>The I2S driver failed to initialise</li>
 </ul>
-<h2><a class="anchor" id="autotoc_md142"></a>
+<h2><a class="anchor" id="autotoc_md145"></a>
 PDMCC26XX_startStream Failing</h2>
 <p ><a class="el" href="_p_d_m_c_c26_x_x_8h.html#af5fafd7c475117bd3ed6783273c2220d" title="Function to start streaming PDM data.">PDMCC26XX_startStream()</a> returns false if it fails. The following can cause <a class="el" href="_p_d_m_c_c26_x_x_8h.html#af5fafd7c475117bd3ed6783273c2220d" title="Function to start streaming PDM data.">PDMCC26XX_startStream()</a> to fail:</p><ul>
 <li>The driver is already streaming</li>
 <li>The I2S driver could not successfully start reading the pdm stream</li>
 </ul>
-<h2><a class="anchor" id="autotoc_md143"></a>
+<h2><a class="anchor" id="autotoc_md146"></a>
 PDMCC26XX_stopStream Failing</h2>
 <p ><a class="el" href="_p_d_m_c_c26_x_x_8h.html#aebd3b158f38ba1489a56efe5b9a722d2" title="Function to stop streaming PDM data.">PDMCC26XX_stopStream()</a> returns false if it fails. The following can cause <a class="el" href="_p_d_m_c_c26_x_x_8h.html#aebd3b158f38ba1489a56efe5b9a722d2" title="Function to stop streaming PDM data.">PDMCC26XX_stopStream()</a> to fail:</p><ul>
 <li>The driver is not currently streaming</li>
 <li>The I2S driver could not gracefully shut down</li>
 </ul>
-<h1><a class="anchor" id="autotoc_md144"></a>
+<h1><a class="anchor" id="autotoc_md147"></a>
 Power Management</h1>
 <p >The PDMCC26XX driver sets a power constraint while streaming to keep the device out of standby. When the stream has ended, the power constraint is released.</p>
 <p >The following statements are valid:</p><ul>
@@ -329,7 +347,7 @@ Power Management</h1>
 <li>After <a class="el" href="_p_d_m_c_c26_x_x_8h.html#aebd3b158f38ba1489a56efe5b9a722d2" title="Function to stop streaming PDM data.">PDMCC26XX_stopStream()</a> succeeds: the device can enter standby.</li>
 <li>If <a class="el" href="_p_d_m_c_c26_x_x_8h.html#afb9597d25d6b2e02f6903bf6652d4371" title="Function to close a given CC26XX PDM peripheral specified by the PDM handle.">PDMCC26XX_close()</a> is called: the device can enter standby.</li>
 </ul>
-<h1><a class="anchor" id="autotoc_md145"></a>
+<h1><a class="anchor" id="autotoc_md148"></a>
 Supported Functions</h1>
 <table class="markdownTable">
 <tr class="markdownTableHead">
@@ -347,10 +365,10 @@ Supported Functions</h1>
 <tr class="markdownTableRowEven">
 <td class="markdownTableBodyNone"><a class="el" href="_p_d_m_c_c26_x_x_8h.html#afb9597d25d6b2e02f6903bf6652d4371" title="Function to close a given CC26XX PDM peripheral specified by the PDM handle.">PDMCC26XX_close()</a>   </td><td class="markdownTableBodyNone">Disable HW and release system dependencies   </td></tr>
 </table>
-<h1><a class="anchor" id="autotoc_md146"></a>
+<h1><a class="anchor" id="autotoc_md149"></a>
 Standard Use Case</h1>
 <p >The standard use case involves calling <a class="el" href="_p_d_m_c_c26_x_x_8h.html#a431d9b71e0d0eebd5ab85960f1c82ee0" title="Function to initialize the CC26XX PDM peripheral specified by the particular handle....">PDMCC26XX_open()</a> once and calling <a class="el" href="_p_d_m_c_c26_x_x_8h.html#af5fafd7c475117bd3ed6783273c2220d" title="Function to start streaming PDM data.">PDMCC26XX_startStream()</a> and <a class="el" href="_p_d_m_c_c26_x_x_8h.html#aebd3b158f38ba1489a56efe5b9a722d2" title="Function to stop streaming PDM data.">PDMCC26XX_stopStream()</a> to start and stop the stream as needed. <a class="el" href="_p_d_m_c_c26_x_x_8h.html#afb9597d25d6b2e02f6903bf6652d4371" title="Function to close a given CC26XX PDM peripheral specified by the PDM handle.">PDMCC26XX_close()</a> is called when the PDM driver will no longer be needed again. In order for the PDM driver task to run, the application pends on a semaphore that is posted in the <a class="el" href="struct_p_d_m_c_c26_x_x___params.html#ada480cae6ca7398efef4293350f92090">PDMCC26XX_Params::callbackFxn</a>. In this example, the application requests 128 buffers. In a real application, the process of pending on a semaphore, requesting a buffer, and freeing it would be repeated as often as required by the use case before stopping the stream. </p>
-<h1><a class="anchor" id="autotoc_md147"></a>
+<h1><a class="anchor" id="autotoc_md150"></a>
 @code</h1>
 <p >void bufRdy_callback(PDMCC26XX_Handle handle, PDMCC26XX_StreamNotification *pStreamNotification) { PDMCC26XX_Status streamStatus = pStreamNotification-&gt;status;</p>
 <p >if (streamStatus == PDMCC26XX_STREAM_BLOCK_READY || streamStatus == PDMCC26XX_STREAM_BLOCK_READY_BUT_PDM_OVERFLOW){ Semaphore_post(Semaphore_handle(&amp;bufferReadySemaphore)); } else { // Handle the error } }</p>
@@ -1080,9 +1098,13 @@ Standard Use Case</h1>
 </div>
 </div>
 </div><!-- contents -->
+</div><!-- doc-content -->
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.3
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_3c4c7c1a85608ccd561c026bec818e51.html">components</a></li><li class="navelem"><a class="el" href="dir_0a34958ece62b88d5f4fac9c00fe2117.html">hal</a></li><li class="navelem"><a class="el" href="dir_38c3cacc9a381efce0aa75aab3acacb5.html">src</a></li><li class="navelem"><a class="el" href="dir_417c773b25c8ee516e66d9072c868b04.html">target</a></li><li class="navelem"><a class="el" href="dir_0fedb0c71f9959ad770933eb4ca379c2.html">cc2650rc</a></li><li class="navelem"><a class="el" href="_p_d_m_c_c26_x_x_8h.html">PDMCC26XX.h</a></li>
+    <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.3 </li>
+  </ul>
+</div>
 </body>
 </html>

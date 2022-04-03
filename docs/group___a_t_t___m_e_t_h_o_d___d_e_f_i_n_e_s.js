@@ -25,7 +25,6 @@ var group___a_t_t___m_e_t_h_o_d___d_e_f_i_n_e_s =
     [ "ATT_READ_REQ", "group___a_t_t___m_e_t_h_o_d___d_e_f_i_n_e_s.html#gae68fd1c9d97883658af425657601907f", null ],
     [ "ATT_READ_RSP", "group___a_t_t___m_e_t_h_o_d___d_e_f_i_n_e_s.html#gae58a449d79a98717dfd92be93c2bcae4", null ],
     [ "ATT_SIGNED_WRITE_CMD", "group___a_t_t___m_e_t_h_o_d___d_e_f_i_n_e_s.html#ga6c78a8ec1d8348495be76a3de612cfd1", null ],
-    [ "ATT_UNSUPPORTED_METHOD", "group___a_t_t___m_e_t_h_o_d___d_e_f_i_n_e_s.html#ga68d9fea66bf5c52e3c4a5dd1a0ac3f57", null ],
     [ "ATT_WRITE_CMD", "group___a_t_t___m_e_t_h_o_d___d_e_f_i_n_e_s.html#gae16c8890f2c8e904a937f7ed838553b1", null ],
     [ "ATT_WRITE_REQ", "group___a_t_t___m_e_t_h_o_d___d_e_f_i_n_e_s.html#ga192ff08a21ec7e054471b7990e700162", null ],
     [ "ATT_WRITE_RSP", "group___a_t_t___m_e_t_h_o_d___d_e_f_i_n_e_s.html#ga9e1cb6f585cadda983385ee63454c477", null ]

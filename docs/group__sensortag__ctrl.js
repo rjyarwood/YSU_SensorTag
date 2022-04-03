@@ -1,5 +1,6 @@
 var group__sensortag__ctrl =
 [
+    [ "I2C Interface", "group__i2c.html", "group__i2c" ],
     [ "Service IDs", "group__service__ids.html", "group__service__ids" ],
     [ "stEvt_t", "structst_evt__t.html", [
       [ "event", "structst_evt__t.html#a1ff7ad663d2a3eabab1ed9ef07e1b8a3", null ],
@@ -7,14 +8,8 @@ var group__sensortag__ctrl =
       [ "serviceID", "structst_evt__t.html#a991deb9bb5ef08599fa663a034cf1051", null ]
     ] ],
     [ "B_ADDR_STR_LEN", "group__sensortag__ctrl.html#gaaa0f78ed174d212fb0e4d4a903dcf4e2", null ],
-    [ "DELAY_MS", "group__sensortag__ctrl.html#ga533648a77705768f66e84ee57b2d2d41", null ],
     [ "INVALID_CONNHANDLE", "group__sensortag__ctrl.html#gad4957cb1be5c3ce6d4d11f836676c2b2", null ],
     [ "SBP_OAD_WRITE_EVT", "group__sensortag__ctrl.html#ga5f48eb0ae0217d21dc4903ee025ca0ca", null ],
-    [ "SENSOR_MIN_UPDATE_PERIOD", "group__sensortag__ctrl.html#ga6f4445f919073a088845c064dd2c5eca", null ],
-    [ "SENSOR_PERIOD_RESOLUTION", "group__sensortag__ctrl.html#ga7af12f5065e6281e9ae66d419b0459f0", null ],
-    [ "ST_CFG_ERROR", "group__sensortag__ctrl.html#gaa97c23ee347017e7b03612546ad63433", null ],
-    [ "ST_CFG_SENSOR_DISABLE", "group__sensortag__ctrl.html#ga396e5a5852582cdc41fc67b97f5223ae", null ],
-    [ "ST_CFG_SENSOR_ENABLE", "group__sensortag__ctrl.html#ga247d8fa22aa57cc3f7da62043f160d31", null ],
     [ "ST_CHAR_CHANGE_EVT", "group__sensortag__ctrl.html#gaa31c9cb09ca1f8cb52990ae00bbf5ae8", null ],
     [ "ST_DEVICE_ID", "group__sensortag__ctrl.html#ga20f40bdf82cc42c714b937b1e739390f", null ],
     [ "ST_PERIODIC_EVT", "group__sensortag__ctrl.html#ga3906c76a2b535cbbc495cbb3f9034a02", null ],

@@ -11,6 +11,6 @@ var group___g_a_t_t___s_e_r_v_e_r___a_p_i =
     [ "GATT_ServiceChangedInd", "group___g_a_t_t___s_e_r_v_e_r___a_p_i.html#ga5d3b326374bd8a5424d6171d36980d98", null ],
     [ "GATT_ServiceEncKeySize", "group___g_a_t_t___s_e_r_v_e_r___a_p_i.html#ga393d8e2bd51764e5336282953f644ee7", null ],
     [ "GATT_ServiceNumAttrs", "group___g_a_t_t___s_e_r_v_e_r___a_p_i.html#ga9497be8a28dcf7275441db9e81e265d2", null ],
-    [ "GATT_VerifyReadPermissions", "group___g_a_t_t___s_e_r_v_e_r___a_p_i.html#ga0f47d29997f5d3bcdb4dfca443072b75", null ],
-    [ "GATT_VerifyWritePermissions", "group___g_a_t_t___s_e_r_v_e_r___a_p_i.html#ga3161911d885d4fa08f0ae38e0740e938", null ]
+    [ "GATT_VerifyReadPermissions", "group___g_a_t_t___s_e_r_v_e_r___a_p_i.html#gab4edffdf23c7f16cf2c0df025d39fbad", null ],
+    [ "GATT_VerifyWritePermissions", "group___g_a_t_t___s_e_r_v_e_r___a_p_i.html#ga0516f5360b60788f23b315b73044d9bc", null ]
 ];

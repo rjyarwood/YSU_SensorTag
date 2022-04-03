@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['ysu_5fsensortag_0',['YSU_SensorTag',['../md__r_e_a_d_m_e.html',1,'']]]
+  ['new_20sensor_20guide_0',['New Sensor Guide',['../md_readmes_new_sensor_guide.html',1,'']]]
 ];

@@ -24,16 +24,20 @@
 */
 var NAVTREE =
 [
-  [ "YSU SensorTag", "index.html", [
-    [ "YSU_SensorTag", "md__r_e_a_d_m_e.html", [
-      [ "Needed Software", "md__r_e_a_d_m_e.html#autotoc_md1", null ],
-      [ "Installation", "md__r_e_a_d_m_e.html#autotoc_md2", [
-        [ "1. TI Setup", "md__r_e_a_d_m_e.html#autotoc_md3", null ],
-        [ "2. Git Setup", "md__r_e_a_d_m_e.html#autotoc_md4", null ]
+  [ "YSU SensorTag v1", "index.html", [
+    [ "YSU_SensorTag", "index.html", [
+      [ "Needed Software", "index.html#autotoc_md1", null ],
+      [ "Installation", "index.html#autotoc_md2", [
+        [ "1. TI Setup", "index.html#autotoc_md3", null ],
+        [ "2. Git Setup", "index.html#autotoc_md4", null ]
       ] ],
-      [ "Opening an Example", "md__r_e_a_d_m_e.html#autotoc_md5", null ],
-      [ "Documentation", "md__r_e_a_d_m_e.html#autotoc_md6", null ],
-      [ "Adding a board", "md__r_e_a_d_m_e.html#autotoc_md7", null ]
+      [ "Opening an Example", "index.html#autotoc_md5", null ],
+      [ "Documentation", "index.html#autotoc_md6", null ],
+      [ "Adding a board", "index.html#autotoc_md7", null ]
+    ] ],
+    [ "New Sensor Guide", "md_readmes_new_sensor_guide.html", [
+      [ "Developing For a New Board", "md_readmes_new_sensor_guide.html#autotoc_md9", null ],
+      [ "Creating a Project", "md_readmes_new_sensor_guide.html#autotoc_md10", null ]
     ] ],
     [ "API: device related", "_d_e_v.html", [
       [ "Device API summary", "_d_e_v.html#dev_api", null ],
@@ -81,6 +85,13 @@ var NAVTREE =
     ] ],
     [ "Todo List", "todo.html", null ],
     [ "Modules", "modules.html", "modules" ],
+    [ "Namespaces", "namespaces.html", [
+      [ "Namespace List", "namespaces.html", "namespaces_dup" ],
+      [ "Namespace Members", "namespacemembers.html", [
+        [ "All", "namespacemembers.html", null ],
+        [ "Functions", "namespacemembers_func.html", null ]
+      ] ]
+    ] ],
     [ "Classes", "annotated.html", [
       [ "Class List", "annotated.html", "annotated_dup" ],
       [ "Class Index", "classes.html", null ],
@@ -106,21 +117,22 @@ var NAVTREE =
 
 var NAVTREEINDEX =
 [
-"__hal__mcu_8h_source.html",
-"dir_0e9fd19530282e00f5adc67025f36b83.html",
-"functions_s.html",
-"group___g_a_p___a_d_t_y_p_e___d_e_f_i_n_e_s.html#ga4eed7b002abac1b211828922418a6956",
-"group___g_a_p_b_o_n_d___p_r_o_f_i_l_e___p_a_r_a_m_e_t_e_r_s.html#ga78802e4dcd220f53bb12c9c0b8fb7dc0",
-"group___g_a_t_t___s_e_r_v_e_r___a_p_i.html#ga355aa7260b9b562e9be14f9b82c0775a",
-"group___s_a_p___s_e_c_u_r_i_t_y___p_a_r_a_m_s.html#gab47e4a7bd7a8dc35590631022afffec3",
-"group___s_n_p___p_e_r_m_i_t___b_i_t_m_a_p_s___d_e_f_i_n_e_s.html#ga0a2d92f4903c5e3179931bba39ceb7e1",
-"onboard_8h_source.html",
-"struct___i_call___gatt_app_compl_msg__.html#ad2f8bde7c9f2fe8bf113444750b4c04d",
-"struct__icall__getbool__args__t.html#ae4aae99b92544e933d7fad01662a6f4c",
-"structatt_attr_type__t.html#a7d6d5abf96f780083518fe1205a54df8",
-"structgap_pairing_req__t.html",
-"structl2cap_psm__t.html#a082452e87f5084da22f13ac23b153111",
-"union___i_call___cmd_msg__.html#a0bfd944409e5153b4a3843ee5e4b0e4e"
+"_b_o_o_s_t_x_l___c_c2650_m_a_8h.html",
+"cc1350lp_2simple__peripheral_2ccs_2app_2_b_m_e688_2api_2_b_m_e688__api_8h_source.html",
+"dir_b896aacbbb726364659ce1ac957badc1.html",
+"group___a_t_t___s_e_r_v_e_r___a_p_i.html#gabbeb090dece408f57bb096a0871eae48",
+"group___g_a_p___m_s_g___e_v_e_n_t___d_e_f_i_n_e_s.html#ga9c157b92919d1b839176f0e8a05a82de",
+"group___g_a_t_t___c_l_i_e_n_t___s_u_b___p_r_o_c_e_d_u_r_e___a_p_i.html#ga3bd8c1e5f6a00cc9c2206f2c8bd8444a",
+"group___s_a_p___a_p_i.html#ga02ee23fcf472e98192183d79a2c2a5d1",
+"group___s_n_p___a_l_l_o_w_e_d___h_c_i.html#gac8872260c7291aa27897e316032d0d9d",
+"group__sensortag__ctrl.html#gaaa0f78ed174d212fb0e4d4a903dcf4e2",
+"struct___i_call___att_param_and_ptr__.html#a6551c26517c556421bfa2d723d08556d",
+"struct___i_call___l2cap_register_psm__.html#a69dda3ab9262a0aafb0d4e4be10e4dfa",
+"struct_n_p_i___params.html#adcaf4e526a0e041dead5d658957e7286",
+"structbuild_info__t.html",
+"structgluc_coll_evt__t.html",
+"structsnp__adv_data.html",
+"uniongap_observer_role_event__t.html#a4916c4e26eb92e72a5da30ebbbf62bc2"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

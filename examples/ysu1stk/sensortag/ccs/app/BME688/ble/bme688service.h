@@ -1,4 +1,4 @@
-/*
+/**
  *  @file bme688service.h
  *
  *  @brief File for the BME service definitions
@@ -15,6 +15,12 @@ extern "C"
 {
 #endif
 
+/// \addtogroup sensortag
+/**
+ * \ingroup sensortag
+ *  \addtogroup bme
+ */
+
 /*********************************************************************
  * INCLUDES
  */
@@ -23,6 +29,12 @@ extern "C"
 /*********************************************************************
  * CONSTANTS
  */
+
+/**
+ * \ingroup bme
+ * \addtogroup bme_ble BME BLE
+ * @{
+ */ 
 
 #define BME_DATA_DESCR       "BME. Data"
 #define BME_CONFIG_DESCR     "BME. Conf."
@@ -34,8 +46,10 @@ extern "C"
 #define BME_CONF_UUID         0xBF02
 #define BME_PERI_UUID         0xBF03
 
-// Length of sensor data in bytes
+/// Length of sensor data in bytes
 #define BME_DATA_LEN          14
+
+/** @} */
 
 /*********************************************************************
  * TYPEDEFS

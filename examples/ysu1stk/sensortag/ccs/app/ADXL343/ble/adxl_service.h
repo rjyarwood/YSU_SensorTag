@@ -1,4 +1,4 @@
-/******************************************************************************
+/****************************************************************************//**
 
  @file  adxl_service.h
 
@@ -25,6 +25,14 @@ extern "C"
 /*********************************************************************
  * CONSTANTS
  */
+/// \addtogroup adxl
+/**
+ * \ingroup adxl
+ * \addtogroup adxl_ble ADXL BLE
+ * @{
+ */ 
+
+
 #define ADXL_DATA_DESCR       "ADXL. Data"
 #define ADXL_CONFIG_DESCR     "ADXL. Conf."
 #define ADXL_PERIOD_DESCR     "ADXL. Period"
@@ -35,9 +43,10 @@ extern "C"
 #define ADXL_CONF_UUID         0xAD02
 #define ADXL_PERI_UUID         0xAD03
 
-// Length of sensor data in bytes
+/// Length of sensor data in bytes
 #define ADXL_DATA_LEN          6
 
+/** @} */
 /*********************************************************************
  * TYPEDEFS
  */

@@ -1,3 +1,7 @@
 {
-    "docwriter.style": "Auto-detect"
+    "docwriter.style": "Auto-detect",
+    "files.associations": {
+        "bme688service.h": "c",
+        "bme688.h": "c"
+    }
 }

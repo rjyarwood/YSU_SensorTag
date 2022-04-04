@@ -1,4 +1,4 @@
-/*
+/**
  *  @file adxl_sensor.c
  *
  *  @brief Contains the code to interact with the ADXL sensor
@@ -13,7 +13,7 @@
 /* Example/Board Header files */
 #include "Board.h"
 
-//TODO add a function to send the device info over BLE
+/// \bug add a function to send the device info over BLE
 
 void ADXL_read(uint8_t *d){
 

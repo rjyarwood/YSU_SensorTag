@@ -1,4 +1,4 @@
-/*
+/**
  *   @file adxl343.h
  *
  *   @brief File to define ADXL Task

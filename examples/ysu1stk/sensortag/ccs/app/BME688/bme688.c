@@ -1,4 +1,4 @@
-/*
+/**
  *  @file bme688.c
  *
  *  @brief Where the BME Task lives
@@ -33,18 +33,25 @@
 /*********************************************************************
  * CONSTANTS
  */
+/// \addtogroup sensortag
 
-// How often to perform sensor reads (milliseconds)
+/** 
+ * \ingroup sensortag
+ * \addtogroup bme BME
+ * @brief 
+ * @{
+ */
+
+/// How often to perform sensor reads (milliseconds)
 #define SENSOR_DEFAULT_PERIOD   1000
 
-// Delay from sensor enable to reading measurement
-// (allow for 250 ms conversion time)
+/// Delay from sensor enable to reading measurement (allow for 250 ms conversion time)
 #define BME_DELAY_PERIOD         275
 
-// Length of the data for this sensor
+/// Length of the data for this sensor
 #define SENSOR_DATA_LEN         BME_DATA_LEN
 
-// Task configuration
+/// Task configuration
 #define SENSOR_TASK_PRIORITY    1
 #define SENSOR_TASK_STACK_SIZE  1024
 
@@ -68,17 +75,17 @@
 /*********************************************************************
  * LOCAL VARIABLES
  */
-// Entity ID used to check for source and/or destination of messages
+/// Entity ID used to check for source and/or destination of messages
 static ICall_EntityID sensorSelfEntity;
 
-// Semaphore used to post events to the application thread
+/// Semaphore used to post events to the application thread
 static ICall_Semaphore sensorSem;
 
-// Task setup
+/// Task setup
 static Task_Struct sensorTask;
 static Char sensorTaskStack[SENSOR_TASK_STACK_SIZE];
 
-// Parameters
+/// Parameters
 static uint8_t sensorConfig;
 static uint16_t sensorPeriod;
 
@@ -99,7 +106,7 @@ static void initCharacteristicValue(uint8_t paramID, uint8_t value,
  */
 static sensorCBs_t sensorCallbacks =
 {
-  sensorConfigChangeCB,  // Characteristic value change callback
+  sensorConfigChangeCB,  /**< Characteristic value change callback */
 };
 
 
@@ -107,7 +114,7 @@ static sensorCBs_t sensorCallbacks =
  * PUBLIC FUNCTIONS
  */
 
-/*********************************************************************
+/*******************************************************************//**
  * @fn      BME_createTask
  *
  * @brief   Task creation function for the BME sensor. This can basically be copied and pasted for new sensor
@@ -129,7 +136,7 @@ void BME_createTask(void)
   Task_construct(&sensorTask, sensorTaskFxn, &taskParams, NULL);
 }
 
-/*********************************************************************
+/*******************************************************************//**
  * @fn      BME_processCharChangeEvt
  *
  * @brief   SensorTag BME event handling. This can basically be copied and pasted for new sensor
@@ -184,7 +191,7 @@ void BME_processCharChangeEvt(uint8_t paramID)
   }
 }
 
-/*********************************************************************
+/*******************************************************************//**
  * @fn      BME_init
  *
  * @brief   Initialize the BME service
@@ -214,7 +221,7 @@ void BME_init(void)
   bmeRegistered = 1;
 }
 
-/*********************************************************************
+/*******************************************************************//**
  * @fn      BME_reset
  *
  * @brief   Reset characteristics
@@ -235,7 +242,7 @@ void BME_reset(void)
 * Private functions
 */
 
-/*********************************************************************
+/*******************************************************************//**
  * @fn      sensorTaskFxn
  *
  * @brief   The task loop of the BME readout task
@@ -303,7 +310,7 @@ static void sensorTaskFxn(UArg a0, UArg a1)
 }
 
 
-/*********************************************************************
+/*******************************************************************//**
  * @fn      sensorChangeCB
  *
  * @brief   Callback from BME Service indicating a value change
@@ -319,7 +326,7 @@ static void sensorConfigChangeCB(uint8_t paramID)
 }
 
 
-/*********************************************************************
+/*******************************************************************//**
  * @fn      initCharacteristicValue
  *
  * @brief   Initialize a characteristic value
@@ -342,4 +349,4 @@ static void initCharacteristicValue(uint8_t paramID, uint8_t value,
 }
 
 
-
+/** @} */

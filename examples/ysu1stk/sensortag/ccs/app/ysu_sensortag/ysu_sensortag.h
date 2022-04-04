@@ -48,7 +48,7 @@ extern "C"
  *  Number does not matter but for simplicity just go in order. CC is to help maintain a steady connection, do not remove
  * @{
  */
-//TODO: USER CODE 3: Add your service ID here for the BLE stack to route to the right service
+/// \todo USER CODE 3: Add your service ID here for the BLE stack to route to the right service
 #define SERVICE_ID_ADXL       0x01 /**< Flag to identify ADXL BLE service */
 #define SERVICE_ID_BME        0x02 /**< Flag to identify BME BLE service  */
 

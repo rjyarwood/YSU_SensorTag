@@ -1,5 +1,5 @@
-/*
- * bme688service.c
+/**
+ * @file bme688service.c
  *
  *  Created on: Mar 3, 2022
  *      Author: rjyar
@@ -26,7 +26,6 @@
  * CONSTANTS
  */
 
-// The temperature sensor does not support the 100 ms update rate
 #undef BME_MIN_UPDATE_PERIOD
 #define BME_MIN_UPDATE_PERIOD  300 // Minimum 300 milliseconds
 
@@ -57,25 +56,31 @@
  * GLOBAL VARIABLES
  */
 
-// Service UUID
+/**
+ * \ingroup bme
+ * \addtogroup bme_ble BME BLE
+ * @{
+ */ 
+
+/// Service UUID
 static CONST uint8_t bmeServiceUUID[TI_UUID_SIZE] =
 {
   TI_UUID(BME_SERV_UUID),
 };
 
-// Characteristic UUID: data
+/// Characteristic UUID: data
 static CONST uint8_t bmeDataUUID[TI_UUID_SIZE] =
 {
   TI_UUID(BME_DATA_UUID),
 };
 
-// Characteristic UUID: config
+/// Characteristic UUID: config
 static CONST uint8_t bmeCfgUUID[TI_UUID_SIZE] =
 {
   TI_UUID(BME_CONF_UUID),
 };
 
-// Characteristic UUID: period
+/// Characteristic UUID: period
 static CONST uint8_t bmePeriodUUID[TI_UUID_SIZE] =
 {
   TI_UUID(BME_PERI_UUID),
@@ -100,42 +105,42 @@ static sensorCBs_t *sensor_AppCBs = NULL;
  * Profile Attributes - variables
  */
 
-// Profile Service attribute
+/// Profile Service attribute
 static CONST gattAttrType_t bmeService = { TI_UUID_SIZE, bmeServiceUUID };
 
-// Characteristic Value: data
+/// Characteristic Value: data
 static uint8_t bmeData[BME_DATA_LEN] = { 0, 0, 0, 0};
 
-// Characteristic Properties: data
+/// Characteristic Properties: data
 static uint8_t bmeDataProps = GATT_PROP_READ | GATT_PROP_NOTIFY;
 
-// Characteristic Configuration: data
+/// Characteristic Configuration: data
 static gattCharCfg_t *bmeDataConfig;
 
 #ifdef USER_DESCRIPTION
-// Characteristic User Description: data
+/// Characteristic User Description: data
 static uint8_t bmeDataUserDescr[] = BME_DATA_DESCR;
 #endif
 
-// Characteristic Properties: configuration
+/// Characteristic Properties: configuration
 static uint8_t bmeCfgProps = GATT_PROP_READ | GATT_PROP_WRITE;
 
-// Characteristic Value: configuration
+/// Characteristic Value: configuration
 static uint8_t bmeCfg = 0;
 
 #ifdef USER_DESCRIPTION
-// Characteristic User Description: configuration
+/// Characteristic User Description: configuration
 static uint8_t bmeCfgUserDescr[] = BME_CONFIG_DESCR;
 #endif
 
-// Characteristic Properties: period
+/// Characteristic Properties: period
 static uint8_t bmePeriodProps = GATT_PROP_READ | GATT_PROP_WRITE;
 
-// Characteristic Value: period
+/// Characteristic Value: period
 static uint8_t bmePeriod = SENSOR_MIN_UPDATE_PERIOD / SENSOR_PERIOD_RESOLUTION;
 
 #ifdef USER_DESCRIPTION
-// Characteristic User Description: period
+/// Characteristic User Description: period
 static uint8_t bmePeriodUserDescr[] = BME_PERIOD_DESCR;
 #endif
 
@@ -272,10 +277,10 @@ static CONST gattServiceCBs_t sensorCBs =
  * PUBLIC FUNCTIONS
  */
 
-/*********************************************************************
- * @fn      IRTemp_addService
+/*******************************************************************//**
+ * @fn      BMEaddService
  *
- * @brief   Initializes the IR Temperature Profile service by registering
+ * @brief   Initializes the BME Profile service by registering
  *          GATT attributes with the GATT server.
  *
  * @return  Success or Failure
@@ -301,8 +306,8 @@ bStatus_t BME_addService(void)
 }
 
 
-/*********************************************************************
- * @fn      IRTemp_registerAppCBs
+/*******************************************************************//**
+ * @fn      BME_registerAppCBs
  *
  * @brief   Registers the application callback function. Only call
  *          this function once.
@@ -326,8 +331,8 @@ bStatus_t BME_registerAppCBs(sensorCBs_t *appCallbacks)
   return (bleAlreadyInRequestedMode);
 }
 
-/*********************************************************************
- * @fn      IRTemp_setParameter
+/*******************************************************************//**
+ * @fn      BME_setParameter
  *
  * @brief   Set a parameter.
  *
@@ -392,8 +397,8 @@ bStatus_t BME_setParameter(uint8_t param, uint8_t len, void *value)
   return (ret);
 }
 
-/*********************************************************************
- * @fn      IRTemp_getParameter
+/*******************************************************************//**
+ * @fn      BME_getParameter
  *
  * @brief   Get a Sensor Profile parameter.
  *
@@ -431,7 +436,7 @@ bStatus_t BME_getParameter(uint8_t param, void *value)
   return (ret);
 }
 
-/*********************************************************************
+/*******************************************************************//**
  * @fn          sensor_ReadAttrCB
  *
  * @brief       Read an attribute.
@@ -490,7 +495,7 @@ static bStatus_t sensor_ReadAttrCB(uint16_t connHandle, gattAttribute_t *pAttr,
   return (status);
 }
 
-/*********************************************************************
+/*******************************************************************//**
  * @fn      sensor_WriteAttrCB
  *
  * @brief   Validate attribute data prior to a write operation

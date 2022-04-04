@@ -1,4 +1,4 @@
-/*
+/**
  *  @file bme688.h
  *
  *  @brief Defines anything for the BME Task
@@ -35,7 +35,7 @@ extern "C"
  */
 
 /*
- * Create the BME temperature sensor task
+ * Create the BME sensor task
  */
 extern void BME_createTask(void);
 

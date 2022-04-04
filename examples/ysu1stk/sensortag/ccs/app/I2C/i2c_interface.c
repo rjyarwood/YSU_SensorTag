@@ -1,5 +1,10 @@
-/*
- * i2c_interface.c
+/**
+ * @file i2c_interface.c
+ * 
+ * @brief Implementation of I2C Interface that is used to handle multiple sensors having simultaneous communication.
+ * 
+ * This is especially important when there are multiple physical busses present on the PCB as the CC chips have one 1 interface available.
+ * This means the interface must be opened for each operation and ensured it is closed after use.
  *
  *  Created on: Jan 29, 2022
  *      Author: rjyar
@@ -7,8 +12,13 @@
 
 #include "i2c_interface.h"
 
+/** 
+ * \addtogroup i2c I2C Interface
+ */
+
 
 /**
+ * \ingroup i2c
  * @brief An array representing all the devices that use seperate I2C busses.
  *
  * Will store a 1 at index I2C_Device_ID if device is holding the flag.

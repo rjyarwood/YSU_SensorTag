@@ -1,4 +1,4 @@
-/*
+/**
  *  @file BME_config.h
  *
  *
@@ -22,7 +22,14 @@
 
 #include "I2C/i2c_interface.h"
 
-/*! \defgroup BME_Configuration
+/// \addtogroup sensortag
+/**
+ * \ingroup sensortag
+ *  \addtogroup bme
+*/
+/*! 
+ * \ingroup bme
+ *\defgroup BME_Configuration BME Configuration
  * @brief Group of functions and data-types called by the user to interact with BME688 device.
  */
 

@@ -1,4 +1,4 @@
-/**********************************************************************************************
+/********************************************************************************************//**
  *
  * @file adxl_service.c
  *
@@ -27,6 +27,13 @@
 /*********************************************************************
  * CONSTANTS
  */
+
+/// \addtogroup adxl
+/**
+ * \ingroup adxl
+ * \addtogroup adxl_ble ADXL BLE
+ * @{
+ */ 
 
 #undef ADXL_MIN_UPDATE_PERIOD
 #define ADXL_MIN_UPDATE_PERIOD  10 // Minimum 100 milliseconds
@@ -58,25 +65,25 @@
  * GLOBAL VARIABLES
  */
 
-// Service UUID
+/// Service UUID
 static CONST uint8_t adxlServiceUUID[TI_UUID_SIZE] =
 {
   TI_UUID(ADXL_SERV_UUID),
 };
 
-// Characteristic UUID: data
+/// Characteristic UUID: data
 static CONST uint8_t adxlDataUUID[TI_UUID_SIZE] =
 {
   TI_UUID(ADXL_DATA_UUID),
 };
 
-// Characteristic UUID: config
+/// Characteristic UUID: config
 static CONST uint8_t adxlCfgUUID[TI_UUID_SIZE] =
 {
   TI_UUID(ADXL_CONF_UUID),
 };
 
-// Characteristic UUID: period
+/// Characteristic UUID: period
 static CONST uint8_t adxlPeriodUUID[TI_UUID_SIZE] =
 {
   TI_UUID(ADXL_PERI_UUID),
@@ -101,42 +108,42 @@ static sensorCBs_t *sensor_AppCBs = NULL;
  * Profile Attributes - variables
  */
 
-// Profile Service attribute
+/// Profile Service attribute
 static CONST gattAttrType_t adxlService = { TI_UUID_SIZE, adxlServiceUUID };
 
-// Characteristic Value: data
+/// Characteristic Value: data
 static uint8_t adxlData[ADXL_DATA_LEN] = { 0, 0, 0, 0, 0, 0};
 
-// Characteristic Properties: data
+/// Characteristic Properties: data
 static uint8_t adxlDataProps = GATT_PROP_READ | GATT_PROP_NOTIFY;
 
-// Characteristic Configuration: data
+/// Characteristic Configuration: data
 static gattCharCfg_t *adxlDataConfig;
 
 #ifdef USER_DESCRIPTION
-// Characteristic User Description: data
+/// Characteristic User Description: data
 static uint8_t adxlDataUserDescr[] = ADXL_DATA_DESCR;
 #endif
 
-// Characteristic Properties: configuration
+/// Characteristic Properties: configuration
 static uint8_t adxlCfgProps = GATT_PROP_READ | GATT_PROP_WRITE;
 
-// Characteristic Value: configuration
+/// Characteristic Value: configuration
 static uint8_t adxlCfg = 0;
 
 #ifdef USER_DESCRIPTION
-// Characteristic User Description: configuration
+/// Characteristic User Description: configuration
 static uint8_t adxlCfgUserDescr[] = ADXL_CONFIG_DESCR;
 #endif
 
-// Characteristic Properties: period
+/// Characteristic Properties: period
 static uint8_t adxlPeriodProps = GATT_PROP_READ | GATT_PROP_WRITE;
 
-// Characteristic Value: period
+/// Characteristic Value: period
 static uint8_t adxlPeriod = ADXL_MIN_UPDATE_PERIOD / SENSOR_PERIOD_RESOLUTION;
 
 #ifdef USER_DESCRIPTION
-// Characteristic User Description: period
+/// Characteristic User Description: period
 static uint8_t adxlPeriodUserDescr[] = ADXL_PERIOD_DESCR;
 #endif
 
@@ -254,26 +261,26 @@ static bStatus_t sensor_WriteAttrCB(uint16_t connHandle, gattAttribute_t *pAttr,
  * PROFILE CALLBACKS
  */
 
-// ADXL Profile Service Callbacks
-// Note: When an operation on a characteristic requires authorization and
-// pfnAuthorizeAttrCB is not defined for that characteristic's service, the
-// Stack will report a status of ATT_ERR_UNLIKELY to the client.  When an
-// operation on a characteristic requires authorization the Stack will call
-// pfnAuthorizeAttrCB to check a client's authorization prior to calling
-// pfnReadAttrCB or pfnWriteAttrCB, so no checks for authorization need to be
-// made within these functions.
+/// ADXL Profile Service Callbacks
+/// Note: When an operation on a characteristic requires authorization and
+/// pfnAuthorizeAttrCB is not defined for that characteristic's service, the
+/// Stack will report a status of ATT_ERR_UNLIKELY to the client.  When an
+/// operation on a characteristic requires authorization the Stack will call
+/// pfnAuthorizeAttrCB to check a client's authorization prior to calling
+/// pfnReadAttrCB or pfnWriteAttrCB, so no checks for authorization need to be
+/// made within these functions.
 static CONST gattServiceCBs_t sensorCBs =
 {
-  sensor_ReadAttrCB,  // Read callback function pointer
-  sensor_WriteAttrCB, // Write callback function pointer
-  NULL                // Authorization callback function pointer
+  sensor_ReadAttrCB,  /// Read callback function pointer
+  sensor_WriteAttrCB, /// Write callback function pointer
+  NULL                /// Authorization callback function pointer
 };
 
 /*********************************************************************
  * PUBLIC FUNCTIONS
  */
 
-/*********************************************************************
+/*******************************************************************//**
  * @fn      ADXL_addService
  *
  * @brief   Initializes the ADXL Accelerometer Profile service by registering
@@ -302,7 +309,7 @@ bStatus_t ADXL_addService(void)
 }
 
 
-/*********************************************************************
+/*******************************************************************//**
  * @fn      ADXL_registerAppCBs
  *
  * @brief   Registers the application callback function. Only call
@@ -327,7 +334,7 @@ bStatus_t ADXL_registerAppCBs(sensorCBs_t *appCallbacks)
   return (bleAlreadyInRequestedMode);
 }
 
-/*********************************************************************
+/*******************************************************************//**
  * @fn      ADXL_setParameter
  *
  * @brief   Set a parameter.
@@ -393,7 +400,7 @@ bStatus_t ADXL_setParameter(uint8_t param, uint8_t len, void *value)
   return (ret);
 }
 
-/*********************************************************************
+/*******************************************************************//**
  * @fn      ADXL_getParameter
  *
  * @brief   Get a Sensor Profile parameter.
@@ -432,7 +439,7 @@ bStatus_t ADXL_getParameter(uint8_t param, void *value)
   return (ret);
 }
 
-/*********************************************************************
+/*******************************************************************//**
  * @fn          sensor_ReadAttrCB
  *
  * @brief       Read an attribute.
@@ -491,7 +498,7 @@ static bStatus_t sensor_ReadAttrCB(uint16_t connHandle, gattAttribute_t *pAttr,
   return (status);
 }
 
-/*********************************************************************
+/*******************************************************************//**
  * @fn      sensor_WriteAttrCB
  *
  * @brief   Validate attribute data prior to a write operation
@@ -609,6 +616,9 @@ static bStatus_t sensor_WriteAttrCB(uint16_t connHandle, gattAttribute_t *pAttr,
 
   return (status);
 }
+
+
+/** @} */
 
 /*********************************************************************
 *********************************************************************/

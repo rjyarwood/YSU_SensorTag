@@ -1,4 +1,4 @@
-/*
+/**
  *  @file adxl343.c
  *
  *  @brief Where the ADXL Task lives
@@ -31,16 +31,25 @@
  * CONSTANTS
  */
 
-// How often to perform sensor reads (milliseconds)
+/// \addtogroup sensortag
+
+/**
+ * \ingroup sensortag
+ * \addtogroup adxl ADXL
+ * 
+ * @{
+ */
+
+/// How often to perform sensor reads (milliseconds)
 #define SENSOR_DEFAULT_PERIOD   1000
 
-// Time start measurement and data ready
+/// Time start measurement and data ready
 #define ADXL_DELAY_PERIOD        15
 
-// Length of the data for this sensor
+/// Length of the data for this sensor
 #define SENSOR_DATA_LEN         ADXL_DATA_LEN
 
-// Task configuration
+/// Task configuration
 #define SENSOR_TASK_PRIORITY    1
 #define SENSOR_TASK_STACK_SIZE  600
 
@@ -64,17 +73,17 @@
  * LOCAL VARIABLES
  */
 
-// Entity ID globally used to check for source and/or destination of messages
+/// Entity ID globally used to check for source and/or destination of messages
 static ICall_EntityID sensorSelfEntity;
 
-// Semaphore globally used to post events to the application thread
+/// Semaphore globally used to post events to the application thread
 static ICall_Semaphore sensorSem;
 
-// Task setup
+/// Task setup
 static Task_Struct sensorTask;
 static Char sensorTaskStack[SENSOR_TASK_STACK_SIZE];
 
-// Parameters
+/// Parameters
 static uint8_t sensorConfig;
 static uint16_t sensorPeriod;
 
@@ -95,7 +104,7 @@ static void initCharacteristicValue(uint8_t paramID, uint8_t value,
  */
 static sensorCBs_t sensorCallbacks =
 {
-  sensorConfigChangeCB,  // Characteristic value change callback
+  sensorConfigChangeCB,  /**< Characteristic value change callback */
 };
 
 
@@ -103,7 +112,7 @@ static sensorCBs_t sensorCallbacks =
  * PUBLIC FUNCTIONS
  */
 
-/*********************************************************************
+/*******************************************************************//**
  * @fn      ADXL_createTask
  *
  * @brief   Task creation function for the ADXL
@@ -125,7 +134,7 @@ void ADXL_createTask(void)
   Task_construct(&sensorTask, sensorTaskFxn, &taskParams, NULL);
 }
 
-/*********************************************************************
+/*******************************************************************//**
  * @fn      ADXL_processCharChangeEvt
  *
  * @brief   SensorTag ADXL event handling
@@ -180,7 +189,7 @@ void ADXL_processCharChangeEvt(uint8_t paramID)
   }
 }
 
-/*********************************************************************
+/*******************************************************************//**
  * @fn      ADXL_init
  *
  * @brief   Initialize the module
@@ -209,7 +218,7 @@ void ADXL_init(void)
   adxlRegistered = 1;
 }
 
-/*********************************************************************
+/*******************************************************************//**
  * @fn      ADXL_reset
  *
  * @brief   Reset characteristics
@@ -230,7 +239,7 @@ void ADXL_reset(void)
 * Private functions
 */
 
-/*********************************************************************
+/*******************************************************************//**
  * @fn      sensorTaskFxn
  *
  * @brief   The task loop of the ADXL readout task
@@ -281,7 +290,7 @@ static void sensorTaskFxn(UArg a0, UArg a1)
 }
 
 
-/*********************************************************************
+/*******************************************************************//**
  * @fn      sensorConfigChangeCB
  *
  * @brief   Callback from ADXL Service indicating a value change
@@ -297,7 +306,7 @@ static void sensorConfigChangeCB(uint8_t paramID)
 }
 
 
-/*********************************************************************
+/*******************************************************************//**
  * @fn      initCharacteristicValue
  *
  * @brief   Initialize a characteristic value
@@ -319,4 +328,4 @@ static void initCharacteristicValue(uint8_t paramID, uint8_t value,
   ADXL_setParameter(paramID, paramLen, data);
 }
 
-
+/** @} */

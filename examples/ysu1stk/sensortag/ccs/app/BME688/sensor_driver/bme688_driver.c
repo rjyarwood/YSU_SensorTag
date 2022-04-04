@@ -1,4 +1,4 @@
-/*
+/**
  *  @file bme688_driver.c
  *
  *  @brief Driver for the BME sensor

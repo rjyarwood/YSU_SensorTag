@@ -1,4 +1,4 @@
-/*
+/**
  *  @file: ysu_sensortag.c
  *
  *  @brief: This is the main thread file. This does everything from setting up BLE to running the main task
@@ -43,7 +43,7 @@
  */
 
 /************************* BEGIN USER CODE 4 ************************/
-/*TODO USER CODE 4: Add your sensor task file here. The ADXL service is only here for advertising. If you would like to
+/** \todo USER CODE 4: Add your sensor task file here. The ADXL service is only here for advertising. If you would like to
 *                    advertise another service see below           
 */
 #include "ADXL343/ble/adxl_service.h"
@@ -268,7 +268,7 @@ static uint8_t advertData[] =
 };
 
 /********************* BEGIN USER CODE 5 ******************/
-///TODO USER CODE 5: Add your device info. Do not overwrite, add an ifdef for your device
+/// \todo USER CODE 5: Add your device info. Do not overwrite, add an ifdef for your device
 /// Device information parameters
 #ifdef YSU
 static const uint8_t devInfoModelNumber[] = "YSU SensorTag";
@@ -374,7 +374,7 @@ static void SensorTag_init(void)
 {
 
   /****************** BEGIN USER CODE 6 *********************/
-  /// TODO USER CODE 6: Initialize any board level drivers needed
+  /// \todo USER CODE 6: Initialize any board level drivers needed
   Board_initI2C();
   /******************* END USER CODE 6 **********************/
 
@@ -482,7 +482,7 @@ static void SensorTag_init(void)
   SensorTag_setDeviceInfo();
 
   /************************ BEGIN USER CODE 7 *******************/
-  ///TODO USER CODE 7: Call the function to set up your Bluetooth service
+  /// \todo USER CODE 7: Call the function to set up your Bluetooth service
   ADXL_init();
   BME_init();
   /************************ END USER CODE 7 *********************/
@@ -574,7 +574,7 @@ static void SensorTag_taskFxn(UArg a0, UArg a1)
 
 
     /*************************** BEGIN USER CODE 8 *****************************/
-    ///TODO USER CODE 8: If you are not using a task for your sensor, poll it here
+    /// \todo USER CODE 8: If you are not using a task for your sensor, poll it here
     /**************************** END USER CODE 8 ******************************/
 
 
@@ -832,7 +832,7 @@ static void SensorTag_processCharValueChangeEvt(uint8_t serviceID,
   {
 
   /***************** BEGIN USER CODE 9 **********************/
-  ///TODO USER CODE 9: This is where you add a case statement for that ID you defined earlier.
+  /// \todo USER CODE 9: This is where you add a case statement for that ID you defined earlier.
   ///This ensures all BLE messages get where they need to go
   case SERVICE_ID_ADXL:
     ADXL_processCharChangeEvt(paramID);

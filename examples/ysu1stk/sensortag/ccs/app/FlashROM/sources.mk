@@ -123,6 +123,7 @@ GEN_OPTS__QUOTED :=
 
 # Every subdirectory with source files must be described here
 SUBDIRS := \
+. \
 ADXL343 \
 ADXL343/ble \
 ADXL343/sensor_driver \

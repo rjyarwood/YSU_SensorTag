@@ -322,11 +322,6 @@
 			<locationURI>copy_PARENT/config/ccfg_app_ble.c</locationURI>
 		</link>
 		<link>
-			<name>Startup/main.c</name>
-			<type>1</type>
-			<locationURI>SRC_EX1/examples/simple_peripheral/cc26xx/app/main.c</locationURI>
-		</link>
-		<link>
 			<name>TOOLS/app_ble.cfg</name>
 			<type>1</type>
 			<locationURI>copy_PARENT1/ccs/config/app_ble.cfg</locationURI>

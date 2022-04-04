@@ -12,6 +12,7 @@ GEN_CMDS__FLAG := -l"configPkg/linker.cmd"
 ORDERED_OBJS += \
 "C:/ti/simplelink/ble_sdk_2_02_01_18/examples/ysu1stk/sensortag/ccs/config/ccs_linker_defines.cmd" \
 "C:/ti/simplelink/ble_sdk_2_02_01_18/src/common/cc26xx/ccs/cc26xx_app.cmd" \
+"./main.obj" \
 "./ADXL343/adxl343.obj" \
 "./ADXL343/ble/adxl_service.obj" \
 "./ADXL343/sensor_driver/adxl_sensor.obj" \
@@ -46,7 +47,6 @@ ORDERED_OBJS += \
 "./PROFILES/simple_gatt_profile.obj" \
 "./Startup/board.obj" \
 "./Startup/ccfg_app_ble.obj" \
-"./Startup/main.obj" \
 "./app/sensortag_conn_ctrl.obj" \
 "./prof/ccservice.obj" \
 "./utils/st_util.obj" \
@@ -63,6 +63,7 @@ RMDIR := RMDIR /S/Q
 
 # All of the sources participating in the build are defined here
 -include sources.mk
+-include subdir_vars.mk
 -include ADXL343/subdir_vars.mk
 -include ADXL343/ble/subdir_vars.mk
 -include ADXL343/sensor_driver/subdir_vars.mk
@@ -90,6 +91,7 @@ RMDIR := RMDIR /S/Q
 -include prof/subdir_vars.mk
 -include utils/subdir_vars.mk
 -include ysu_sensortag/subdir_vars.mk
+-include subdir_rules.mk
 -include ADXL343/subdir_rules.mk
 -include ADXL343/ble/subdir_rules.mk
 -include ADXL343/sensor_driver/subdir_rules.mk
@@ -249,10 +251,9 @@ sensortag_ysu1stk_app.hex: $(EXE_OUTPUTS)
 # Other Targets
 clean:
 	-$(RM) $(BIN_OUTPUTS__QUOTED)$(GEN_FILES__QUOTED)$(EXE_OUTPUTS__QUOTED)
-	-$(RM) "ADXL343\adxl343.obj" "ADXL343\ble\adxl_service.obj" "ADXL343\sensor_driver\adxl_sensor.obj" "Application\simple_peripheral.obj" "Application\util.obj" "BME688\api\BME688_api.obj" "BME688\ble\bme688service.obj" "BME688\bme688.obj" "BME688\sensor_driver\bme688_driver.obj" "Drivers\Display\Display.obj" "Drivers\Display\DisplayDogm1286.obj" "Drivers\Display\DisplayUart.obj" "Drivers\ECC\ECCROMCC26XX.obj" "Drivers\PIN\PINCC26XX.obj" "Drivers\RF\RFCC26XX_singleMode.obj" "Drivers\SPI\SPI.obj" "Drivers\SPI\SPICC26XXDMA.obj" "Drivers\TRNG\TRNGCC26XX.obj" "Drivers\UART\UART.obj" "Drivers\UART\UARTCC26XX.obj" "Drivers\UDMA\UDMACC26XX.obj" "I2C\i2c_interface.obj" "ICall\icall.obj" "ICall\icall_cc2650.obj" "ICallBLE\ble_user_config.obj" "ICallBLE\icall_api.obj" "Middleware\extflash\ExtFlash.obj" "PROFILES\devinfoservice.obj" "PROFILES\gatt_uuid.obj" "PROFILES\gattservapp_util.obj" "PROFILES\peripheral.obj" "PROFILES\simple_gatt_profile.obj" "Startup\board.obj" "Startup\ccfg_app_ble.obj" "Startup\main.obj" 
+	-$(RM) "main.obj" "ADXL343\adxl343.obj" "ADXL343\ble\adxl_service.obj" "ADXL343\sensor_driver\adxl_sensor.obj" "Application\simple_peripheral.obj" "Application\util.obj" "BME688\api\BME688_api.obj" "BME688\ble\bme688service.obj" "BME688\bme688.obj" "BME688\sensor_driver\bme688_driver.obj" "Drivers\Display\Display.obj" "Drivers\Display\DisplayDogm1286.obj" "Drivers\Display\DisplayUart.obj" "Drivers\ECC\ECCROMCC26XX.obj" "Drivers\PIN\PINCC26XX.obj" "Drivers\RF\RFCC26XX_singleMode.obj" "Drivers\SPI\SPI.obj" "Drivers\SPI\SPICC26XXDMA.obj" "Drivers\TRNG\TRNGCC26XX.obj" "Drivers\UART\UART.obj" "Drivers\UART\UARTCC26XX.obj" "Drivers\UDMA\UDMACC26XX.obj" "I2C\i2c_interface.obj" "ICall\icall.obj" "ICall\icall_cc2650.obj" "ICallBLE\ble_user_config.obj" "ICallBLE\icall_api.obj" "Middleware\extflash\ExtFlash.obj" "PROFILES\devinfoservice.obj" "PROFILES\gatt_uuid.obj" "PROFILES\gattservapp_util.obj" "PROFILES\peripheral.obj" "PROFILES\simple_gatt_profile.obj" "Startup\board.obj" "Startup\ccfg_app_ble.obj" 
 	-$(RM) "app\sensortag_conn_ctrl.obj" "prof\ccservice.obj" "utils\st_util.obj" "ysu_sensortag\ysu_sensortag.obj" 
-	-$(RM) "ADXL343\adxl343.d" "ADXL343\ble\adxl_service.d" "ADXL343\sensor_driver\adxl_sensor.d" "Application\simple_peripheral.d" "Application\util.d" "BME688\api\BME688_api.d" "BME688\ble\bme688service.d" "BME688\bme688.d" "BME688\sensor_driver\bme688_driver.d" "Drivers\Display\Display.d" "Drivers\Display\DisplayDogm1286.d" "Drivers\Display\DisplayUART.d" "Drivers\ECC\ECCROMCC26XX.d" "Drivers\PIN\PINCC26XX.d" "Drivers\RF\RFCC26XX_singleMode.d" "Drivers\SPI\SPI.d" "Drivers\SPI\SPICC26XXDMA.d" "Drivers\TRNG\TRNGCC26XX.d" "Drivers\UART\UART.d" "Drivers\UART\UARTCC26XX.d" "Drivers\UDMA\UDMACC26XX.d" "I2C\i2c_interface.d" "ICall\icall.d" "ICall\icall_cc2650.d" "ICallBLE\ble_user_config.d" "ICallBLE\icall_api.d" "Middleware\extflash\ExtFlash.d" "PROFILES\devinfoservice.d" "PROFILES\gatt_uuid.d" "PROFILES\gattservapp_util.d" "PROFILES\peripheral.d" "PROFILES\simple_gatt_profile.d" "Startup\board.d" "Startup\ccfg_app_ble.d" "Startup\main.d" "app\sensortag_conn_ctrl.d" "prof\ccservice.d" "utils\st_util.d" 
-	-$(RM) "ysu_sensortag\ysu_sensortag.d" 
+	-$(RM) "main.d" "ADXL343\adxl343.d" "ADXL343\ble\adxl_service.d" "ADXL343\sensor_driver\adxl_sensor.d" "Application\simple_peripheral.d" "Application\util.d" "BME688\api\BME688_api.d" "BME688\ble\bme688service.d" "BME688\bme688.d" "BME688\sensor_driver\bme688_driver.d" "Drivers\Display\Display.d" "Drivers\Display\DisplayDogm1286.d" "Drivers\Display\DisplayUART.d" "Drivers\ECC\ECCROMCC26XX.d" "Drivers\PIN\PINCC26XX.d" "Drivers\RF\RFCC26XX_singleMode.d" "Drivers\SPI\SPI.d" "Drivers\SPI\SPICC26XXDMA.d" "Drivers\TRNG\TRNGCC26XX.d" "Drivers\UART\UART.d" "Drivers\UART\UARTCC26XX.d" "Drivers\UDMA\UDMACC26XX.d" "I2C\i2c_interface.d" "ICall\icall.d" "ICall\icall_cc2650.d" "ICallBLE\ble_user_config.d" "ICallBLE\icall_api.d" "Middleware\extflash\ExtFlash.d" "PROFILES\devinfoservice.d" "PROFILES\gatt_uuid.d" "PROFILES\gattservapp_util.d" "PROFILES\peripheral.d" "PROFILES\simple_gatt_profile.d" "Startup\board.d" "Startup\ccfg_app_ble.d" "app\sensortag_conn_ctrl.d" "prof\ccservice.d" "utils\st_util.d" "ysu_sensortag\ysu_sensortag.d" 
 	-$(RMDIR) $(GEN_MISC_DIRS__QUOTED)
 	-@echo 'Finished clean'
 	-@echo ' '

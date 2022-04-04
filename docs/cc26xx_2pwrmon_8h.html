@@ -159,34 +159,34 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>PWRMON_stopMonitor</b
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p >power monitoring for CC26xx device </p>
 <p >============================================================================</p>
-<h1><a class="anchor" id="autotoc_md120"></a>
+<h1><a class="anchor" id="autotoc_md125"></a>
 Driver Include</h1>
 <p >The header file should be included in an application as follows: </p><div class="fragment"><div class="line"><span class="preprocessor">#include &quot;pwrmon.h&quot;</span></div>
 </div><!-- fragment --><p> the location of the driver needs to be included in the project options: $SRC_REMOTI_EXAMPLE$/common/cc26xx </p>
-<h1><a class="anchor" id="autotoc_md121"></a>
+<h1><a class="anchor" id="autotoc_md126"></a>
 Overview</h1>
 <p >The power monitoring driver provides a set of API to easily monitor the voltage applied to your device. it allows the reading of this voltage at any time, or to know if the voltage is under a certain threshold, or to register a callback that will be called if the voltage goes under a specific threshold.</p>
-<h2><a class="anchor" id="autotoc_md122"></a>
+<h2><a class="anchor" id="autotoc_md127"></a>
 General Behavior</h2>
 <p >For code examples, see Use Cases below. This driver is not thread safe and is not intented to be used by different threads. <br  />
 </p>
-<h3><a class="anchor" id="autotoc_md123"></a>
+<h3><a class="anchor" id="autotoc_md128"></a>
 Starting up the monitoring</h3>
 <p >On CC26xx platform, the power monitoring is always enabled by default. The call to PWRMON_init() is optional.</p>
-<h3><a class="anchor" id="autotoc_md124"></a>
+<h3><a class="anchor" id="autotoc_md129"></a>
 Reading of the voltage</h3>
 <p >There are two ways to check the voltage appllied to the chip:</p><ul>
 <li>ask for a comparison with a threshold</li>
 <li>ask for the direct value of the voltage</li>
 </ul>
-<h4><a class="anchor" id="autotoc_md125"></a>
+<h4><a class="anchor" id="autotoc_md130"></a>
 Threshold comparaison</h4>
 <p >calling PWRMON_check(thresh) will return FALSE depending if the current voltage appllied to the cc26xx if bellow the threshold 'thresh', TRUE if it's equal or above. in this case, the threshold unit is a fractional value align with the register definition (PWRMON_REGISTER)</p>
-<h4><a class="anchor" id="autotoc_md126"></a>
+<h4><a class="anchor" id="autotoc_md131"></a>
 Voltage reading</h4>
 <p >calling PWRMON_getVoltage() will return the voltage appllied to the cc26xx</p>
 <p >On CC26xx platform, the power monitoring is always enabled by default. The call to PWRMON_init() is optional.</p>
-<h3><a class="anchor" id="autotoc_md127"></a>
+<h3><a class="anchor" id="autotoc_md132"></a>
 Setting up an alert</h3>
 <p >Using the APIs PWRMON_setMonitor and PWRMON_startMonitor, the user can register a callback function that will be called if the voltage goes under a specified threshold API PWRMON_stopMonitor can be used to stop the monitoring. This is not multi-thread, meaning only one monitoring can be setup at any time. </p>
 </div><h2 class="groupheader">Macro Definition Documentation</h2>

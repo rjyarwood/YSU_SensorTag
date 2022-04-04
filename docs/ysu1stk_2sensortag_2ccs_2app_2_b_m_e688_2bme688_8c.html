@@ -97,7 +97,7 @@ $(document).ready(function(){initNavTree('ysu1stk_2sensortag_2ccs_2app_2_b_m_e68
 <div class="textblock"><code>#include &quot;./sensor_driver/bme688_driver.h&quot;</code><br />
 <code>#include &quot;gatt.h&quot;</code><br />
 <code>#include &quot;gattservapp.h&quot;</code><br />
-<code>#include &quot;./ble/bme688service.h&quot;</code><br />
+<code>#include &quot;<a class="el" href="ysu1stk_2sensortag_2ccs_2app_2_b_m_e688_2ble_2bme688service_8h_source.html">./ble/bme688service.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="ysu1stk_2sensortag_2ccs_2app_2_b_m_e688_2bme688_8h_source.html">bme688.h</a>&quot;</code><br />
 <code>#include &quot;SensorUtils.h&quot;</code><br />
 <code>#include &quot;board.h&quot;</code><br />
@@ -107,141 +107,84 @@ $(document).ready(function(){initNavTree('ysu1stk_2sensortag_2ccs_2app_2_b_m_e68
 </div><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="define-members" name="define-members"></a>
 Macros</h2></td></tr>
-<tr class="memitem:a351e8a3e549190f11ff796a9dac11cdf"><td class="memItemLeft" align="right" valign="top"><a id="a351e8a3e549190f11ff796a9dac11cdf" name="a351e8a3e549190f11ff796a9dac11cdf"></a>
+<tr class="memitem:ga351e8a3e549190f11ff796a9dac11cdf"><td class="memItemLeft" align="right" valign="top">
 #define&#160;</td><td class="memItemRight" valign="bottom"><b>SENSOR_DEFAULT_PERIOD</b>&#160;&#160;&#160;1000</td></tr>
-<tr class="separator:a351e8a3e549190f11ff796a9dac11cdf"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:acdd23aa241151b2bb586ade37ab224e2"><td class="memItemLeft" align="right" valign="top"><a id="acdd23aa241151b2bb586ade37ab224e2" name="acdd23aa241151b2bb586ade37ab224e2"></a>
+<tr class="memdesc:ga351e8a3e549190f11ff796a9dac11cdf"><td class="mdescLeft">&#160;</td><td class="mdescRight">How often to perform sensor reads (milliseconds) <br /></td></tr>
+<tr class="separator:ga351e8a3e549190f11ff796a9dac11cdf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gacdd23aa241151b2bb586ade37ab224e2"><td class="memItemLeft" align="right" valign="top">
 #define&#160;</td><td class="memItemRight" valign="bottom"><b>BME_DELAY_PERIOD</b>&#160;&#160;&#160;275</td></tr>
-<tr class="separator:acdd23aa241151b2bb586ade37ab224e2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3229e2d0044c7bae953c56896760c9b1"><td class="memItemLeft" align="right" valign="top"><a id="a3229e2d0044c7bae953c56896760c9b1" name="a3229e2d0044c7bae953c56896760c9b1"></a>
-#define&#160;</td><td class="memItemRight" valign="bottom"><b>SENSOR_DATA_LEN</b>&#160;&#160;&#160;BME_DATA_LEN</td></tr>
-<tr class="separator:a3229e2d0044c7bae953c56896760c9b1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af88752d4543f9c32588b0174affa7c5a"><td class="memItemLeft" align="right" valign="top"><a id="af88752d4543f9c32588b0174affa7c5a" name="af88752d4543f9c32588b0174affa7c5a"></a>
+<tr class="memdesc:gacdd23aa241151b2bb586ade37ab224e2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Delay from sensor enable to reading measurement (allow for 250 ms conversion time) <br /></td></tr>
+<tr class="separator:gacdd23aa241151b2bb586ade37ab224e2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga3229e2d0044c7bae953c56896760c9b1"><td class="memItemLeft" align="right" valign="top">
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>SENSOR_DATA_LEN</b>&#160;&#160;&#160;<a class="el" href="group__bme__ble.html#gae3ed1f57fc1213506438cddaa94720c1">BME_DATA_LEN</a></td></tr>
+<tr class="memdesc:ga3229e2d0044c7bae953c56896760c9b1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Length of the data for this sensor. <br /></td></tr>
+<tr class="separator:ga3229e2d0044c7bae953c56896760c9b1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaf88752d4543f9c32588b0174affa7c5a"><td class="memItemLeft" align="right" valign="top">
 #define&#160;</td><td class="memItemRight" valign="bottom"><b>SENSOR_TASK_PRIORITY</b>&#160;&#160;&#160;1</td></tr>
-<tr class="separator:af88752d4543f9c32588b0174affa7c5a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9f2ec03f3efab149ac0a38d8b139a850"><td class="memItemLeft" align="right" valign="top"><a id="a9f2ec03f3efab149ac0a38d8b139a850" name="a9f2ec03f3efab149ac0a38d8b139a850"></a>
+<tr class="memdesc:gaf88752d4543f9c32588b0174affa7c5a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Task configuration. <br /></td></tr>
+<tr class="separator:gaf88752d4543f9c32588b0174affa7c5a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga9f2ec03f3efab149ac0a38d8b139a850"><td class="memItemLeft" align="right" valign="top">
 #define&#160;</td><td class="memItemRight" valign="bottom"><b>SENSOR_TASK_STACK_SIZE</b>&#160;&#160;&#160;1024</td></tr>
-<tr class="separator:a9f2ec03f3efab149ac0a38d8b139a850"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="separator:ga9f2ec03f3efab149ac0a38d8b139a850"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:a730b3b2460d648eb59a7dacb1811e28e"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ysu1stk_2sensortag_2ccs_2app_2_b_m_e688_2bme688_8c.html#a730b3b2460d648eb59a7dacb1811e28e">sensorTaskFxn</a> (UArg a0, UArg a1)</td></tr>
-<tr class="separator:a730b3b2460d648eb59a7dacb1811e28e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a43c227195f56741bdff53deab2e2e77c"><td class="memItemLeft" align="right" valign="top"><a id="a43c227195f56741bdff53deab2e2e77c" name="a43c227195f56741bdff53deab2e2e77c"></a>
+<tr class="memitem:ga730b3b2460d648eb59a7dacb1811e28e"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__bme.html#ga730b3b2460d648eb59a7dacb1811e28e">sensorTaskFxn</a> (UArg a0, UArg a1)</td></tr>
+<tr class="separator:ga730b3b2460d648eb59a7dacb1811e28e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga43c227195f56741bdff53deab2e2e77c"><td class="memItemLeft" align="right" valign="top">
 static void&#160;</td><td class="memItemRight" valign="bottom"><b>sensorConfigChangeCB</b> (uint8_t paramID)</td></tr>
-<tr class="separator:a43c227195f56741bdff53deab2e2e77c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a81eaa6cd8a96429d9b12c979b13c253a"><td class="memItemLeft" align="right" valign="top"><a id="a81eaa6cd8a96429d9b12c979b13c253a" name="a81eaa6cd8a96429d9b12c979b13c253a"></a>
+<tr class="separator:ga43c227195f56741bdff53deab2e2e77c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga81eaa6cd8a96429d9b12c979b13c253a"><td class="memItemLeft" align="right" valign="top">
 static void&#160;</td><td class="memItemRight" valign="bottom"><b>initCharacteristicValue</b> (uint8_t paramID, uint8_t value, uint8_t paramLen)</td></tr>
-<tr class="separator:a81eaa6cd8a96429d9b12c979b13c253a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a943a472674a310bff82fe29d2276a07b"><td class="memItemLeft" align="right" valign="top"><a id="a943a472674a310bff82fe29d2276a07b" name="a943a472674a310bff82fe29d2276a07b"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>BME_createTask</b> (void)</td></tr>
-<tr class="separator:a943a472674a310bff82fe29d2276a07b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3fb0a73c003a855de490e8a3844a8dbf"><td class="memItemLeft" align="right" valign="top"><a id="a3fb0a73c003a855de490e8a3844a8dbf" name="a3fb0a73c003a855de490e8a3844a8dbf"></a>
+<tr class="separator:ga81eaa6cd8a96429d9b12c979b13c253a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga943a472674a310bff82fe29d2276a07b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__bme.html#ga943a472674a310bff82fe29d2276a07b">BME_createTask</a> (void)</td></tr>
+<tr class="memdesc:ga943a472674a310bff82fe29d2276a07b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Task creation function for the BME sensor. This can basically be copied and pasted for new sensor.  <a href="group__bme.html#ga943a472674a310bff82fe29d2276a07b">More...</a><br /></td></tr>
+<tr class="separator:ga943a472674a310bff82fe29d2276a07b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga3fb0a73c003a855de490e8a3844a8dbf"><td class="memItemLeft" align="right" valign="top">
 void&#160;</td><td class="memItemRight" valign="bottom"><b>BME_processCharChangeEvt</b> (uint8_t paramID)</td></tr>
-<tr class="separator:a3fb0a73c003a855de490e8a3844a8dbf"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af58aacde835b11ee7d5d6180eedf6136"><td class="memItemLeft" align="right" valign="top"><a id="af58aacde835b11ee7d5d6180eedf6136" name="af58aacde835b11ee7d5d6180eedf6136"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>BME_init</b> (void)</td></tr>
-<tr class="separator:af58aacde835b11ee7d5d6180eedf6136"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4b580d5cf0d66751fd27fa57bbbac1cf"><td class="memItemLeft" align="right" valign="top"><a id="a4b580d5cf0d66751fd27fa57bbbac1cf" name="a4b580d5cf0d66751fd27fa57bbbac1cf"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>BME_reset</b> (void)</td></tr>
-<tr class="separator:a4b580d5cf0d66751fd27fa57bbbac1cf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="separator:ga3fb0a73c003a855de490e8a3844a8dbf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaf58aacde835b11ee7d5d6180eedf6136"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__bme.html#gaf58aacde835b11ee7d5d6180eedf6136">BME_init</a> (void)</td></tr>
+<tr class="memdesc:gaf58aacde835b11ee7d5d6180eedf6136"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialize the BME service.  <a href="group__bme.html#gaf58aacde835b11ee7d5d6180eedf6136">More...</a><br /></td></tr>
+<tr class="separator:gaf58aacde835b11ee7d5d6180eedf6136"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga4b580d5cf0d66751fd27fa57bbbac1cf"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__bme.html#ga4b580d5cf0d66751fd27fa57bbbac1cf">BME_reset</a> (void)</td></tr>
+<tr class="memdesc:ga4b580d5cf0d66751fd27fa57bbbac1cf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reset characteristics.  <a href="group__bme.html#ga4b580d5cf0d66751fd27fa57bbbac1cf">More...</a><br /></td></tr>
+<tr class="separator:ga4b580d5cf0d66751fd27fa57bbbac1cf"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="var-members" name="var-members"></a>
 Variables</h2></td></tr>
-<tr class="memitem:ae9cf58a9a5291ecbe0068cff4c4c63e5"><td class="memItemLeft" align="right" valign="top"><a id="ae9cf58a9a5291ecbe0068cff4c4c63e5" name="ae9cf58a9a5291ecbe0068cff4c4c63e5"></a>
+<tr class="memitem:gae9cf58a9a5291ecbe0068cff4c4c63e5"><td class="memItemLeft" align="right" valign="top">
 static ICall_EntityID&#160;</td><td class="memItemRight" valign="bottom"><b>sensorSelfEntity</b></td></tr>
-<tr class="separator:ae9cf58a9a5291ecbe0068cff4c4c63e5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0ad1b1ac85733bdf34b26ed8ecfd2c10"><td class="memItemLeft" align="right" valign="top"><a id="a0ad1b1ac85733bdf34b26ed8ecfd2c10" name="a0ad1b1ac85733bdf34b26ed8ecfd2c10"></a>
+<tr class="memdesc:gae9cf58a9a5291ecbe0068cff4c4c63e5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Entity ID used to check for source and/or destination of messages. <br /></td></tr>
+<tr class="separator:gae9cf58a9a5291ecbe0068cff4c4c63e5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga0ad1b1ac85733bdf34b26ed8ecfd2c10"><td class="memItemLeft" align="right" valign="top">
 static ICall_Semaphore&#160;</td><td class="memItemRight" valign="bottom"><b>sensorSem</b></td></tr>
-<tr class="separator:a0ad1b1ac85733bdf34b26ed8ecfd2c10"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac733250573a28d076420459c3332d439"><td class="memItemLeft" align="right" valign="top"><a id="ac733250573a28d076420459c3332d439" name="ac733250573a28d076420459c3332d439"></a>
+<tr class="memdesc:ga0ad1b1ac85733bdf34b26ed8ecfd2c10"><td class="mdescLeft">&#160;</td><td class="mdescRight">Semaphore used to post events to the application thread. <br /></td></tr>
+<tr class="separator:ga0ad1b1ac85733bdf34b26ed8ecfd2c10"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gac733250573a28d076420459c3332d439"><td class="memItemLeft" align="right" valign="top">
 static Task_Struct&#160;</td><td class="memItemRight" valign="bottom"><b>sensorTask</b></td></tr>
-<tr class="separator:ac733250573a28d076420459c3332d439"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5968802c0b7b1cfc77c903d4020dc726"><td class="memItemLeft" align="right" valign="top"><a id="a5968802c0b7b1cfc77c903d4020dc726" name="a5968802c0b7b1cfc77c903d4020dc726"></a>
+<tr class="memdesc:gac733250573a28d076420459c3332d439"><td class="mdescLeft">&#160;</td><td class="mdescRight">Task setup. <br /></td></tr>
+<tr class="separator:gac733250573a28d076420459c3332d439"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga5968802c0b7b1cfc77c903d4020dc726"><td class="memItemLeft" align="right" valign="top">
 static Char&#160;</td><td class="memItemRight" valign="bottom"><b>sensorTaskStack</b> [SENSOR_TASK_STACK_SIZE]</td></tr>
-<tr class="separator:a5968802c0b7b1cfc77c903d4020dc726"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a613daf74c171f75ca0daf3b92998977a"><td class="memItemLeft" align="right" valign="top"><a id="a613daf74c171f75ca0daf3b92998977a" name="a613daf74c171f75ca0daf3b92998977a"></a>
+<tr class="separator:ga5968802c0b7b1cfc77c903d4020dc726"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga613daf74c171f75ca0daf3b92998977a"><td class="memItemLeft" align="right" valign="top">
 static uint8_t&#160;</td><td class="memItemRight" valign="bottom"><b>sensorConfig</b></td></tr>
-<tr class="separator:a613daf74c171f75ca0daf3b92998977a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a543e0391462105e6f58bd007ca3b60d1"><td class="memItemLeft" align="right" valign="top"><a id="a543e0391462105e6f58bd007ca3b60d1" name="a543e0391462105e6f58bd007ca3b60d1"></a>
+<tr class="memdesc:ga613daf74c171f75ca0daf3b92998977a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Parameters. <br /></td></tr>
+<tr class="separator:ga613daf74c171f75ca0daf3b92998977a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga543e0391462105e6f58bd007ca3b60d1"><td class="memItemLeft" align="right" valign="top">
 static uint16_t&#160;</td><td class="memItemRight" valign="bottom"><b>sensorPeriod</b></td></tr>
-<tr class="separator:a543e0391462105e6f58bd007ca3b60d1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab2fcf6071970c92de251b2d287dbb057"><td class="memItemLeft" align="right" valign="top"><a id="ab2fcf6071970c92de251b2d287dbb057" name="ab2fcf6071970c92de251b2d287dbb057"></a>
+<tr class="separator:ga543e0391462105e6f58bd007ca3b60d1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gab2fcf6071970c92de251b2d287dbb057"><td class="memItemLeft" align="right" valign="top">
 uint8_t&#160;</td><td class="memItemRight" valign="bottom"><b>bmeRegistered</b> = 0</td></tr>
-<tr class="memdesc:ab2fcf6071970c92de251b2d287dbb057"><td class="mdescLeft">&#160;</td><td class="mdescRight">Make a flag for your sensor so we know ICALL sees it before we try to use it. <br /></td></tr>
-<tr class="separator:ab2fcf6071970c92de251b2d287dbb057"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:adf1662cc9de1267ed003d2848736590b"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="structsensor_c_bs__t.html">sensorCBs_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ysu1stk_2sensortag_2ccs_2app_2_b_m_e688_2bme688_8c.html#adf1662cc9de1267ed003d2848736590b">sensorCallbacks</a></td></tr>
-<tr class="separator:adf1662cc9de1267ed003d2848736590b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memdesc:gab2fcf6071970c92de251b2d287dbb057"><td class="mdescLeft">&#160;</td><td class="mdescRight">Make a flag for your sensor so we know ICALL sees it before we try to use it. <br /></td></tr>
+<tr class="separator:gab2fcf6071970c92de251b2d287dbb057"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gadf1662cc9de1267ed003d2848736590b"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="structsensor_c_bs__t.html">sensorCBs_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__bme.html#gadf1662cc9de1267ed003d2848736590b">sensorCallbacks</a></td></tr>
+<tr class="separator:gadf1662cc9de1267ed003d2848736590b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p >Where the BME Task lives. </p>
 <p >Created on: Mar 2, 2022 Author: RJ Yarwood </p>
-</div><h2 class="groupheader">Function Documentation</h2>
-<a id="a730b3b2460d648eb59a7dacb1811e28e" name="a730b3b2460d648eb59a7dacb1811e28e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a730b3b2460d648eb59a7dacb1811e28e">&#9670;&nbsp;</a></span>sensorTaskFxn()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">static void sensorTaskFxn </td>
-          <td>(</td>
-          <td class="paramtype">UArg&#160;</td>
-          <td class="paramname"><em>a0</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">UArg&#160;</td>
-          <td class="paramname"><em>a1</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<p >Note: You could turn sensor on before reading then off immediatly after if power consumption is more important</p>
-
-</div>
-</div>
-<h2 class="groupheader">Variable Documentation</h2>
-<a id="adf1662cc9de1267ed003d2848736590b" name="adf1662cc9de1267ed003d2848736590b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#adf1662cc9de1267ed003d2848736590b">&#9670;&nbsp;</a></span>sensorCallbacks</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="structsensor_c_bs__t.html">sensorCBs_t</a> sensorCallbacks</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<b>Initial value:</b><div class="fragment"><div class="line">=</div>
-<div class="line">{</div>
-<div class="line">  sensorConfigChangeCB,  </div>
-<div class="line">}</div>
-</div><!-- fragment -->
-</div>
-</div>
-</div><!-- contents -->
+</div></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->

@@ -255,16 +255,16 @@ Functions</h2></td></tr>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p >ECC ROM driver implementation for a CC26XX device. </p>
 <p >============================================================================</p>
-<h1><a class="anchor" id="autotoc_md108"></a>
+<h1><a class="anchor" id="autotoc_md113"></a>
 Driver Include</h1>
 <p >The ECC ROM header file should be included in an application as follows: </p><div class="fragment"><div class="line"><span class="preprocessor">#include &lt;ti/drivers/ecc/ECCROMCC26XX.h&gt;</span></div>
-</div><!-- fragment --><h1><a class="anchor" id="autotoc_md109"></a>
+</div><!-- fragment --><h1><a class="anchor" id="autotoc_md114"></a>
 Overview</h1>
 <p >The ECCROMCC26XX driver provides reentrant access to the ROM based ECC module. Access is given first come, first serve and subsequent calls block until all preceding callers have returned or the caller times out in which case execution returns to the caller but the operation is not performed.</p>
-<h2><a class="anchor" id="autotoc_md110"></a>
+<h2><a class="anchor" id="autotoc_md115"></a>
 General Behavior</h2>
 <p >For code examples, see Use Cases below.</p>
-<h3><a class="anchor" id="autotoc_md111"></a>
+<h3><a class="anchor" id="autotoc_md116"></a>
 Initialzing the driver</h3>
 <ul>
 <li>The application initializes the ECCROMCC26XX driver by calling <a class="el" href="_e_c_c_r_o_m_c_c26_x_x_8h.html#adbed30899def3597c9f91d9d6cceff8f" title="Initializes module&#39;s synchronization resources. Only needs to be called once, but safe to call multip...">ECCROMCC26XX_init()</a>.</li>
@@ -280,7 +280,7 @@ Initialzing the driver</h3>
 <div class="line">}</div>
 <div class="ttc" id="a_e_c_c_r_o_m_c_c26_x_x_8h_html_a97cdc759b911e36c7ccc18cfc45fede5"><div class="ttname"><a href="_e_c_c_r_o_m_c_c26_x_x_8h.html#a97cdc759b911e36c7ccc18cfc45fede5">ECCROMCC26XX_genKeys</a></div><div class="ttdeci">int8_t ECCROMCC26XX_genKeys(uint8_t *privateKey, uint8_t *publicKeyX, uint8_t *publicKeyY, ECCROMCC26XX_Params *params)</div><div class="ttdoc">Generate Public Key X and Y Coordinates.</div><div class="ttdef"><b>Definition:</b> ECCROMCC26XX.c:185</div></div>
 <div class="ttc" id="a_e_c_c_r_o_m_c_c26_x_x_8h_html_adbed30899def3597c9f91d9d6cceff8f"><div class="ttname"><a href="_e_c_c_r_o_m_c_c26_x_x_8h.html#adbed30899def3597c9f91d9d6cceff8f">ECCROMCC26XX_init</a></div><div class="ttdeci">void ECCROMCC26XX_init(void)</div><div class="ttdoc">Initializes module's synchronization resources. Only needs to be called once, but safe to call multip...</div><div class="ttdef"><b>Definition:</b> ECCROMCC26XX.c:130</div></div>
-</div><!-- fragment --> <h3><a class="anchor" id="autotoc_md112"></a>
+</div><!-- fragment --> <h3><a class="anchor" id="autotoc_md117"></a>
 Initializing client parameters</h3>
 <ul>
 <li>Prior to calling either <a class="el" href="_e_c_c_r_o_m_c_c26_x_x_8h.html#a97cdc759b911e36c7ccc18cfc45fede5" title="Generate Public Key X and Y Coordinates.">ECCROMCC26XX_genKeys()</a> or <a class="el" href="_e_c_c_r_o_m_c_c26_x_x_8h.html#a64032ff4d46e71fcc876eb0f0491f13c" title="Generate Diffie-Hellman Shared Secret Key X and Y Coordinates.">ECCROMCC26XX_genDHKey()</a>, parameters must be initialized with a call to <a class="el" href="_e_c_c_r_o_m_c_c26_x_x_8h.html#ab4b43f73cb42748bf9261a43953f8709" title="Function to initialize the ECCROMCC26XX_Params struct to its defaults. params should not be modified ...">ECCROMCC26XX_Params_init()</a> and initialize an instance of <a class="el" href="struct_e_c_c_r_o_m_c_c26_x_x___params.html" title="ECCROMCC26XX Parameters.">ECCROMCC26XX_Params</a>. Generally, it is expected that each client will initialize its own instance of <a class="el" href="struct_e_c_c_r_o_m_c_c26_x_x___params.html" title="ECCROMCC26XX Parameters.">ECCROMCC26XX_Params</a>, but in some cases this is not necessary. Multiple clients may share the same <a class="el" href="struct_e_c_c_r_o_m_c_c26_x_x___params.html" title="ECCROMCC26XX Parameters.">ECCROMCC26XX_Params</a> instance as long as they do not rely on the status field. This field could be overwritten by any of the clients whom share the instance. The clients should then rely on the return value of the API function which was called.</li>
@@ -332,9 +332,9 @@ Initializing client parameters</h3>
 <div class="ttc" id="astruct_e_c_c_r_o_m_c_c26_x_x___params_html_a8aeed969b1abd618b1ee9c248cb7d20f"><div class="ttname"><a href="struct_e_c_c_r_o_m_c_c26_x_x___params.html#a8aeed969b1abd618b1ee9c248cb7d20f">ECCROMCC26XX_Params::curve</a></div><div class="ttdeci">ECCROMCC26XX_CurveParams curve</div><div class="ttdef"><b>Definition:</b> ECCROMCC26XX.h:339</div></div>
 </div><!-- fragment --></li>
 </ul>
-<h2><a class="anchor" id="autotoc_md113"></a>
+<h2><a class="anchor" id="autotoc_md118"></a>
 Use Cases @anchor ECC_USE_CASES</h2>
-<h3><a class="anchor" id="autotoc_md114"></a>
+<h3><a class="anchor" id="autotoc_md119"></a>
 Performing a key and shared secret generation operation</h3>
 <div class="fragment"><div class="line"><span class="comment">// Declaration of this client&#39;s ECCROMCC26XX parameters.</span></div>
 <div class="line"><a class="code hl_struct" href="struct_e_c_c_r_o_m_c_c26_x_x___params.html">ECCROMCC26XX_Params</a>      params;</div>
@@ -370,15 +370,15 @@ Performing a key and shared secret generation operation</h3>
 <div class="line">                      remotePublicKeyY, sharedSecretKeyX,</div>
 <div class="line">                      sharedSecretKeyY, &amp;params);</div>
 <div class="ttc" id="a_e_c_c_r_o_m_c_c26_x_x_8h_html_a64032ff4d46e71fcc876eb0f0491f13c"><div class="ttname"><a href="_e_c_c_r_o_m_c_c26_x_x_8h.html#a64032ff4d46e71fcc876eb0f0491f13c">ECCROMCC26XX_genDHKey</a></div><div class="ttdeci">int8_t ECCROMCC26XX_genDHKey(uint8_t *privateKey, uint8_t *publicKeyX, uint8_t *publicKeyY, uint8_t *dHKeyX, uint8_t *dHKeyY, ECCROMCC26XX_Params *params)</div><div class="ttdoc">Generate Diffie-Hellman Shared Secret Key X and Y Coordinates.</div><div class="ttdef"><b>Definition:</b> ECCROMCC26XX.c:281</div></div>
-</div><!-- fragment --><h3><a class="anchor" id="autotoc_md115"></a>
+</div><!-- fragment --><h3><a class="anchor" id="autotoc_md120"></a>
 Supported transaction modes</h3>
 <ul>
 <li>All key generation functions are blocking.</li>
 </ul>
-<h2><a class="anchor" id="autotoc_md116"></a>
+<h2><a class="anchor" id="autotoc_md121"></a>
 Error handling</h2>
 <p >If an error occur during key generation, an error status will be returned and stored in the status field of the <a class="el" href="struct_e_c_c_r_o_m_c_c26_x_x___params.html" title="ECCROMCC26XX Parameters.">ECCROMCC26XX_Params</a> instance passed as an argument.</p>
-<h2><a class="anchor" id="autotoc_md117"></a>
+<h2><a class="anchor" id="autotoc_md122"></a>
 Supported Functions</h2>
 <table class="markdownTable">
 <tr class="markdownTableHead">
@@ -392,10 +392,10 @@ Supported Functions</h2>
 <tr class="markdownTableRowEven">
 <td class="markdownTableBodyNone"><a class="el" href="_e_c_c_r_o_m_c_c26_x_x_8h.html#a64032ff4d46e71fcc876eb0f0491f13c" title="Generate Diffie-Hellman Shared Secret Key X and Y Coordinates.">ECCROMCC26XX_genDHKey()</a>   </td><td class="markdownTableBodyNone">Generate Diffie-Hellman Shared Secret   </td></tr>
 </table>
-<h2><a class="anchor" id="autotoc_md118"></a>
+<h2><a class="anchor" id="autotoc_md123"></a>
 Unsupported functions:</h2>
 <p >Functionality that currently not supported: </p>
-<h1><a class="anchor" id="autotoc_md119"></a>
+<h1><a class="anchor" id="autotoc_md124"></a>
 - ECDSA Sign and Verify.</h1>
 </div><h2 class="groupheader">Macro Definition Documentation</h2>
 <a id="aeccc0f3dcead42358240278e47250618" name="aeccc0f3dcead42358240278e47250618"></a>

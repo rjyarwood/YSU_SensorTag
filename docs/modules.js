@@ -1,7 +1,6 @@
 var modules =
 [
     [ "Bme68x_api", "group__bme68x__api.html", "group__bme68x__api" ],
-    [ "BME_Configuration", "group___b_m_e___configuration.html", "group___b_m_e___configuration" ],
     [ "SAP Parameter Subsystems", "group___s_a_p___p_a_r_a_m___s_u_b_s_y_s_t_e_m_s.html", "group___s_a_p___p_a_r_a_m___s_u_b_s_y_s_t_e_m_s" ],
     [ "SAP Advertising Parameters", "group___s_a_p___a_d_v___p_a_r_a_m_s.html", "group___s_a_p___a_d_v___p_a_r_a_m_s" ],
     [ "SAP Advertising States", "group___s_a_p___a_d_v___s_t_a_t_e_s.html", "group___s_a_p___a_d_v___s_t_a_t_e_s" ],

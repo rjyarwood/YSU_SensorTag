@@ -1,7 +1,9 @@
 var searchData=
 [
-  ['bme688_2ec_0',['bme688.c',['../ysu1stk_2sensortag_2ccs_2app_2_b_m_e688_2bme688_8c.html',1,'']]],
-  ['bme688_2eh_1',['bme688.h',['../ysu1stk_2sensortag_2ccs_2app_2_b_m_e688_2bme688_8h.html',1,'']]],
-  ['board_2eh_2',['Board.h',['../boards_2_c_c1310_d_k__4_x_d_2_board_8h.html',1,'']]],
-  ['boostxl_5fcc2650ma_2eh_3',['BOOSTXL_CC2650MA.h',['../_b_o_o_s_t_x_l___c_c2650_m_a_8h.html',1,'']]]
+  ['adxl343_2ec_0',['adxl343.c',['../ysu1stk_2sensortag_2ccs_2app_2_a_d_x_l343_2adxl343_8c.html',1,'']]],
+  ['adxl343_2eh_1',['adxl343.h',['../ysu1stk_2sensortag_2ccs_2app_2_a_d_x_l343_2adxl343_8h.html',1,'']]],
+  ['adxl_5fsensor_2ec_2',['adxl_sensor.c',['../ysu1stk_2sensortag_2ccs_2app_2_a_d_x_l343_2sensor__driver_2adxl__sensor_8c.html',1,'']]],
+  ['adxl_5fsensor_2eh_3',['adxl_sensor.h',['../ysu1stk_2sensortag_2ccs_2app_2_a_d_x_l343_2sensor__driver_2adxl__sensor_8h.html',1,'']]],
+  ['adxl_5fservice_2ec_4',['adxl_service.c',['../ysu1stk_2sensortag_2ccs_2app_2_a_d_x_l343_2ble_2adxl__service_8c.html',1,'']]],
+  ['adxl_5fservice_2eh_5',['adxl_service.h',['../ysu1stk_2sensortag_2ccs_2app_2_a_d_x_l343_2ble_2adxl__service_8h.html',1,'']]]
 ];

@@ -5,10 +5,13 @@ var searchData=
   ['adv_2e_20data_20buffer_2',['Adv. data buffer',['../group___s_n_p___advbuffer.html',1,'']]],
   ['advertisement_20filter_20policy_20type_3',['Advertisement Filter Policy Type',['../group___s_n_p___adv_filter_policy_type.html',1,'']]],
   ['advertisement_20type_4',['Advertisement Type',['../group___s_n_p___adv_type.html',1,'']]],
-  ['att_20client_20api_20functions_5',['ATT Client API Functions',['../group___a_t_t___c_l_i_e_n_t___a_p_i.html',1,'']]],
-  ['att_20error_20codes_6',['ATT Error Codes',['../group___a_t_t___e_r_r___c_o_d_e___d_e_f_i_n_e_s.html',1,'']]],
-  ['att_20message_20event_20ids_7',['ATT Message Event IDs',['../group___a_t_t___m_s_g___e_v_e_n_t___d_e_f_i_n_e_s.html',1,'']]],
-  ['att_20methods_8',['ATT Methods',['../group___a_t_t___m_e_t_h_o_d___d_e_f_i_n_e_s.html',1,'']]],
-  ['att_20server_20api_20functions_9',['ATT Server API Functions',['../group___a_t_t___s_e_r_v_e_r___a_p_i.html',1,'']]],
-  ['att_20server_20common_20functions_10',['ATT Server Common Functions',['../group___a_t_t___c_o_m_m_o_n___a_p_i.html',1,'']]]
+  ['adxl_5',['ADXL',['../group__adxl.html',1,'']]],
+  ['adxl_20ble_6',['ADXL BLE',['../group__adxl__ble.html',1,'']]],
+  ['adxl_20configuration_7',['ADXL Configuration',['../group__adxl__conf.html',1,'']]],
+  ['att_20client_20api_20functions_8',['ATT Client API Functions',['../group___a_t_t___c_l_i_e_n_t___a_p_i.html',1,'']]],
+  ['att_20error_20codes_9',['ATT Error Codes',['../group___a_t_t___e_r_r___c_o_d_e___d_e_f_i_n_e_s.html',1,'']]],
+  ['att_20message_20event_20ids_10',['ATT Message Event IDs',['../group___a_t_t___m_s_g___e_v_e_n_t___d_e_f_i_n_e_s.html',1,'']]],
+  ['att_20methods_11',['ATT Methods',['../group___a_t_t___m_e_t_h_o_d___d_e_f_i_n_e_s.html',1,'']]],
+  ['att_20server_20api_20functions_12',['ATT Server API Functions',['../group___a_t_t___s_e_r_v_e_r___a_p_i.html',1,'']]],
+  ['att_20server_20common_20functions_13',['ATT Server Common Functions',['../group___a_t_t___c_o_m_m_o_n___a_p_i.html',1,'']]]
 ];

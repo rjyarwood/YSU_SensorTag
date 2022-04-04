@@ -12,5 +12,6 @@ var searchData=
   ['bme68x_5fset_5fheatr_5fconf_9',['bme68x_set_heatr_conf',['../group__bme68x_api_config.html',1,'']]],
   ['bme68x_5fset_5fop_5fmode_10',['bme68x_set_op_mode',['../group__bme68x_api_om.html',1,'']]],
   ['bme68x_5fset_5fregs_11',['bme68x_set_regs',['../group__bme68x_api_register.html',1,'']]],
-  ['bme68x_5fsoft_5freset_12',['bme68x_soft_reset',['../group__bme68x_api_system.html',1,'']]]
+  ['bme68x_5fsoft_5freset_12',['bme68x_soft_reset',['../group__bme68x_api_system.html',1,'']]],
+  ['bug_20list_13',['Bug List',['../bug.html',1,'']]]
 ];

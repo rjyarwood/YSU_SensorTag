@@ -116,14 +116,14 @@ $(document).ready(function(){initNavTree('ysu1stk_2sensortag_2ccs_2app_2_b_m_e68
 <div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span><span class="comment"> */</span></div>
 <div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span> </div>
 <div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span><span class="comment">/*</span></div>
-<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span><span class="comment"> * Create the BME temperature sensor task</span></div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span><span class="comment"> * Create the BME sensor task</span></div>
 <div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span><span class="comment"> */</span></div>
-<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span><span class="keyword">extern</span> <span class="keywordtype">void</span> BME_createTask(<span class="keywordtype">void</span>);</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span><span class="keyword">extern</span> <span class="keywordtype">void</span> <a class="code hl_function" href="group__bme.html#ga943a472674a310bff82fe29d2276a07b">BME_createTask</a>(<span class="keywordtype">void</span>);</div>
 <div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span> </div>
 <div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span><span class="comment">/*</span></div>
 <div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span><span class="comment"> * Initialize BME sensor module</span></div>
 <div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span><span class="comment"> */</span></div>
-<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span><span class="keyword">extern</span> <span class="keywordtype">void</span> BME_init(<span class="keywordtype">void</span>);</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span><span class="keyword">extern</span> <span class="keywordtype">void</span> <a class="code hl_function" href="group__bme.html#gaf58aacde835b11ee7d5d6180eedf6136">BME_init</a>(<span class="keywordtype">void</span>);</div>
 <div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span> </div>
 <div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span><span class="comment">/*</span></div>
 <div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span><span class="comment"> * Task Event Processor for characteristic changes</span></div>
@@ -133,7 +133,7 @@ $(document).ready(function(){initNavTree('ysu1stk_2sensortag_2ccs_2app_2_b_m_e68
 <div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span><span class="comment">/*</span></div>
 <div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span><span class="comment"> * Reset BME sensor module</span></div>
 <div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span><span class="comment"> */</span></div>
-<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span><span class="keyword">extern</span> <span class="keywordtype">void</span> BME_reset(<span class="keywordtype">void</span>);</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span><span class="keyword">extern</span> <span class="keywordtype">void</span> <a class="code hl_function" href="group__bme.html#ga4b580d5cf0d66751fd27fa57bbbac1cf">BME_reset</a>(<span class="keywordtype">void</span>);</div>
 <div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span> </div>
 <div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span><span class="comment">/*********************************************************************</span></div>
 <div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span><span class="comment">*********************************************************************/</span></div>
@@ -143,6 +143,9 @@ $(document).ready(function(){initNavTree('ysu1stk_2sensortag_2ccs_2app_2_b_m_e68
 <div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span><span class="preprocessor">#endif</span></div>
 <div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span> </div>
 <div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span><span class="preprocessor">#endif </span><span class="comment">/* BME688_BME688_H_ */</span><span class="preprocessor"></span></div>
+<div class="ttc" id="agroup__bme_html_ga4b580d5cf0d66751fd27fa57bbbac1cf"><div class="ttname"><a href="group__bme.html#ga4b580d5cf0d66751fd27fa57bbbac1cf">BME_reset</a></div><div class="ttdeci">void BME_reset(void)</div><div class="ttdoc">Reset characteristics.</div><div class="ttdef"><b>Definition:</b> bme688.c:225</div></div>
+<div class="ttc" id="agroup__bme_html_ga943a472674a310bff82fe29d2276a07b"><div class="ttname"><a href="group__bme.html#ga943a472674a310bff82fe29d2276a07b">BME_createTask</a></div><div class="ttdeci">void BME_createTask(void)</div><div class="ttdoc">Task creation function for the BME sensor. This can basically be copied and pasted for new sensor.</div><div class="ttdef"><b>Definition:</b> bme688.c:118</div></div>
+<div class="ttc" id="agroup__bme_html_gaf58aacde835b11ee7d5d6180eedf6136"><div class="ttname"><a href="group__bme.html#gaf58aacde835b11ee7d5d6180eedf6136">BME_init</a></div><div class="ttdeci">void BME_init(void)</div><div class="ttdoc">Initialize the BME service.</div><div class="ttdef"><b>Definition:</b> bme688.c:195</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->

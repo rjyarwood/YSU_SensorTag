@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['pdmcc26xx_2eh_0',['PDMCC26XX.h',['../_p_d_m_c_c26_x_x_8h.html',1,'']]],
-  ['pwrmon_2eh_1',['pwrmon.h',['../cc26xx_2pwrmon_8h.html',1,'']]]
+  ['main_2ec_0',['main.c',['../examples_2ysu1stk_2sensortag_2ccs_2app_2main_8c.html',1,'']]]
 ];

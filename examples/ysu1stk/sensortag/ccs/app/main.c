@@ -1,15 +1,16 @@
-/******************************************************************************
-
- @file  main.c
-
- @brief main entry of the BLE stack sample application. This is mostly from the TI SDK but is overwritten to fit our needs
- Do not remove something in this file just because it is causing an error. It is probably something that is integral to another board.
- Remove the preprocessor flag for the feature causing issue
-
- Group: WCS, BTS
- Target Device: CC2650, CC2640, CC1350
-
- ******************************************************************************
+/****************************************************************************/
+/**
+*
+* @file  main.c
+*
+* @brief main entry of the BLE stack sample application. This is mostly from the TI SDK but is overwritten to fit our needs
+* Do not remove something in this file just because it is causing an error. It is probably something that is integral to another board.
+* Remove the preprocessor flag for the feature causing issue
+*
+* Group: WCS, BTS
+* Target Device: CC2650, CC2640, CC1350
+*
+*******************************************************************************
 
  Copyright (c) 2013-2016, Texas Instruments Incorporated
  All rights reserved.
@@ -149,7 +150,7 @@ extern void AssertHandler(uint8 assertCause, uint8 assertSubcause);
 
 extern Display_Handle dispHandle;
 
-/*******************************************************************************
+/*****************************************************************************//**
  * @fn          Main
  *
  * @brief       Application Main
@@ -242,7 +243,7 @@ int main()
 }
 
 
-/*******************************************************************************
+/*****************************************************************************//**
  * @fn          AssertHandler
  *
  * @brief       This is the Application's callback handler for asserts raised
@@ -326,7 +327,7 @@ void AssertHandler(uint8 assertCause, uint8 assertSubcause)
 }
 
 
-/*******************************************************************************
+/*****************************************************************************//**
  * @fn          smallErrorHook
  *
  * @brief       Error handler to be hooked into TI-RTOS.
@@ -347,7 +348,7 @@ void smallErrorHook(Error_Block *eb)
 }
 
 #if defined (CC1350_LAUNCHXL) && defined (POWER_SAVING)
-/*******************************************************************************
+/*****************************************************************************//**
  * @fn          rFSwitchNotifyCb
  *
  * @brief       Power driver callback to toggle RF switch on Power state

@@ -1,5 +1,10 @@
 var NAVTREEINDEX15 =
 {
+"structxdc__runtime___heap_min___module____.html":[9,0,537],
+"structxdc__runtime___heap_min___object2____.html":[9,0,538],
+"structxdc__runtime___heap_min___object____.html":[9,0,539],
+"structxdc__runtime___main___module___gate_proxy___module____.html":[9,0,540],
+"structxdc__runtime___main___module___gate_proxy___object2____.html":[9,0,541],
 "structxdc__runtime___memory___heap_proxy___module____.html":[9,0,542],
 "structxdc__runtime___memory___heap_proxy___object2____.html":[9,0,543],
 "structxdc__runtime___memory___module___state____.html":[9,0,544],
@@ -244,10 +249,5 @@ var NAVTREEINDEX15 =
 "unionsnp__msg__t.html#af303e807ddb7f23b9006d494b5970f66":[9,0,437,19],
 "unionsnp__msg__t.html#afda3c6d13d633193f74705a90b8c14f1":[9,0,437,12],
 "unionsnp__msg__t.html#afddff22990b4241a6899be664dd96827":[9,0,437,38],
-"unionsnp_event_param__t.html":[9,0,439],
-"utc__clock_8h_source.html":[10,0,3,1,0,3,2],
-"util_8h_source.html":[10,0,3,1,0,7],
-"ysu1st__board_8h_source.html":[10,0,3,9,9,0],
-"ysu1stk_2sensortag_2ccs_2app_2_a_d_x_l343_2adxl343_8c.html":[10,0,0,1,0,0,0,0,2],
-"ysu1stk_2sensortag_2ccs_2app_2_a_d_x_l343_2adxl343_8h.html":[10,0,0,1,0,0,0,0,3]
+"unionsnp_event_param__t.html":[9,0,439]
 };

@@ -89,22 +89,26 @@ $(document).ready(function(){initNavTree('todo.html',''); initResizable(); });
 <div class="contents">
 <div class="textblock"><dl class="reflist">
 <dt>Member <a class="el" href="group__sensortag__ble.html#ga89eb91b070c19a65c672c2b788a16251">devInfoModelNumber</a>  []</dt>
-<dd><a class="anchor" id="_todo000003"></a>USER CODE 5: Add your device info. Do not overwrite, add an ifdef for your device Device information parameters  </dd>
+<dd><a class="anchor" id="_todo000005"></a>USER CODE 5: Add your device info. Do not overwrite, add an ifdef for your device Device information parameters  </dd>
 <dt>Member <a class="el" href="group__i2c.html#ga06cbc78d2305af02e2015f28e8816281">I2C_Device_ID</a>  </dt>
 <dd><a class="anchor" id="_todo000001"></a>USER CODE 10: If your I2C Device is on a different physical bus add it to the enum below  </dd>
+<dt>Member <a class="el" href="examples_2ysu1stk_2sensortag_2ccs_2app_2main_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4">main</a>  ()</dt>
+<dd><a class="anchor" id="_todo000003"></a>USER CODE 2: Call your sensor create task here.  </dd>
 <dt>Module <a class="el" href="group__sensortag__ble.html">sensortag_ble</a>  </dt>
-<dd><a class="anchor" id="_todo000002"></a>USER CODE 4: Add your sensor task file here. The ADXL service is only here for advertising. If you would like to advertise another service see below <br  />
+<dd><a class="anchor" id="_todo000004"></a>USER CODE 4: Add your sensor task file here. The ADXL service is only here for advertising. If you would like to advertise another service see below <br  />
   </dd>
 <dt>Member <a class="el" href="group__sensortag__ctrl.html#ga2f6fd326eb97aef2e3c414bc20b7cb61">SensorTag_init</a>  (void)</dt>
-<dd><p class="startdd"><a class="anchor" id="_todo000004"></a>USER CODE 6: Initialize any board level drivers needed </p>
-<p class="enddd"><a class="anchor" id="_todo000005"></a>USER CODE 7: Call the function to set up your Bluetooth service  </p>
+<dd><p class="startdd"><a class="anchor" id="_todo000006"></a>USER CODE 6: Initialize any board level drivers needed </p>
+<p class="enddd"><a class="anchor" id="_todo000007"></a>USER CODE 7: Call the function to set up your Bluetooth service  </p>
 </dd>
 <dt>Member <a class="el" href="group__sensortag__ble.html#gae0086a6a3fefd54f7125c95deb4c4e5c">SensorTag_processCharValueChangeEvt</a>  (uint8_t serviceID, uint8_t paramID)</dt>
-<dd><a class="anchor" id="_todo000007"></a>USER CODE 9: This is where you add a case statement for that ID you defined earlier. This ensures all BLE messages get where they need to go  </dd>
+<dd><a class="anchor" id="_todo000009"></a>USER CODE 9: This is where you add a case statement for that ID you defined earlier. This ensures all BLE messages get where they need to go  </dd>
 <dt>Member <a class="el" href="group__sensortag__ctrl.html#gac9e9c40cd9c1e8d56a2825bc20291ceb">SensorTag_taskFxn</a>  (UArg a0, UArg a1)</dt>
-<dd><a class="anchor" id="_todo000006"></a>USER CODE 8: If you are not using a task for your sensor, poll it here  </dd>
+<dd><a class="anchor" id="_todo000008"></a>USER CODE 8: If you are not using a task for your sensor, poll it here  </dd>
 <dt>Member <a class="el" href="group__service__ids.html#ga597dcf4280efaaa555d6039fce7aca06">SERVICE_ID_ADXL</a>  </dt>
-<dd><a class="anchor" id="_todo000008"></a>USER CODE 3: Add your service ID here for the BLE stack to route to the right service </dd>
+<dd><a class="anchor" id="_todo000010"></a>USER CODE 3: Add your service ID here for the BLE stack to route to the right service  </dd>
+<dt>Member <a class="el" href="examples_2ysu1stk_2sensortag_2ccs_2app_2main_8c.html#a14bb28c3a1fcd6a0d9c0bfb74f06b9a5">user0Cfg</a>  </dt>
+<dd><a class="anchor" id="_todo000002"></a>USER CODE 1: This is where you add the includes to where your sensor RTOS Task is. </dd>
 </dl>
 </div></div><!-- contents -->
 </div><!-- PageDoc -->

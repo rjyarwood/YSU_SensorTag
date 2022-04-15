@@ -120,7 +120,8 @@ File Contents</h3>
 <div class="line">extern void &lt;sensorname&gt;_init(void);</div>
 <div class="line">extern void &lt;sensorname&gt;_processCharChangeEvt(uint8_t paramID);</div>
 <div class="line">extern void &lt;sensorname&gt;_reset(void);</div>
-</div><!-- fragment --><p> If your sensor does not use a task,<code>&lt;sensorname&gt;_createTask</code> would be omitted. You can see an example of this in the <code>SENSOR_EXAMPLE</code> folder included in the repo.</p>
+</div><!-- fragment --><p> Note: If your sensor does not use a task,<code>&lt;sensorname&gt;_createTask</code> would be omitted.</p>
+<p >You can see an example of this in the <code>SENSOR_EXAMPLE</code> folder included in the repo.</p>
 <p ><code>&lt;sensorname&gt;.c</code> should contain the implementations to these functions as well as some other local functions. This can also be see in the <code>SENSOR_EXAMPLE</code> folder.</p>
 <p >The <code>sensor_driver</code> folder will contain device specific implementation. The only thing that must be included is a function to read the device. This should be declared in the 'h' file so that it can be see by the task.</p>
 <p >The <code>ble</code> folder will contain everything about the BLE service pertaining to your sensor. There will be an example of this in the <code>SENSOR_EXAMPLE</code> folder.</p>

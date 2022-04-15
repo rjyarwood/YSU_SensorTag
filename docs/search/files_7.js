@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['sensor_5fexample_2ec_0',['SENSOR_EXAMPLE.c',['../_s_e_n_s_o_r___e_x_a_m_p_l_e_8c.html',1,'']]],
-  ['sensor_5fexample_2eh_1',['SENSOR_EXAMPLE.h',['../_s_e_n_s_o_r___e_x_a_m_p_l_e_8h.html',1,'']]]
+  ['pdmcc26xx_2eh_0',['PDMCC26XX.h',['../_p_d_m_c_c26_x_x_8h.html',1,'']]],
+  ['pwrmon_2eh_1',['pwrmon.h',['../cc26xx_2pwrmon_8h.html',1,'']]]
 ];

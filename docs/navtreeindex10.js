@@ -1,5 +1,10 @@
 var NAVTREEINDEX10 =
 {
+"struct___i_call___gap_set_param__.html#a1aa246c23d3756ca07f868aa034b762a":[9,0,31,2],
+"struct___i_call___gap_set_param__.html#a52dbb9150ead0268e087bd57a450f78b":[9,0,31,1],
+"struct___i_call___gap_set_param__.html#aadcf463e9ac71b37cec66c0695db82e0":[9,0,31,0],
+"struct___i_call___gap_signable__.html":[9,0,32],
+"struct___i_call___gap_signable__.html#a0492a5a4d24ad904b9541c7521ab0fe9":[9,0,32,3],
 "struct___i_call___gap_signable__.html#a1ef2df13207bdab2c525f1aa3d91619b":[9,0,32,1],
 "struct___i_call___gap_signable__.html#aaa6407406b04fccae53f00f1f9d171bc":[9,0,32,2],
 "struct___i_call___gap_signable__.html#acb5c315bddada77d3605a4b3ca3a5747":[9,0,32,0],
@@ -244,10 +249,5 @@ var NAVTREEINDEX10 =
 "struct__icall__entity2service__args__t.html#aaa124df1cae38684e75fa614b68617f2":[9,0,15,2],
 "struct__icall__entity2service__args__t.html#aad2b95f42013bb0dd66830e26b5040cd":[9,0,15,0],
 "struct__icall__entity2service__args__t.html#ad1f3ec47b073c54839ad3b33c1bc7bb0":[9,0,15,1],
-"struct__icall__entity__entry__t.html":[9,0,16],
-"struct__icall__fetch__msg__args__t.html":[9,0,18],
-"struct__icall__fetch__msg__args__t.html#a19281daba7596958ef6bccec84d2bfff":[9,0,18,2],
-"struct__icall__fetch__msg__args__t.html#a8d3f00791b3e2119d7945c793b227534":[9,0,18,4],
-"struct__icall__fetch__msg__args__t.html#abfb3c68f16c5333136f5f6ed8addc375":[9,0,18,1],
-"struct__icall__fetch__msg__args__t.html#acbabe2d83f06fc1c07022d8155672eef":[9,0,18,3]
+"struct__icall__entity__entry__t.html":[9,0,16]
 };

@@ -373,8 +373,8 @@ static uint16_t&#160;</td><td class="memItemRight" valign="bottom"><b>events</b>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>none</dd></dl>
 <p>This function initializes BLE and any board drivers. This includes registering the entire app with the ICALL dispatcher, creating a message queue for RTOS messages. It also initializes a clock for periodic events and initializes the GAP and GATT. This is where you call any functions that register services. </p>
-<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000004">Todo:</a></b></dt><dd>USER CODE 6: Initialize any board level drivers needed </dd></dl>
-<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000005">Todo:</a></b></dt><dd>USER CODE 7: Call the function to set up your Bluetooth service </dd></dl>
+<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000006">Todo:</a></b></dt><dd>USER CODE 6: Initialize any board level drivers needed </dd></dl>
+<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000007">Todo:</a></b></dt><dd>USER CODE 7: Call the function to set up your Bluetooth service </dd></dl>
 
 </div>
 </div>
@@ -485,7 +485,7 @@ static uint16_t&#160;</td><td class="memItemRight" valign="bottom"><b>events</b>
 
 <p>Main application thread. </p>
 <p >This manages the flow of ICALL and RTOS messages. It also manages the periodic clock and can be used to poll sensors that do not have their own RTOS task </p>
-<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000006">Todo:</a></b></dt><dd>USER CODE 8: If you are not using a task for your sensor, poll it here </dd></dl>
+<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000008">Todo:</a></b></dt><dd>USER CODE 8: If you are not using a task for your sensor, poll it here </dd></dl>
 
 </div>
 </div>

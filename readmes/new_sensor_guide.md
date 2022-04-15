@@ -46,7 +46,9 @@ extern void <sensorname>_init(void);
 extern void <sensorname>_processCharChangeEvt(uint8_t paramID);
 extern void <sensorname>_reset(void);
 ```
-If your sensor does not use a task,```<sensorname>_createTask``` would be omitted. You can see an example of this in the `SENSOR_EXAMPLE` folder included in the repo. 
+Note: If your sensor does not use a task,```<sensorname>_createTask``` would be omitted. 
+
+You can see an example of this in the `SENSOR_EXAMPLE` folder included in the repo. 
 
 `<sensorname>.c` should contain the implementations to these functions as well as some other local functions. This can also be see in the `SENSOR_EXAMPLE` folder.
 

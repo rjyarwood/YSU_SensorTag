@@ -1,5 +1,10 @@
 var NAVTREEINDEX8 =
 {
+"group__adxl__conf.html#ga0f6c8c7ea3016f3792f26fd77b4bb839":[7,108,0,1,1],
+"group__adxl__conf.html#ga17e71c7af6e8ab6b49e3e1750a72be36":[7,108,0,1,5],
+"group__adxl__conf.html#ga39bedec91b75c1230e3d84a3721e1a0c":[7,108,0,1,28],
+"group__adxl__conf.html#ga3d1c4b49cdb2a4fc68c03863dcb5dbb4":[7,108,0,1,29],
+"group__adxl__conf.html#ga45b9b3d79b4ac5bee381ed09252a999e":[7,108,0,1,6],
 "group__adxl__conf.html#ga484db64e1c3e6501f8442b6ad521b041":[7,108,0,1,36],
 "group__adxl__conf.html#ga493b5218c89ab8d0ccbe78b1ddb7db39":[7,108,0,1,18],
 "group__adxl__conf.html#ga53c6ad41a83f84d0d272f78350b8e144":[7,108,0,1,41],
@@ -244,10 +249,5 @@ var NAVTREEINDEX8 =
 "namespacefrontier.html#af23374f85171fa01e97218a59802bdf0":[8,0,0,1],
 "namespacelib__search.html":[8,0,1],
 "namespacelib__search.html#a325a4db078a1a6293567c5cd9bb59d38":[8,0,1,6],
-"namespacelib__search.html#a3be36c2d54e557d7fd33555078cf151b":[8,0,1,1],
-"namespacelib__search.html#a87e58f7bfd29250108d214dde1adb2d5":[8,0,1,5],
-"namespacelib__search.html#ac004e7fdb6e818324d4bede9d6c3a0ec":[8,0,1,2],
-"namespacelib__search.html#ac9177099e5ed5ea46a354c1687a71882":[8,0,1,0],
-"namespacelib__search.html#ae52b9d59d68180b3bb2a9515de670713":[8,0,1,3],
-"namespacelib__search.html#af2c865276b0d4fc10dbe390a7e63ce5e":[8,0,1,4]
+"namespacelib__search.html#a3be36c2d54e557d7fd33555078cf151b":[8,0,1,1]
 };

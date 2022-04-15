@@ -1,5 +1,10 @@
 var NAVTREEINDEX14 =
 {
+"structl2cap_flow_ctrl_credit__t.html#ac9d94fe3d67c9e2ed8b7a25c8c26c32f":[9,0,324,1],
+"structl2cap_info_req__t.html":[9,0,326],
+"structl2cap_info_req__t.html#afd60a6e2aac1192c3571f20cbd328db2":[9,0,326,0],
+"structl2cap_info_rsp__t.html":[9,0,327],
+"structl2cap_info_rsp__t.html#a2a8a9001a790ecfb44d491ef7dd3e8ad":[9,0,327,0],
 "structl2cap_info_rsp__t.html#ace4ae9ef60cf7d358b3038f794acdb77":[9,0,327,1],
 "structl2cap_info_rsp__t.html#ae36d4f84a83c0b66e63de604ee459468":[9,0,327,2],
 "structl2cap_invalid_c_i_d__t.html":[9,0,328],
@@ -244,10 +249,5 @@ var NAVTREEINDEX14 =
 "structver_exchange__t.html":[9,0,528],
 "structver_info__t.html":[9,0,529],
 "structxdc__runtime___error___module___state____.html":[9,0,535],
-"structxdc__runtime___heap_min_______s1.html":[9,0,536],
-"structxdc__runtime___heap_min___module____.html":[9,0,537],
-"structxdc__runtime___heap_min___object2____.html":[9,0,538],
-"structxdc__runtime___heap_min___object____.html":[9,0,539],
-"structxdc__runtime___main___module___gate_proxy___module____.html":[9,0,540],
-"structxdc__runtime___main___module___gate_proxy___object2____.html":[9,0,541]
+"structxdc__runtime___heap_min_______s1.html":[9,0,536]
 };

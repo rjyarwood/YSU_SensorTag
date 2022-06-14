@@ -174,7 +174,7 @@ void ADXL_read(uint8_t *d){
 
     if(!I2C_transfer(dev.i2c, &(dev.i2cTransaction))){
 
-        /* 0x00 [6] Will mean a data read error */
+        /* 0x00 [5] Will mean a data read error */
         d[0] = 0xFF;
         d[1] = 0xFF;
         d[2] = 0xFF;
